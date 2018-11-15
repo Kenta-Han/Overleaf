@@ -1,0 +1,200 @@
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  15 NOV 2018 13:22
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**imecs_jap(deim).tex
+(./imecs_jap(deim).tex
+pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+(./deimj.cls
+Document Class: deimj 
+\@JQ=\dimen118
+\@Q=\dimen119
+\@EM=\dimen120
+\c@@paper=\count83
+\@authorlist=\toks15
+\@authorcnt=\count84
+\@alcnt=\count85
+\p@alcnt=\count86
+\@totalnumber=\count87
+\authornamesep=\dimen121
+\tn@dn=\count88
+\@spcnt=\count89
+\alignorder=\count90
+\totalnumberm@ne=\count91
+\@authorcntp@ne=\count92
+\chk@alcnt=\count93
+\chk@p@alcnt=\count94
+\Pauthorsep=\dimen122
+\jabstractbox=\box42
+\jkeywordbox=\box43
+\c@section=\count95
+\c@subsection=\count96
+\c@subsubsection=\count97
+\c@paragraph=\count98
+\c@subparagraph=\count99
+\@hlskip=\skip41
+\verbatimleftmargin=\dimen123
+\verbatimbaselineskip=\dimen124
+\c@figure=\count100
+\c@table=\count101
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\@tempboxb=\box44
+\capwidth=\dimen125
+\ecapwidth=\dimen126
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 2506.
+LaTeX Font Info:    Redeclaring symbol font `mincho' on input line 2564.
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `normal'
+(Font)                  JY1/mc/m/n --> JY1/mc/m/n on input line 2564.
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/gt/m/n --> JY1/mc/m/n on input line 2564.
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY1/mc/m/n --> JY1/gt/m/n on input line 2564.
+LaTeX Font Info:    Redeclaring math alphabet \mathgt on input line 2564.
+LaTeX Font Info:    Overwriting math alphabet `\mathgt' in version `normal'
+(Font)                  JY1/gt/m/n --> JY1/gt/m/n on input line 2564.
+LaTeX Font Info:    Overwriting math alphabet `\mathgt' in version `bold'
+(Font)                  JY1/gt/m/n --> JY1/gt/m/n on input line 2564.
+LaTeX Info: Redefining \mc on input line 2572.
+LaTeX Info: Redefining \gt on input line 2573.
+\bibindent=\dimen127
+\c@profile=\count102
+\mathindent=\dimen128
+\@minsofar=\count103
+\@min=\count104
+\@cite@temp=\count105
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: dvipdfmx.def on input line 99.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+File: dvipdfmx.def 2017/06/24 v5.0g Graphics/color driver for dvipdfmx
+))
+\Gin@req@height=\dimen129
+\Gin@req@width=\dimen130
+) (/usr/local/texlive/2018/texmf-dist/tex/platex/pxchfon/pxchfon.sty
+Package: pxchfon 2018/03/15 v1.2
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2016/02/03 v2.11b `tabularx' package (DPC)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
+Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
+\col@sep=\dimen131
+\ar@mcellbox=\box45
+\extrarowheight=\dimen132
+\NC@list=\toks17
+\extratabsurround=\skip44
+\backup@length=\skip45
+\ar@cellbox=\box46
+)
+\TX@col@width=\dimen133
+\TX@old@table=\dimen134
+\TX@old@col=\dimen135
+\TX@target=\dimen136
+\TX@delta=\dimen137
+\TX@cols=\count106
+\TX@ftn=\toks18
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip46
+\multirow@cntb=\count107
+\multirow@dima=\skip47
+\bigstrutjot=\dimen138
+) (./imecs_jap(deim).aux)
+\openout1 = `imecs_jap(deim).aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 35.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 44.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 44.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 44.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 44.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.5> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.34996> on input line 44.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.25> on input line 44.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 49.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 49.
+File: picture/Photo_Image.png Graphic file (type bmp)
+<picture/Photo_Image.png>
+[1
+
+
+]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 98.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 98.
+File: picture/Photo_CosSim.png Graphic file (type bmp)
+<picture/Photo_CosSim.png>
+ [2] [3] [4
+
+] (./imecs_jap(deim).aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.45pt have occurred.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1653 strings out of 493281
+ 22302 string characters out of 6145040
+ 110537 words of memory out of 5000000
+ 5610 multiletter control sequences out of 15000+600000
+ 19006 words of font info for 73 fonts, out of 8000000 for 9000
+ 929 hyphenation exceptions out of 8191
+ 25i,13n,23p,1145b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on imecs_jap(deim).dvi (4 pages, 35900 bytes).
