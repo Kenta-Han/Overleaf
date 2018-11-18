@@ -56,7 +56,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
 
 本研究では，ユーザの未知なスポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する類推情報提示を提案する．具体的には，ユーザが入力した既訪問スポットと未訪問エリアから，レビュを用いて既訪問スポット内の各スポットの独特な特徴と未訪問エリア内の各スポットの独特な特徴を抽出し，比較を行って類推情報を提示する．このプロトタイプシステムにより，ユーザが未訪問エリアに対する理解の支援を目指す．図\ref{fig:photo_image}は提案手法の概念図である．
 
-本論文の構成は下記のとおりである．2節では関連研究について述べる．3節では提案手法の概要について述べる．4節では構築したプロトタイプシステムの効果を検証する評価実験と考察について述べる．最後に5節では今後のまとめと課題について述べる．
+本論文の構成は下記のとおりである．2節では関連研究について述べる．3節では提案手法の概要について述べる．4節では構築したプロトタイプシステムの効果を検証する評価実験と考察について述べる．最後に5節ではまとめと今後の課題について述べる．
 
 \begin{figure}[t]
   \begin{center}
@@ -70,7 +70,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{関連研究}
-\label{sec:Related Research Papers}
+\label{sec:Related Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 クチコミを使用した地理情報の検索および推薦に関する研究は数多く行われている．廣嶋ら\cite{Codd01}は，地理情報検索の際のクエリ入力支援として，提示する特徴語の抽出手法について研究を行った．この手法では，各ブログ記事から特徴語候補の抽出および地点の特定を行った．具体的には，特徴語の候補をWikipediaの見出し語に限定し，ポアソン確率を用いて特徴語抽出を行った．
@@ -96,7 +96,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{観光スポットの相対的な特徴}
-\label{subsec:Relative features of sightseeing spots}
+\label{subsec:Relative features of tourist spots}
 % 本研究では，観光スポットの特徴を絶対的な特徴と相対的な特徴の2つに分類する．絶対的な特徴とは，観光スポット検索サイトでスポットを検索するためで使う絞り込み情報である．絞り込み情報は例は以下の3つである．
 % \begin{itemize}
 %  \item カテゴリー：神社・神宮・寺院，観光施設・名所巡り等
@@ -108,7 +108,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
   \begin{center}
     \includegraphics[clip,width=7.0cm]{picture/Photo_CosSim.png}
     \caption{類似度計算概念図}
-    \label{fig:photo_exp}
+    \label{fig:photo_cossim}
     \end{center}
 \end{figure}
 
@@ -126,7 +126,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
     \label{math:Vector difference}
 \end{equation}
 
-既訪問スポットの各特徴差分ベクトル$v_i$と未訪問スポットの各特徴差分ベクトル$v_j$から，既訪問スポットと未訪問スポット間の相対的な特徴の類似度（図\ref{fig:photo_exp}）を求める．類似度計算には，コサイン類似度(式\ref{math:CosSim})を用いる．
+既訪問スポットの各特徴差分ベクトル$v_i$と未訪問スポットの各特徴差分ベクトル$v_j$から，既訪問スポットと未訪問スポット間の相対的な特徴の類似度（図\ref{fig:photo_cossim}）を求める．類似度計算には，コサイン尺度(式\ref{math:CosSim})を用いる．
 \begin{eqnarray}
 cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}
 {\sqrt{v^2_{i1}+\cdots+v^2_{in}}\times\sqrt{v^2_{j1}+\cdots+v^2_{jn}}}
@@ -168,8 +168,7 @@ cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{調和平均による類推情報提示}
 \label{subsec:Presenting similar information by harmonic mean}
-既訪問スポットから未訪問スポットをイメージするための類推情報は，単語形式でユーザに提示する．節\ref{subsec:Feature vector generation by TFIDF}で関連付けした既訪問スポットと未訪問スポットの類推情報は，節\ref{subsec:Calculation of similarity by cosine similarity}で求めた各スポットの特徴ベクトルによる調和平均を用いて決定する．
-調和平均とは，逆数の算術平均の逆数である．既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．単語スコアが大きい10個の単語を類推情報としてユーザに提示する．
+既訪問スポットから未訪問スポットをイメージするための類推情報は，単語形式でユーザに提示する．節\ref{subsec:Feature vector generation by TFIDF}で関連付けした既訪問スポットと未訪問スポットの類推情報は，節\ref{subsec:Calculation of similarity by cosine similarity}で求めた各スポットの特徴ベクトルによる調和平均を用いて決定する．調和平均とは，逆数の算術平均の逆数である．既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．$visited_{word}$と$unvisited_{word}$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．単語スコアの値が大きと既訪問スポットと未訪問スポットのそれぞれのTFIDF値が大きい，つまり単語がそれぞれの文書に置いて重要度が高いことを示している．よって，単語スコアの上位10個の単語を類推情報としてユーザに提示する．
 \begin{eqnarray}
   score=\frac{1}{\frac{1}{2}(\frac{1}{visited_{word}}+\frac{1}{unvisited_{word}})}
   \label{math:Harmonic Mean}
@@ -231,8 +230,14 @@ cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{平均の重みと調和平均の比較実験}
 \label{subsec:A comparative experiment of harmonic mean over the average weight}
+
+節\ref{subsec:Presenting similar information by harmonic mean}では，調和平均を利用して単語スコアを算出し，上位10個の単語を類推情報としてユーザに提示するの提案手法について，妥当性を調査する予備実験を行った．
+
 %%%%%%%%%%%%%%%%%%
 \subsubsection{実験内容}
+調和平均を利用して類推情報を提示する場合と，各スポットの平均の重みを利用する場合の比較を行った．まず，訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．次は，閾値を決めて各スポットのTFIDF値の平均以上の単語を抽出する．具体的に，既訪問スポット集合の各スポットのTFIDF値の平均を計算し，スポット毎の単語のTFIDF値が各スポットの平均の重み以上であるかどうか判断する．また，未訪問スポットも同様な算出方法を使っての集合の各スポットのTFIDF値の平均を計算し，スポット毎の単語のTFIDF値が各スポットの平均の重み以上であるかどうか判断する．既訪問スポット単語スコアと未訪問単語スコアの差の絶対値が0に近いと，それぞれのスポットにおいての単語の意味合いが近いと示している．よって，差の絶対値が0に近い10個の単語を類推情報としてユーザに提示
+する．
+
 %%%%%%%%%%%%%%%%%%
 \subsubsection{実験結果と考察}
 
