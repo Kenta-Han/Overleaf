@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 NOV 2018 01:05
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 NOV 2018 18:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -139,35 +139,35 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 44.
+(Font)              <12> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 44.
+(Font)              <8> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 44.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 44.
+(Font)              <6> on input line 48.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 48.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 44.
+(Font)              size <10.95> substituted on input line 48.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 44.
+(Font)              size <10.95> substituted on input line 48.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.5> on input line 44.
+(Font)              <10.5> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.34996> on input line 44.
+(Font)              <7.34996> on input line 48.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.25> on input line 44.
+(Font)              <5.25> on input line 48.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 49.
+(Font)              <9> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 49.
+(Font)              <5> on input line 53.
 File: picture/Photo_Image.png Graphic file (type bmp)
 <picture/Photo_Image.png>
 [1
@@ -175,9 +175,9 @@ File: picture/Photo_Image.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 98.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 136.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 98.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 136.
 File: picture/Photo_CosSim.png Graphic file (type bmp)
 <picture/Photo_CosSim.png>
  [2] [3] [4] (./imecs_jap(deim).aux)
@@ -187,12 +187,12 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 1653 strings out of 493281
- 22290 string characters out of 6145040
- 113537 words of memory out of 5000000
- 5610 multiletter control sequences out of 15000+600000
+ 1652 strings out of 493281
+ 22209 string characters out of 6145040
+ 110528 words of memory out of 5000000
+ 5609 multiletter control sequences out of 15000+600000
  19006 words of font info for 73 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,13n,23p,1145b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,13n,23p,853b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_jap(deim).dvi (4 pages, 38680 bytes).
+Output written on imecs_jap(deim).dvi (4 pages, 38600 bytes).

@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1542557225 "imecs_eng.dvi" "imecs_eng.pdf" "imecs_eng" 1542557227
-  "imecs_eng.dvi" 1542557226 21612 814107bf8e17eb48e4bf4c435428cabd "latex"
+["dvipdf"] 1542622222 "imecs_eng.dvi" "imecs_eng.pdf" "imecs_eng" 1542622223
+  "imecs_eng.dvi" 1542622222 20364 c183183684881abf682cc68de16644f8 "latex"
   (generated)
   "imecs_eng.pdf"
-["latex"] 1542557225 "imecs_eng.tex" "imecs_eng.dvi" "imecs_eng" 1542557227
+["latex"] 1542622221 "imecs_eng.tex" "imecs_eng.dvi" "imecs_eng" 1542622223
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm" 1480098689 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -14,19 +14,16 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth8.tfm" 1480098698 1196 f76ab7ae43ed1dfe29b9e6ec2933fdb4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1480098698 1196 b274fc006918dea9e5263e2117f4bddb ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm" 1480098698 1196 1be730212205a270378fba11a44765dc ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm" 1480098698 1196 ede67ffb8cb4a6a8b9436c82b428664c ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min8.tfm" 1480098698 1196 d5b431ce76e19b70391960a9dd08fa4f ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min9.tfm" 1480098698 1196 415df3c165ce605a3c248afbbe3c844b ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm" 1480098698 856 7404843a5f798859944d7973a47821d5 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth8.tfm" 1480098698 856 8bfd9428b6290f70fd02322c8acb67da ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth9.tfm" 1480098698 856 bed293689e159275e10c27a9927115b7 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm" 1480098698 856 39c171483fe1bb7d0e1368980c0c205b ""
+  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm" 1480098698 856 e782a1e1d78799594d137f0fef162b39 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm" 1480098698 856 bdef40bcf3aed4751efa9be9bfa6eb4b ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin9.tfm" 1480098698 856 b22b8128b44bf8881977f2c74b361f47 ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1480098701 1328 c834bbb027764024c09d3d2bf908b5f0 ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1480098701 1332 f817c21a1ba54560425663374f1b651a ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm" 1480098701 1344 8a0be4fe4d376203000810ad4dc81558 ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1480098701 1336 3125ccb448c1a09074e3aa4a9832f130 ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1480098701 1332 1fde11373e221473104d6cc5993f046e ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1480098701 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1480098701 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1480098701 1300 b62933e007d01cfd073f79b963c01526 ""
@@ -44,12 +41,11 @@
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IAENGtran.cls" 1542215776 203149 9471e5de82c69aa397b96d0945566985 ""
-  "NEURAL_NETWORK.eps" 1542215776 397726 f85cc82d1a4ccbe60136b20303b488b6 ""
-  "imecs_eng.aux" 1542557226 2167 3e9a39dca59a8bdfb65e899c85199dcd ""
-  "imecs_eng.tex" 1542557225 39278 5e881f21d679c37fe7540db88558d803 ""
-  "picture/Photo_CosSim.png" 1542215776 47529 5712800aa94c3100887e895d47cc894e ""
-  "picture/Photo_Image.png" 1542215776 101964 be29a3e5cf55cbbfe2ba773451e6af5e ""
+  "imecs_eng.aux" 1542622222 2861 a02c69713fe891f67b1da9e5f0ef8ab3 ""
+  "imecs_eng.tex" 1542622221 46134 cb0a65a7d7fd95a6b250c9b69c434075 ""
+  "picture/Photo_CosSim_eng.png" 1542621613 50796 df03df0d0bd21f74b0db29e761761be1 ""
+  "picture/Photo_Image_eng.png" 1542621732 100464 480d65cb1d45ce95b94612998a75921f ""
   (generated)
+  "imecs_eng.aux"
   "imecs_eng.dvi"
   "imecs_eng.log"
-  "imecs_eng.aux"
