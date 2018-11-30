@@ -72,12 +72,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin8.tfm
-INPUT picture/Photo_Image.png
-INPUT extractbb -B cropbox -O picture/Photo_Image.png
+INPUT picture/Photo_Image_jap.png
+INPUT extractbb -B cropbox -O picture/Photo_Image_jap.png
 OUTPUT imecs_jap(deim).dvi
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT picture/Photo_CosSim.png
-INPUT extractbb -B cropbox -O picture/Photo_CosSim.png
+INPUT picture/Photo_CosSim_jap.png
+INPUT extractbb -B cropbox -O picture/Photo_CosSim_jap.png
 INPUT imecs_jap(deim).aux

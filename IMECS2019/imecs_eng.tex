@@ -385,7 +385,7 @@
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
-\title{Analogical Information Presentation Method Based on Already Visited Spot for Understanding of Unvisited Area}
+\title{An Explanation Method of Unfamiliar Tourist Spots based on Roles of User's Familiar Spots}
 %
 %
 % author names and IAENG memberships
@@ -425,26 +425,25 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 \begin{abstract}
 %\boldmath
 
-
 % 近年，観光スポットを決める時にWeb上の観光情報を活用して計画を立てることが多くなっている．
 In recent years, when planning tourist spots, planning is often made by utilizing tourist information on the Web.
 % しかし，ユーザが多くのエリアから訪問したいエリアを決めた上で，さらに自分のイメージに合う観光スポットを探すのは膨大な時間と労力を必要とする．
 However, after deciding the area you want to visit from many areas, the user also needs enormous amount of time and effort to find tourist spots that match your image.
 % また，ユーザが未訪問スポットに対して期待と不安を感じる場合がある．
 In addition, there are cases where the user feels expectation and anxiety with respect to the unvisited spot.
-% 本研究では，ユーザの未知なスポットに対する理解を支援するためには，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する類推情報提示を提案する．
-In this research, in order to support understanding of users' unknown spots, we propose analogy information presentation that supports the understanding by fitting the features of tourist spots that have already visited to unvisited spots.
+% 本研究では，ユーザの未知なスポットに対する理解を支援するためには，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
+In this research, in order to support understanding of users' unknown spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have already visited to unvisited spots.
 % 観光スポット自身の特徴を重視するため，各観光スポットの特徴抽出に，ユーザが入力した観光スポットのすべてのレビュー，対象エリアの観光スポットのすべてのレビューを使用する．
 In order to emphasize the features of the tourist spots themselves, extraction of features of each tourist spot is done by work using all reviews of tourist spots entered by the user, all reviews of tourist spots in the target area.
-% また，プロトタイプシステムを構築し，既訪問スポットと未訪問スポットとの類推情報の効果を検証する評価実験を行う．
-We also conduct an evaluation experiment to construct the prototype system and verify the effect of the analogy information between the visited spot and the unvisited spot.
+% また，プロトタイプシステムを構築し，既訪問スポットと未訪問スポットとの説明情報の効果を検証する評価実験を行う．
+We also conduct an evaluation experiment to construct the prototype system and verify the effect of the explanatory information between the visited spot and the unvisited spot.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{IAENGkeywords}
-% 観光スポット，類推，理解支援，レビュー，コサイン類似度，TFIDF，調和平均
-tourist spots, analogy, understanding support, reviews, cosine similarity, TFIDF, harmonic mean.
+% 観光スポット，理解支援，レビュー，コサイン類似度，TFIDF，調和平均
+tourist spots, understanding support, reviews, cosine similarity, TFIDF, harmonic mean
 \end{IAENGkeywords}
 
 \IAENGpeerreviewmaketitle
@@ -471,31 +470,31 @@ In recent years, the speed of development of tourism industry and social network
 % さまざまな観光スポットを効果的に理解するためには，既存の情報をもとにして，未知な情報と既知な情報との対応関係を考えることが不可欠となる．
 In order to effectively understand various tourist spots, it is essential to consider the correspondence between unknown information and existing information based on existing information.
 % この考え方は，以前に経験した事柄(ベースと呼ぶ)を，現在直面している事柄あるいは問題(ターゲットと呼ぶ)にあてはめる類推に相当する．
-This way of thinking is equivalent to analogy which applies to the things by previous experiences (called "bases"), or problems (called "targets").
+This way of thinking is equivalent to analogy which applies to the things by previous experiences (called the base), or problems (called the target).
 % たとえば，金沢の「にし茶屋街」という未知なスポットに対して既訪問の京都の「花見小路」と似ていると説明するとイメージの理解がしやすくすることがある．
-For example, whereas unknown spots such as "Kanazawa's Nisityayagai", if you explain that it is similar to the already visited "Kyoto Hanamikoji", it may make it easier to understand the image.
+For example, whereas unknown spots such as ``Kanazawa's Nisityayagai'', if you explain that it is similar to the already visited ``Kyoto Hanamikoj'', it may make it easier to understand the image.
 
-% 本研究では，ユーザの未知なスポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する類推情報提示を提案する．
-In this research, in order to support understanding of users' unknown spots, we propose analogy information presentation that supports the understanding by fitting the features of tourist spots that have already visited to unvisited spots.
-% 具体的には，ユーザが入力した既訪問スポットと未訪問エリアから，レビュを用いて既訪問スポット内の各スポットの独特な特徴と未訪問エリア内の各スポットの独特な特徴を抽出し，比較を行って類推情報を提示する．
-Specifically, from the already visited spot and the unvisited area entered by the user, we use the review to extract the unique features of each spot in the already visited spot and the unique features of each spot in the unvisited area, compare and present analogy information.
-% このプロトタイプシステムにより，ユーザが未訪問エリアに対する理解の支援を目指す．
-With this prototype system, users aim to support understanding of unvisited areas.
+% 本研究では，ユーザの未知なスポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
+In this research, in order to support understanding of users' unknown spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have already visited to unvisited spots.
+% 具体的には，ユーザが入力した既訪問スポットと未訪問エリアから，レビュを用いて既訪問スポット内の各スポットの独特な特徴と未訪問エリア内の各スポットの独特な特徴を抽出し，比較を行って説明情報を提示する．
+Specifically, from the already visited spot and the unvisited area entered by the user, we use the review to extract the unique features of each spot in the already visited spot and the unique features of each spot in the unvisited area, compare and present explanatory information.
+% このプロトタイプシステムにより，ユーザが未訪問スポットに対する理解の支援を目指す．
+With this prototype system, users aim to support understanding of unvisited spots.
 % 図\ref{fig:Photo_Image}は提案手法の概念図である．
 Fig. \ref{fig:Photo_Image} is a conceptual diagram of the proposed method.
 
 % 本論文の構成は下記のとおりである．2節では関連研究について述べる．3節では提案手法の概要について述べる．4節では構築したプロトタイプシステムの効果を検証する評価実験と考察について述べる．最後に5節ではまとめと今後の課題について述べる．
 The structure of this paper is as follows.
 Section \ref{sec:Related Work} describes related research.
-Section \ref{sec:Analogical Information Presentation Method} gives an overview of the proposed method.
-Section \ref{sec:Preliminary Experiment} describes evaluation experiments and considerations to verify the effect of the constructed prototype system.
+Section \ref{sec:An Explaination Method of Unfamiliar Tourist Spots} gives an overview of the proposed method.
+Section \ref{sec:Evaluation Experiment} describes evaluation experiments and considerations to verify the effect of the constructed prototype system.
 Section \ref{sec:Conclusions and Future Work} describes with conclusions and future work.
 
 \begin{figure}[t]
   \begin{center}
     \includegraphics[clip,width=7.5cm,bb=0 0 720 540]{picture/Photo_Image_eng.png}
-    % 未訪問エリアの理解支援のための既訪問スポットに基づく類推情報提示手法
-    \caption{Analogical information presentation method based on already visited spot for understanding of unvisited area}
+    % ユーザの既訪問スポットの位置づけに基づく未訪問スポット(エリア)の説明手法
+    \caption{An explanation method of unfamiliar tourist spots based on roles of user's familiar spots}
     \label{fig:Photo_Image}
    \end{center}
 \end{figure}
@@ -507,16 +506,64 @@ Section \ref{sec:Conclusions and Future Work} describes with conclusions and fut
 \label{sec:Related Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Research using user history}
+\label{subsec:Research using user history}
+
+% ユーザの体験履歴を利用した検索や推薦システムに関する研究が数多く発表されている．
+Many researches on retrieval and recommendation system using the user's experience history have been published.
+% 倉島ら\cite{Codd01}は，Flickrに投稿された写真のジオタグ情報を人々の旅行履歴として利用した旅行ルート推薦手法を提案した．
+Kurashima et al.\cite{Codd01} proposed a travel route recommendation method using geotag information of photos posted to Flickr as a travel history of people.
+% この手法では，ユーザの現在地から行きやすい場所とユーザの興味に合致した場所に移動しやすいと仮定し，行動モデルを生成している．
+In this method, it is assumed that it is easy to move from a user's present location to a place easily accessible to the user's interest, and a behavior model is generated.
+% ユーザのジオタグ付き写真集合は，時間情報でソートすると個人の旅行履歴とみなすことができると考え，ジオタグ情報を利用してユーザの行動モデルを生成している．
+That geotagged photo aggregation of users can be regarded as personal travel history when sorted by time information, and we generate user behavior model using geotag information.
+% 北村らは\cite{Codd02}，一般的な物体認識を用いて，過去の個人旅行写真から旅行計画のユーザの嗜好を推定することに基づいて観光地を推薦する方法を提案した．
+Kitamura et al.\cite{Codd02} proposed a method of recommending sightseeing spots based on estimating user's preferences of travel plan from past personal travel photographs using general object recognition.
+% 物体認識システムを用いて，写真で撮った被写体情報のキーワードを取得し，グラフ視覚化技術によってキーワードの共起を表現した．
+Using an object recognition system to acquire keywords of subject information taken in the photos and represented the co-occurrence of the keywords by a graph visualization technique.
+% また，グラフの視覚化技術に基づいて旅行写真付きのグラフを視覚化するユーザインターフェイスを紹介した．
+In addition, present a user interface that visualizes a graph with travel photos based on our graph visualization technique.
+% Chengらは\cite{Codd03}，自由に利用できるコミュニティ寄稿の写真を活用して，パーソナライズされた旅行のおすすめに焦点を当て，特定のユーザープロファイルまたは属性を考慮し，パーソナライズされた旅行の推奨を行うことを提案した．
+Cheng et al.\cite{Codd03} used photographs of freely available community contributions to focus on personalized trip recommendations, considering specific user profiles or attributes, suggested to consider personalized travel recommendations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Research on analogy}
+\label{subsec:Research on analogy}
+
+% 類推は創造的思考に貢献すると指摘されてた\cite{Codd04}．
+Analogies were pointed out as contributing to creative thinking\cite{Codd04}.
+% 既知の知識(ベースと呼ぶ)から概念(ターゲットと呼ぶ)を獲得するときに類推思考が働くとされる\cite{Codd05}．
+Analogical thinking works when acquiring a concept (called the target) from known knowledge (called the bases)\cite{Codd05}.
+% 類推に関する研究の多くは，ベースとなる学習データとターゲットとなる問題が与えられ，物事の特徴を問題の特徴にマッピングして問題を解決するもの\cite{Codd06}である．
+Many of the researches on analogy are given the base learning data and targeted problems, and the problems are solved by mapping the features of things to the characteristics of the problem\cite{Codd06}.
+% Gickらは，不確定な問題の解を見つけるためのガイドとして，異種ドメイン間の類推の使用を調査するように設計した．
+Gick et al. designed to investigate the use of analogies between disparate domains as a guide to finding solutions for an ill-defined problem.
+% 学習データの与え方や機能について研究したもの\cite{Codd07}や，認知的な熟達度に応じて問題を解決するかどうかを明らかにしたもの\cite{Codd08}がある．
+Some studied about how to give learning data and functions\cite{Codd07}, and clarified whether to solve the problem depending on the degree of cognitive proficiency\cite{Codd08}.
+% これらを含む従来研究の多くにおいては，類推に用いるベースとターゲットを与えたうえで，一定の手順に従って問題解決を行っている.
+In many of the conventional research including these, after giving bases and targets for analogy, we solve problems according to a certain procedure.
+% また，構造の類似性には3種類あり，特徴の共有数で決まる「対象レベルの類似性」，ベースに存在する関係とターゲットに存在する関係の共有度に基づく「関係レベルの類似性」，および題の解法あるいは目標レベルでの類似性である「プラグマティックな類似性」とがある\cite{Codd05}，\cite{Codd09}．
+There are three types of structural similarities``similarity of object level'' determined by the number of shared features, ``relationship similarity'' based on the degree of sharedness of relationships existing in the base and the relationship existing in the base, and similarity in the title solution or target level There is a certain ``pragmatic similarity''\cite{Codd05}，\cite{Codd09}.
+
+% 従来のユーザの体験履歴を利用する手法では，履歴写真のジオタグ情報を分析し，ユーザの嗜好とする研究が多く行われている．
+In the conventional method of using the user's experience history, many researches that analyze the geotag information of the history photograph and make it user's preference are performed.
+% また，類推技術に関して学習支援でよくて使われている．
+In addition, it is well used in learning support on analogy technology.
+% 本研究では，既訪問スポットと未訪問エリアのレビューを使って，ユーザ既訪問スポット集合と未訪問スポット集合のそれぞれ集合の各スポットの相対的な特徴を求め，関連付けることによって，スポットに対する理解を支援するため説明情報を提示することができる．
+In this research, using the review of visited spots and unvisited areas, the relative features of each spot in each set of user visited spot set and unvisited spot set are determined and associated, thereby supporting understanding of spots explanation information can be presented.
+% また，本研究では，類推の質を明示的扱うため，構造の類似性「関係レベルの類似性」に近いと考えられる．
+Moreover, because the quality of analogy is treated explicitly, it is considered to be similar to the similarity of structure "similarity of relationship level" by this research.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Analogical Information Presentation Method}
-\label{sec:Analogical Information Presentation Method}
+% 未訪問スポットの説明手法
+\section{An Explaination Method of Unfamiliar Tourist Spots}
+\label{sec:An Explaination Method of Unfamiliar Tourist Spots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 我々は，未訪問エリアの理解支援のための既訪問スポットに基づく類推情報提示手法を提案する．
-We propose an analogy information presentation method based on an already visited spot for supporting understanding of unvisited areas.
+% 我々は，ユーザの既訪問スポットの位置づけに基づく未訪問スポットの説明手法を提案する．
+We propose an explanation method of unfamiliar tourist spots based on roles of user’s familiar spots
 % 具体的にはまず，ユーザが既訪問の複数個の観光スポットと訪問したい観光スポットエリア情報を入力する．
 Specifically, first, the user inputs a plurality of tourist spots that have been visited and tourist spot area information that user wishes to visit.
 % 既訪問スポットレビューベクトルを使って既訪問スポット毎の特徴ベクトルを求める．
@@ -525,11 +572,23 @@ Use the already visited spot review vector to find the feature vector for each v
 Similarly, the feature vector of each spot in the area is obtained for an unvisited spot.
 % 次に，既訪問スポットレビューベクトルと未訪問スポットレビューベクトルの差分特徴に類似する特徴を持つ未既訪問観光スポット関連付けを行う．
 Next, we associate unvisited tourist spots with features similar to the difference features between the visited spot review vector and the unvisited spot review vector.
-% 最後に，TFIDFを用いて未訪問エリアの理解支援のための類推情報を定義し，ユーザに提示する．
-Finally, analogy information for supporting understanding of unvisited areas is defined using TFIDF and presented to the user.
+% 最後に，TFIDFを用いて未訪問スポットの理解支援のための説明手法を定義し，ユーザに提示する．
+Finally, explanation method for supporting understanding of unvisited spot is defined using TFIDF and presented to the user.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Relative features of tourist spots}
+% スポットのレビューから特徴ベクトル生成
+\subsection{Generating feature vector from reviews of spot}
+\label{subsec:Generating feature vector from reviews of spot}
+% 既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器「mecab-ipadic-NEologd」で分かち書き(原型)したレビューを利用して作成する．
+Review vectors of previously visited spots and unvisited spots are created using a discriminated (original) review with the morphological analyzer\cite{Codd10} ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
+% その後，Doc2VecのDistributed Bag-of-Wordsを利用して，各スポットの全レビューを使って300次元で作成したベクトルを使う．
+After that, using Distributed\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} Bag-of-Words of Doc2Vec, we use a vector created in 300 dimensions using all reviews of each spot.
+% 本稿に置いて，レビューデータは2016年09月末までじゃらんから取得したものを用いる．
+In this paper, we will use the review data obtained from ``Jalan''\footnote{https://www.jalan.net/kankou/} until the end of September 2016.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%観光スポットの役割に関する相対的な特徴
+\subsection{Relative features for role of tourist spots}
 \label{subsec:Relative features of tourist spots}
 
 \begin{figure}[t]
@@ -546,32 +605,22 @@ In this research, features of tourist spots make use of relative features.
 % 相対的な特徴とは，特定の観光スポットが，ある観光スポット集合に含まれた他の観光スポットと比較した場合における独特な特徴である．
 The relative feature is a unique feature when a specific tourist spot is compared with other tourist spots included in a set of tourist spots.
 % 例として，観光スポット集合内に鹿苑寺と清水寺が存在する場合を考える．
-As an example, consider the case where there are "Rokuonji" and "Kiyomizudera" in the tourist spot group.
+As an example, consider the case where there are ``Rokuonji'' and ``Kiyomizudera'' in the tourist spot group.
 % このとき鹿苑寺の特徴は，金色，金箔，輝き等となり，清水寺の特徴は，舞台，胎内，一望等となる．
-At this time, the features of "Rokuonji" will be gold color, gold leaf, glow, etc., the features of "Kiyomizudera" are the stage, the womb inside, the panoramic view etc.
+At this time, the features of ``Rokuonji'' will be gold color, gold leaf, glow, etc., the features of ``Kiyomizudera'' are the stage, the womb inside, the panoramic view etc.
 % どちらも京都に存在する寺院であるため，京都や寺院に関連する特徴は独特な特徴として現れることがない．
 Because both are temples existing in Kyoto, features related to Kyoto and temples do not appear as unique features.
 % 次に，観光スポット集合内に東京都庁舎展望台と鹿苑寺が存在する場合を考える．
-Next, consider the case where "the Tokyo Metropolitan Government Building Observatories" and "Rokuonji" exist within the tourist spot group.
+Next, consider the case where ``the Tokyo Metropolitan Government Building Observatories'' and ``Rokuonji'' exist within the tourist spot group.
 % このとき鹿苑寺の特徴は，金閣寺，お寺，金色，京都等となり，東京都庁舎の特徴は，展望，夜景，新宿等となる．
-Features of "Rokuonji" at this time will be Kinkakuji, a temple, golden color, Kyoto etc.
+Features of ``Rokuonji'' at this time will be Kinkakuji, a temple, golden color, Kyoto etc.
 % 観光スポットのカテゴリーが大きく異なる場合であれば，カテゴリーとしての特徴が現れる．
-Features of "the Tokyo Metropolitan Government Building Observatories" will be perspectives, night view, Shinjuku etc.
+Features of ``the Tokyo Metropolitan Government Building Observatories'' will be perspectives, night view, Shinjuku etc.
 % また，スポット自身の特徴を表すことができる．
 If the categories of tourist spots are largely different, features as categories will appear.
 % 本研究では，あるスポットが集合内の他のスポットと比較するとき，より各スポットの特徴を明らかにできる相対的な特徴に着目して研究を行う．
 Also, it can show the features of the spot itself.
 In this research, when a certain spot compares with other spots in the set, we focus on the relative features that make it possible to clarify the features of each spot.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Calculation of similarity by cosine similarity}
-\label{subsec:Calculation of similarity by cosine similarity}
-% 既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器「mecab-ipadic-NEologd」で分かち書き(原型)したレビューを利用して作成する．
-Review vectors of previously visited spots and unvisited spots are created using a discriminated (original) review with the morphological analyzer "mecab-ipadic-NEologd"\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
-% その後，Doc2VecのDistributed Bag-of-Wordsを利用して，各スポットの全レビューを使って300次元で作成したベクトルを使う．
-After that, using Distributed\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} Bag-of-Words of Doc2Vec, we use a vector created in 300 dimensions using all reviews of each spot.
-% 本稿に置いて，レビューデータは2016年09月末までじゃらんから取得したものを用いる．
-In this paper, we will use the review data obtained from "Jalan"\footnote{https://www.jalan.net/kankou/} until the end of September 2016.
 
 % スポット差分ベクトルは式\ref{math:Vector difference}として定義される．
 The spot differential vector is defined as formula \ref{math:Vector difference}.
@@ -587,10 +636,16 @@ $s_i$ is a tourist spot in the set.
     \label{math:Vector difference}
 \end{equation}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%説明スポットの決定
+\subsection{Determination of explainable spot}
+\label{subsec:Determination of explainable spot}
+
 % 既訪問スポットの各特徴差分ベクトル$v_i$と未訪問スポットの各特徴差分ベクトル$v_j$から，既訪問スポットと未訪問スポット間の相対的な特徴の類似度（図\ref{fig:photo_cossim}）を求める．
 From the feature difference vector $v_i$ of the visited spot and the feature difference vector $v_j$ of the unvisited spot, the relative feature similarity between the visited spot and the unvisited spot (Fig. \ref{fig:Photo_CosSim} ).
 % 類似度計算には，コサイン尺度(式\ref{math:CosSim})を用いる．
-For the similarity calculation, use the cosine scale (formula \ref{math: CosSim}).
+For the similarity calculation, use the cosine scale (formula \ref{math:CosSim}).
 
 \begin{eqnarray}
 cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}
@@ -600,19 +655,36 @@ cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}
 
 % 既訪問スポットの各特徴ベクトルと未訪問エリア内の各特徴ベクトルの類似度が0.125以上かつ，類似度が最も高い既訪問スポットと未訪問スポットの関連付けを行う．
 A correlation between the already visited spot having similarity of each feature vector of the already visited spot and each feature vector in the unvisited area of 0.125 or more and the highest similarity and the unvisited spot is performed.
+% また，既訪問スポットと未訪問スポットとの関連をつけるとき以下の2つの方法がある．
+In addition, there are two ways to establish an association between an already visited spot and an unvisited spot.
+
+\begin{enumerate}
+  % \item 既訪問スポットをベースにして未訪問スポットと関連付ける方法
+  \item how to relate to unvisited spots based on already visited spots
+  % \item 未訪問スポットをベースにして既訪問スポットと関連付ける方法
+  \item how to relate to already visited spots based on unvisited spots
+\end{enumerate}
+
+% 方法1では，既訪問スポットをベースにすると未訪問エリア内のスポットが複数の特徴を保持する場合は同じ未訪問スポットと関連付ける場合がある．
+In the method 1, if the spot in the unvisited area holds a plurality of features when using the already visited spot as the base, there are cases where the spot is associated with the same unvisited spot.
+% 方法2では，未訪問スポットをベースにすることによって，既訪問スポット集合から各スポットの特徴を取り出し，未訪問スポットと関連付けることができるため，方法2を利用する．
+In method 2, method 2 is used as it is possible to extract features of each spot from the already visited spot set based on the unvisited spot and associate with the unvisited spot.
+% また，本研究では，未訪問スポットを説明するため未訪問スポットをベースにすることが妥当と考えられる．
+In addition, in this research, it is considered reasonable to base on unvisited spots to explain unvisited spots.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Feature vector generation by TFIDF}
-\label{subsec:Feature vector generation by TFIDF}
+% 説明するための役割語の抽出
+\subsection{Extraction of explainable words for role}
+\label{subsec:Extraction of explainable words for role}
 % 観光スポットのレビューはすべて形態素解析器「mecab-ipadic-NEologd」を使用することで，単語抽出処理を行う．
-All tourist spots review words by using morphological analyzer "mecab-ipadic-NEologd".
+All tourist spots review words by using morphological analyzer ``mecab-ipadic-NEologd''.
 % しかし，これらを用いて得られた単語は，日本語として成立しない語が含まれており，これらノイズの削除が必要となる．
 However, words obtained by using these words contain words that do not hold Japanese, and it is necessary to delete these noises.
 % 具体的には，助詞，助動詞，連体詞，記号を削除する．
 Specifically, delete particles, auxiliary verbs, rentaishi, symbols.
 
-% 節\ref{subsec:Calculation of similarity by cosine similarity}で関連付けした既訪問スポットと未訪問スポットの類推情報は単語形式でユーザに提示するため，ある観光スポットのレビュー集合を文書$i$とし，$i$に対する単語$j$が出現するスポット集合の出現回数を$TF_{i,j}$，単語$j$がスポット集合の文書数を$DF_{j}$，スポット集合内の全スポット数を$|D|$とした時，そのスポットにおける単語の特徴量は，式\ref{math:TFIDF}で定義される．
-Since the analogy information of the visited spot and the unvisited spot associated in section \ref{subsec:Calculation of similarity by cosine similarity} is presented to the user in word format, a review set of a certain tourist spot is assumed to be a document $i$ and a spot where the word $j$ for $i$ appears When the number of occurrences of the set is $TF_{i,j}$, the word $j$ is the number of documents in the spot set is $DF_{j}$, and the total number of spots in the spot set is $|D|$ The feature quantity of a word in a spot is defined by the formula \ref{math:TFIDF}.
+% 節\ref{subsec:Determination of explainable spot}で関連付けした既訪問スポットと未訪問スポットの説明情報は単語形式でユーザに提示するため，ある観光スポットのレビュー集合を文書$i$とし，$i$に対する単語$j$が出現するスポット集合の出現回数を$TF_{i,j}$，単語$j$がスポット集合の文書数を$DF_{j}$，スポット集合内の全スポット数を$|D|$とした時，そのスポットにおける単語の特徴量は，式\ref{math:TFIDF}で定義される．
+Since the explanation information of the visited spot and the unvisited spot associated in section \ref{subsec:Determination of explainable spot} is presented to the user in word format, a review set of a certain tourist spot is assumed to be a document $i$ and a spot where the word $j$ for $i$ appears When the number of occurrences of the set is $TF_{i,j}$, the word $j$ is the number of documents in the spot set is $DF_{j}$, and the total number of spots in the spot set is $|D|$ The feature quantity of a word in a spot is defined by the formula \ref{math:TFIDF}.
 
 \begin{equation}
   word_{i,j} = TF_{i,j} \times IDF_{j}
@@ -625,21 +697,16 @@ Since the analogy information of the visited spot and the unvisited spot associa
 
 % 本手法では，既訪問スポットに関して，ユーザが複数個のスポットを入力する．
 In this method, for visited spots, the user inputs plurality of spots.
-% それぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，既訪問スポット毎の特徴ベクトルとする．
-By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature vector for each spot in the unvisited area.
+% それぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，既訪問スポット毎の特徴語とする．
+By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unvisited area.
 
 % 未訪問エリアに関して，ユーザがエリアを指定して入力する．
 Regarding the unvisited area, the user designates an area and inputs it.
-% エリア内のそれぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，未訪問エリアのスポット毎の特徴ベクトルとする．
-By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature vector for each spot in the unvisited area.
+% エリア内のそれぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，未訪問エリアのスポット毎の特徴語とする．
+By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unvisited area.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Presenting similar information by harmonic mean}
-\label{subsec:Presenting similar information by harmonic mean}
-% 既訪問スポットから未訪問スポットをイメージするための類推情報は，単語形式でユーザに提示する．
-The analogy information for imaging the unvisited spot from the already visited spot is presented to the user in word format.
-% 節\ref{subsec:Feature vector generation by TFIDF}で関連付けした既訪問スポットと未訪問スポットの類推情報は，節\ref{subsec:Calculation of similarity by cosine similarity}で求めた各スポットの特徴ベクトルによる調和平均を用いて決定する．
-The analogy information of the visited spot and the unvisited spot associated with the section \ref{subsec:Feature vector generation by TFIDF}, it is determined using harmonic mean by the feature vector of each spot obtained by the section \ref{subsec:Calculation of similarity by cosine similarity}.
+% 関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
+The explanation information on the associated visited spots and unvisited spots associated with each other is determined by using harmonic averages according to feature words of each spot obtained by TFIDF.
 % 調和平均とは，逆数の算術平均の逆数である．
 The harmonic mean is the reciprocal of the arithmetic mean of the reciprocal.
 % 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
@@ -650,13 +717,20 @@ The score of the extracted word is defined by the formula \ref{math:Harmonic Mea
 $word_{visited}$ and $word_{unvisited}$ indicate the TFIDF value of the visited spot and the TFIDF value of the unvisited spot, respectively.
 % 単語スコアの値が大きと既訪問スポットと未訪問スポットのそれぞれのTFIDF値が大きい，つまり単語がそれぞれの文書に置いて重要度が高いことを示している．
 When the value of the word score is large, the TFIDF value of each of the visited spot and the unvisited spot is large, that is, the word has high importance in each document.
-% よって，単語スコアの上位10個の単語を類推情報としてユーザに提示する．
-Therefore, the top ten words of the word score are presented to the user as analogy information.
+% よって，単語スコアの上位10個の単語を説明情報としてユーザに提示する．
+Therefore, the top ten words of the word score are presented to the user as explanation information.
 
 \begin{eqnarray}
   score=\frac{1}{\frac{1}{2}(\frac{1}{word_{visited}}+\frac{1}{word_{unvisited}})}
   \label{math:Harmonic Mean}
 \end{eqnarray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Example of explained unfamiliar tourist spots}
+\label{subsec:Example of explained unfamiliar tourist spots}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -680,6 +754,7 @@ Therefore, the top ten words of the word score are presented to the user as anal
 \label{sec:Conclusions and Future Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 % use section* for acknowledgement
@@ -727,51 +802,48 @@ are placed in the unnumbered footnote on the first page, not here.
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
-
   \bibitem{Codd01}
-    廣嶋 伸章,安田 宜仁,藤田 尚樹,片岡 良治,
-      地理情報検索におけるクエリ入力支援のための特徴語の提示,
-      第26回人工知能学会全国大会, Vol.26, 1C1-R-5-6, 2012
+    T. Kurashima, T. Iwata, G. Irie and K. Fujimura.,
+      ``Travel route recommendation using geotags in photo sharing sites'',
+      CIKM '10 Proceedings of the 19th ACM international conference on Information and knowledge management, pp.579-588, 2010
   \bibitem{Codd02}
-    松本 敦志,杉本 徹,
-      クチコミから抽出した特徴語を利用する観光地検索支援,
-      第75回全国大会講演論文集, Vol.2013, No.1, pp.307-308, 2013
+    R. Kitamura and T. Itoh,
+      ``Tourist Spot Recommmendation Applying Generic Object Recognition with Travel Photos'',
+      ITE Tech. Rep., Vol.42, No.12, AIT2018-94, pp.185-188, 2018
   \bibitem{Codd03}
-    上原 尚,嶋田 和孝,遠藤 勉,
-      Web上に混在する観光情報を活用した観光地推薦システム,
-      社団法人 電子情報通信学会,信学技報, Vol.112, No.367, pp.13-18, 2012
+    A. J. Cheng, Y. Y. Chen, Y. T. Huang and Winston H. Hsu,
+      ``Personalized Travel Recommendation by Mining People Attributes from Community-Contributed Photos'',
+      MM '11 Proceedings of the 19th ACM international conference on Multimedia, pp.83-92, 2011
   \bibitem{Codd04}
-    野守 耕爾,神津 友武,
-      口コミデータにPLSAを適用した観光客目線による観光地分析,
-      第29回人工知能学会全国大会, Vol.29, 1J2-OS-18a-2, pp.1-4, 2015
+    K. J. Holyoak and P. Thagard,
+      ``Mental Leaps: Analogy in Creative Thought, MIT Press'',
+      % Cambridge, 1995 %英語用
+      Journal of Japanese Society for Artificial Intelligence,  Vol.11, No.3,  pp.489, 1996
   \bibitem{Codd05}
-    Gick, M.L. and Holyoak, K.J.:
-    Analogical Problem Solving,
-    Cognitive Psychology, Vol.12, pp.306–355, 1980
+    D. Gentner,
+      ``Structure-Mapping: A Theoretical Framework for Analogy'',
+      Cognitive Science, Vol.7, pp.155–170, 1983
   \bibitem{Codd06}
-    石田 純太,砂山 渡,
-      新知識を理解するための類推能力の育成,
-      第30回人工知能学会全国大会, Vol.30, 3F3-3, 2016
+    M. L. Gick and K. J. Holyoak,
+      ``Analogical Problem Solving'',
+      Cognitive Psychology, Vol.12, pp.306–355, 1980
   \bibitem{Codd07}
-    % 死
-    砂山 渡, 石田 純太,川本 佳代,西原 陽子,
-      類推による説明スキルの獲得支援システム,
-      情報処理学会論文誌, Vol.59, No.10, 1922–1931, 2018
+    M. L. Gick and K. J. Holyoak,
+      ``Scheme Induction and Similarity in Analogical Transfer'',
+      Cognitive Psychology, Vol.15, pp.1–38, 1983
   \bibitem{Codd08}
-    % 中村 潤,大澤 幸生,
-    Jun NAKAMURA, Yukio OHSAWA,
-      % 概念創造のための類推思考プロセスにおける迷いの効果,
-      Effect of Vacillation on Analogical Thought Process for Concept Creation,
-      % 横幹, Vol.2, No.1, p.40-48, 2008
-      Oukan, Vol.2, No.1, p.40-48, 2008
+    Z. Chen and M. W. Daehler,
+      ``Positive and Negative Transfer in Analogical Problem-solving by 6-years-old Children'',
+      Cognitive Development, Vol.4, No.4, pp.327–344, 1989
   \bibitem{Codd09}
-    Gentner, D.: Structure-Mapping:
-    A Theoretical Framework for Analogy,
-    Cognitive Science, Vol.7, pp.155–170, 1983
-  \bibitem{Codd13}
-    杉山 将,
-      確率分布間の距離推定:機械学習分野における最新動向,
-      日本応用数理学会論文誌,Vol.23, No.3, pp.439-452, 2013
+    K. J. Holyoak and P. Thagard,
+      ``Analogical Mapping by Constraint Satisfaction'',
+      Cognitive Science, Vol.13, pp.295–355, 1989
+  \bibitem{Codd10}
+    % 日本の形態素解析に条件付きランダムフィールドを適用する
+    T. Kudo, K. Yamamoto and Y. Matsumoto,
+    ``Applying Conditional Random Fields to Japanese Morphological Analysis'',
+    Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP-2004), pp.230-237, 2004
 
 \end{thebibliography}
 

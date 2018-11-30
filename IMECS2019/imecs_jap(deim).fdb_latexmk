@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1542620886 "imecs_jap(deim).dvi" "imecs_jap(deim).pdf" "imecs_jap(deim)" 1542620887
-  "imecs_jap(deim).dvi" 1542620886 38600 f9318e3bd1cd2693fd9c0022e03b481c "latex"
+["dvipdf"] 1543583002 "imecs_jap(deim).dvi" "imecs_jap(deim).pdf" "imecs_jap(deim)" 1543583004
+  "imecs_jap(deim).dvi" 1543583002 38892 b9dc76c293a99249a0c5ba6ebbb1455c "latex"
   (generated)
   "imecs_jap(deim).pdf"
-["latex"] 1542620885 "imecs_jap(deim).tex" "imecs_jap(deim).dvi" "imecs_jap(deim)" 1542620887
+["latex"] 1543583001 "imecs_jap(deim).tex" "imecs_jap(deim).dvi" "imecs_jap(deim)" 1543583004
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1480098698 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1480098698 1196 b274fc006918dea9e5263e2117f4bddb ""
@@ -49,13 +49,13 @@
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "deimj.cls" 1542215776 90163 9e45442a18cb67b016edff923a3a20d9 ""
-  "extractbb -B cropbox -O picture/Photo_CosSim.png" 0 -1 0 ""
-  "extractbb -B cropbox -O picture/Photo_Image.png" 0 -1 0 ""
-  "imecs_jap(deim).aux" 1542620886 1598 fd06aeacfa009638bb69e43fd4865e2e ""
-  "imecs_jap(deim).tex" 1542620884 32323 df75f6c3094e63b97fe077bcb41e2563 ""
-  "picture/Photo_CosSim.png" 1542215776 47529 5712800aa94c3100887e895d47cc894e ""
-  "picture/Photo_Image.png" 1542215776 101964 be29a3e5cf55cbbfe2ba773451e6af5e ""
+  "extractbb -B cropbox -O picture/Photo_CosSim_jap.png" 0 -1 0 ""
+  "extractbb -B cropbox -O picture/Photo_Image_jap.png" 0 -1 0 ""
+  "imecs_jap(deim).aux" 1543583002 1659 0f400658404d1536ff0167c62ffd8560 ""
+  "imecs_jap(deim).tex" 1543583000 40198 05872b0262b9db68d7b96f1161543c08 ""
+  "picture/Photo_CosSim_jap.png" 1542215776 47529 5712800aa94c3100887e895d47cc894e ""
+  "picture/Photo_Image_jap.png" 1543580622 101618 bcb97912f469f26a2ebcd47cd00cd6df ""
   (generated)
-  "imecs_jap(deim).aux"
   "imecs_jap(deim).log"
   "imecs_jap(deim).dvi"
+  "imecs_jap(deim).aux"
