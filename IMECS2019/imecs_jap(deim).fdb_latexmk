@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1545204858 "imecs_jap(deim).dvi" "imecs_jap(deim).pdf" "imecs_jap(deim)" 1545204860
-  "imecs_jap(deim).dvi" 1545204858 52060 ba3b2aeca17cd3c24b4dfde1c5a38a66 "latex"
+["dvipdf"] 1545213350 "imecs_jap(deim).dvi" "imecs_jap(deim).pdf" "imecs_jap(deim)" 1545213352
+  "imecs_jap(deim).dvi" 1545213350 52060 c2d88a5c9ccf520de397c81d65eafcc4 "latex"
   (generated)
   "imecs_jap(deim).pdf"
-["latex"] 1545204857 "imecs_jap(deim).tex" "imecs_jap(deim).dvi" "imecs_jap(deim)" 1545204860
+["latex"] 1545213349 "imecs_jap(deim).tex" "imecs_jap(deim).dvi" "imecs_jap(deim)" 1545213352
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1480098698 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1480098698 1196 b274fc006918dea9e5263e2117f4bddb ""
@@ -52,13 +52,13 @@
   "deimj.cls" 1542215776 90163 9e45442a18cb67b016edff923a3a20d9 ""
   "extractbb -B cropbox -O picture/Photo_CosSim_jap.png" 0 -1 0 ""
   "extractbb -B cropbox -O picture/Photo_Image_jap.png" 0 -1 0 ""
-  "extractbb -B cropbox -O picture/Photo_map.png" 0 -1 0 ""
-  "imecs_jap(deim).aux" 1545204858 1677 eaf1a5210cc72d02a19c8884122385d6 ""
-  "imecs_jap(deim).tex" 1545204856 54595 354abfd4518ea7a023556d14a8b747ff ""
+  "extractbb -B cropbox -O picture/Photo_Map.png" 0 -1 0 ""
+  "imecs_jap(deim).aux" 1545213350 1677 eaf1a5210cc72d02a19c8884122385d6 ""
+  "imecs_jap(deim).tex" 1545213349 54595 11bfe38f377c6afbb96057ff35dc47aa ""
   "picture/Photo_CosSim_jap.png" 1542215776 47529 5712800aa94c3100887e895d47cc894e ""
   "picture/Photo_Image_jap.png" 1543580622 101618 bcb97912f469f26a2ebcd47cd00cd6df ""
-  "picture/Photo_map.png" 1542264569 1202799 153a3c07198620adba82b015998923b7 ""
+  "picture/Photo_Map.png" 1542264569 1202799 153a3c07198620adba82b015998923b7 ""
   (generated)
   "imecs_jap(deim).aux"
-  "imecs_jap(deim).log"
   "imecs_jap(deim).dvi"
+  "imecs_jap(deim).log"

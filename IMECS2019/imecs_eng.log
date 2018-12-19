@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 DEC 2018 17:34
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 DEC 2018 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -268,34 +268,7 @@ Underfull \hbox (badness 2261) in paragraph at lines 454--455
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 463.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-./imecs_eng.tex:482: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.482 ...ge value of the TFIDF values ^^e2^^80^^8b
-                                                  ^^e2^^80^^8bof the respect...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./imecs_eng.tex:482: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.482 ...the TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
-                                                  of the respective spots.
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-[4] [5] [6
+) [4] [5] [6
 
 ] (./imecs_eng.aux)
 
@@ -306,10 +279,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1442 strings out of 493281
- 23889 string characters out of 6145040
+ 1441 strings out of 493281
+ 23883 string characters out of 6145040
  104217 words of memory out of 5000000
- 5399 multiletter control sequences out of 15000+600000
+ 5398 multiletter control sequences out of 15000+600000
  39476 words of font info for 109 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  27i,13n,21p,581b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
