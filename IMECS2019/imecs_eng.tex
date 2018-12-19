@@ -36,22 +36,10 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{Michael~Shell,~\IAENGmembership{Member,~IAENG,}
-        John~Doe,~\IAENGmembership{Senior Member,~IAENG,}
-        and~Jane~Doe,~\IAENGmembership{Fellow,~IAENG}% <-this % stops a space
-\thanks{Manuscript received April XX, 20XX; revised June XX, 20XX. (Write the date on
-which you submitted your paper for review.) This work was supported
-in part by the U.S. Department of Commerce under Grant BS123456
-(sponsor and financial support acknowledgment goes here). Paper
-titles should be written in uppercase and lowercase letters, not all
-uppercase. Avoid writing long formulas with subscripts in the title;
-short formulas that identify the elements are fine.}
-\thanks{M. Shell is with the Department
-of Electrical and Computer Engineering, Georgia Institute of
-Technology, Atlanta,
-GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
-\thanks{J. Doe and J. Doe are with Anonymous University.}}% <-this % stops a space
-
+\author{Kenta~Han and Daisuke~Kitayama
+% \thanks{Manuscript received January 8, 2017; revised February 3, 2017. }
+\thanks{K. T. Han is with the Graduate School of Engineering, Kogakuin University, Japan; e-mail: em18011@ns.kogakuin.ac.jp.}% <-this % stops a space
+\thanks{D. Kitayama is with the Faculty of Informatics, Kogakuin University, Japan;  e-mail: kitayama@cc.kogakuin.ac.jp.}}% <-this % stops a space
 
 \maketitle
 
@@ -391,7 +379,7 @@ Table \ref{table:Explanation information} shows the results of explaining the ex
 % 公園という特徴に注目すると，未訪問スポット集合内で最も公園に近いスポットは新宿御苑であると考えられる．
 Focusing on the feature of the park, it is thought that the spot closest to the park in the unfamiliar spot group is ``Shinjuku Gyoen''.
 % 既訪問スポット集合内には小田原城址公園と奈良公園の二つの公園がある．
-In the set of familiar spots there are two parks, `Odawara-jo Park'' and ``Nara Park''.
+In the set of familiar spots there are two parks, ``Odawara-jo Park'' and ``Nara Park''.
 % 小田原城址公園には花や遊具に対する記述が多く，奈良公園は鹿や草に対する記述が多い．
 ``Odawara-jo Park'' has a lot of descriptions about flowers and play equipments, and there are many descriptions for deers and grass at ``Nara Park''.
 % 新宿御苑は花や遊具に対する記述が多いため，小田原城址公園との関連性があると考えられる．
@@ -473,7 +461,7 @@ The explanation information A is narrowing-down information used for searching s
 \begin{itemize}
 \item category: Shrine / Temple，Tourist facilities / Tourist tours etc.
 \item duration time: less than 1 hour，1\verb|~|2 hour etc.
-\item season: 1 month\verb|~|12 month, spring, summer, autumn, winnter
+\item season: 1\verb|~|12 month, spring, summer, autumn, winnter
 \end{itemize}
 
 % まず，既訪問スポットを使って，未訪問スポットとのカテゴリが一致がどうか，滞在時間と一致かどうか，訪問時期と一致かどうかの順で徐々に情報を絞って，既訪問スポットと未訪問スポットの対応付けを行う．
@@ -514,8 +502,8 @@ Processing was carried out in the order of A to D of the pattern of explanation 
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{result}
-\label{subsec:result}
+\subsection{Result}
+\label{subsec:Result}
 
 \begin{table*}[t]
   \caption{Statistics on the number of data of experiment results}
@@ -534,7 +522,7 @@ Processing was carried out in the order of A to D of the pattern of explanation 
 \end{table*}
 
 % 表\ref{table:Statistics on the number of data of experiment results}は評価1から5の説明情報AからDのそれぞれの実験結果のデータの数である．
-Table 10 shows the number of data of each experimental result of explanation information A to D of Evaluations 1 to 5.
+Table \ref{table:Statistics on the number of data of experiment results} shows the number of data of each experimental result of explanation information A to D of Evaluations 1 to 5.
 % 評価実験では，使用可能のデータの合計は394件である．
 In the evaluation experiment, the total of usable data is 394.
 % 説明情報Aの方が未訪問スポットと関連がある既訪問スポットの数が最も少ない．
@@ -559,6 +547,63 @@ The explanation information C and explanation information D, the association met
   \end{tabular}
 \end{table*}
 
+% 表\ref{table:Percentage of evaluation in explanation information}は説明情報AからDにおいて評価1から5の実験結果のデータの数の割合である．
+Table \ref{table:Percentage of evaluation in explanation information} shows the ratio of the number of data of the experiment results as the evaluation 1 to 5 in the explanation information A to D.
+% 被験者に提示する説明情報Aは，未訪問スポットと既訪問スポットがそもそも関連性があり，またキーワードを提示することによってさらに明確となった．
+The explanatory information A presented to subjects, the unfamiliar spot and the familiar spot were originally related, and further clarified by presenting keywords.
+% 説明情報Dは，未訪問スポットと既訪問スポットに関連性がないと思っていたが，被験者にキーワードを提示することによって初めて気がついたため，本研究の提案手法に関連性がある．
+The explanatory information D thought that there was no relevance to the unfamiliar spot and the familiar spot, but since it was noticed for the first time by presenting the keyword to the subject, it is related to the proposed method of this research.
+% 説明情報Cと説明情報Dは，被験者に提示する未訪問スポットと既訪問スポットがそもそも関連性がない割合が多い．
+In explanation information C and explanation information D, there are many proportions in which the unfamiliar spot presented to the subject and the familiar spot are not related in the first place.
+% 4つの説明情報パターンにおいて説明情報Dのみ被験者に提示するキーワードがない．
+In the four explanatory information patterns, only the explanatory information D has no keyword to present to the subject.
+% よって，調和平均を利用することによって　被験者にキーワードを提示することができる場合が多いといえる．
+Therefore, it can be said that in many cases it is possible to present keywords to subjects by using harmonic means.
+% また，評価1，評価4と評価5は説明情報を意味がなしていないことが示すことができる．
+In addition, it can be shown that evaluation 1, evaluation 4 and evaluation 5 mean that explanation information is meaningless.
+% よって，説明情報Dは最もの意味をなしていないことがいえる．
+Therefore, it can be said that explanation information D does not make the most sense.
+
+% 評価1と評価2はから，被験者に提示する未訪問スポットと既訪問スポットがそもそも関連性があるカテゴリを利用する場合が1番良いでる．
+From evaluation 1 and evaluation 2, the best case is to use categories that are unfamiliar spots presented to subjects and familiar spots in the first place.
+% しかし，関連性のあるスポットの数はカテゴリに制限しているため被験者に提示できる数も少ない．
+However, since the number of relevant spots is limited to categories, there are also few numbers that can be presented to subjects.
+% また，別カテゴリのスポット情報を被験者に提示できないため意外性を求めることができないといえる．
+In addition, it can not be said that unexpectedness can not be obtained because spot information of another category can not be presented to subjects.
+% 2番目は特徴ベクトル利用する場合，3番目は差分ベクトルと調和平均の組み合わせるとき，最も良くないのは説明情報Dの差分ベクトルと相加平均の組み合わせである．
+The second is to use the feature vector, the third to combine the difference vector and the harmonic mean, the combination which is not the best is the combination of the difference vector of the explanation information D and the arithmetic mean.
+% 説明情報Cと説明情報Dの関連性があるスポットの数が同じであるが，相加平均を使って単語スコアを算出することによって被験者に提示するキーワードの理解支援の役割が減少したといえる．
+Although the number of spots with relevance between explanation information C and explanation information D is the same, it can be said that the role of understanding support of keywords presented to subjects is reduced by calculating word scores using arithmetic mean.
+
+% 評価2は差分ベクトルと相加平均の組み合わせが最も良い，差分ベクトルと調和平均の組み合わせが2番目良い，3番目は特徴ベクトル利用する場合，最も良くないのはカテゴリを用いる場合である．
+Evaluation 2 is the combination of the difference vector and arithmetic mean, the combination of the difference vector and the harmonic mean is the second best, the third is the case where the feature vector is used, and the case where the category is not the best is used.
+% よって，説明情報Bの特徴ベクトルと説明情報Cの差分ベクトルと調和平均の組み合わせが良い結果を示すことができるといえる．
+Therefore, it can be said that a combination of a difference vector between the feature vector of the explanation information B and the explanation information C and a harmonic mean can show a good result.
+% また，差分ベクトルを利用することによって被験者に意外性があり，カテゴリに拘らない未訪問スポットを提示することができる．
+In addition, by using the difference vector, subjects have unexpectedness, and it is possible to present unfamiliar spots irrespective of categories.
+
+\begin{table*}[t]
+  \caption{When the categories of the familiar spots are different or  percentage of evaluation when similar}
+  \label{table:When the categories different or similar}
+  \centering
+  \begin{tabular}{c|r|r}
+  \hline
+  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}When the familiar spots are different\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}When the familiar spots are similar\end{tabular}} \\ \hline
+  Explanation information B \& Evaluation 1 & 56.82\%                            & 43.18\%                            \\
+  Explanation information C \& Evaluation 1 & 71.87\%                            & 28.13\%                            \\ \hline
+  Explanation information B \& Evaluation 2 & 51.61\%                            & 48.39\%                            \\
+  Explanation information C \& Evaluation 2 & 52.83\%                            & 47.170\%                            \\ \hline
+\end{tabular}
+\end{table*}
+
+% 説明情報Bと説明情報Cについて，被験者が入力した既訪問スポットのカテゴリが異なる場合と類似する場合のとき，評価2と評価3の評価の割合は表\ref{table:When the categories of the familiar spots are different and percentage of evaluation when similar}となる．
+For explanation information B and explanation information C, the case where the category of the familiar spot inputted by the examinee is different is similar to the case where the categories of the familiar spots input by the subject are different, the ratio of the evaluation of the evaluation 2 and the evaluation 3 is the table \ref{table:When the categories different or similar}.
+% 提案手法である説明情報Cを使うと，被験者が既に訪問したあるスポットと関係なしで，被験者が有意味のキーワードを提示することができる．
+Using explanation information C, which is the proposed method, subjects can present meaningful keywords without relation to a certain spot that the subject has familiar visited.
+% 差分ベクトルを利用することによって，カテゴリに渡って各スポットの特徴を求めることができるといえる．
+By using the difference vector, it can be said that the characteristics of each spot can be found over the category.
+% 既訪問スポットのジャンルが類似する場合では説明情報Bの方かより良い評価となっている．
+In the case where the genres of the familiar visited spots are similar, the explanation information B is better than the case.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -567,59 +612,42 @@ The explanation information C and explanation information D, the association met
 \label{sec:Conclusions and Future Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 本研究では，ユーザが行きたい観光スポットが決まっていない場合，ランキング，おすすめ情報やカテゴリーなどに観光検索情報を使用することによって，検索した観光スポットがに対する理解が困難であることを着目した．
-% 未訪問なスポットに対する理解を支援するために，ユーザが既に訪問したことがあるスポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案した．
+% 本研究では，ユーザが行きたい観光スポットが決まっていない場合，ランキング，おすすめ情報やカテゴリなどに観光検索情報を使用することによって，検索した観光スポットがに対する理解が困難であることを着目した．
+In this research, we focused on the difficulty of understanding the sightseeing spots searched by using the sightseeing search information in ranking, recommendation information, categories etc, if the sights where the user wants to visit have not been decided.
+% 未訪問スポットに対する理解を支援するために，ユーザが既に訪問したことがあるスポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案した．
+In order to support understanding of unfamiliar spots, we proposed an explanatory method to support understanding by fitting the characteristics of spots that users have already visited to unfamiliar spots.
+
+% 評価実験では4つの説明情報パターンを用いて比較を行った．
+In the evaluation experiment, comparison was made using four explanatory information patterns.
+% 結果，カテゴリを利用する場合では，未訪問スポットと関連する既訪問スポットが最も少ない．
+As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
+% 差分ベクトルと相加平均を利用する場合では，キーワードの理解を支援する役割が最も少ない．
+In the case of using the difference vector and arithmetic mean, the role of supporting the understanding of keywords is the least.
+% 差分ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
+By using the difference vector and harmonic mean, the characteristics of each spot can be obtained.
+% また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を引き出すことができる可能性があることを確認した．
+In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with already familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
+
+% 今後の課題としては，実験時に得られたユーザに提示するキーワード，未訪問スポットと既訪問スポットのカテゴリの関連性を分析する．
+As future tasks, we analyze the relevance between keywords presented to users obtained at the time of experiment, categories of unfamiliar spots and familiar spots.
+% また，ユーザに提示する各キーワードの有効性と関連性についての評価を行う予定である．
+We also plan to evaluate the effectiveness and relevance of each keyword presented to the user.
 
 
-
-
-
-
-
-% use section* for acknowledgement
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Acknowledgment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551.
 
 
-The authors would like to thank...
-
-The preferred spelling of the word "acknowledgment" in American
-English is without an "e" after the "g." Use the singular heading
-even if you have many acknowledgments. Avoid expressions such as
-"One of us (S.B.A.) would like to thank ... ." Instead, write "F. A.
-Author thanks ... ." Sponsor and financial support acknowledgments
-are placed in the unnumbered footnote on the first page, not here.
-
-
-% Can use something like this to put references on a page
-% by themselves when using endfloat and the captionsoff option.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifCLASSOPTIONcaptionsoff
   \newpage
 \fi
 
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IAENGtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IAENGtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-% The IAENGtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/IAENGtran/bibtex/
-%\bibliographystyle{IAENGtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IAENGabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
   \bibitem{Codd01}
     T. Kurashima, T. Iwata, G. Irie and K. Fujimura.,
