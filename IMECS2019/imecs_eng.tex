@@ -1,122 +1,5 @@
-
-%% IAENG_pub.tex 2010/08/30
-%% It is based on the bare_jrnl.tex V1.3 2007/01/11 by Michael Shell
-%% see http://www.michaelshell.org/
-%% for current contact information.
-%%
-%% This is a skeleton file demonstrating the use of IAENGtran.cls
-%% (requires IAENGtran.cls version 1.7 or later) with an IAENG journal/conference paper.
-%%
-%% Support sites:
-%% http://www.michaelshell.org/tex
-%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
-
-% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
-% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
-% *** with production work. IAENG's font choices can trigger bugs that do  ***
-% *** not appear when using other class files.                            ***
-% The testflow support page is at:
-% http://www.michaelshell.org/tex/testflow/
-
-
-%%*************************************************************************
-%% Legal Notice:
-%% This code is offered as-is without any warranty either expressed or
-%% implied; without even the implied warranty of MERCHANTABILITY or
-%% FITNESS FOR A PARTICULAR PURPOSE!
-%% User assumes all risk.
-%% In no event shall IAENG or any contributor to this code be liable for
-%% any damages or losses, including, but not limited to, incidental,
-%% consequential, or any other damages, resulting from the use or misuse
-%% of any information contained here.
-%%
-%% All comments are the opinions of their respective authors and are not
-%% necessarily endorsed by the IAENG.
-%%
-%% This work is distributed under the LaTeX Project Public License (LPPL)
-%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-%% distributed and modified. A copy of the LPPL, version 1.3, is included
-%% in the base LaTeX documentation of all distributions of LaTeX released
-%% 2003/12/01 or later.
-%% Retain all contribution notices and credits.
-%% ** Modified files should be clearly indicated as such, including  **
-%% ** renaming them and changing author support contact information. **
-%%
-%%*************************************************************************
-
-% Note that the a4paper option is mainly intended so that authors in
-% countries using A4 can easily print to A4 and see how their papers will
-% look in print - the typesetting of the document will not typically be
-% affected with changes in paper size (but the bottom and side margins will).
-% Use the testflow package mentioned above to verify correct handling of
-% both paper sizes by the user's LaTeX system.
-%
-% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
-% should be used if it is desired that the figures are to be displayed in
-% draft mode.
-%
 \documentclass[journal]{IAENGtran}
-%
-% If IAENGtran.cls has not been installed into the LaTeX system files,
-% manually specify the path to it like:
-% \documentclass[journal]{../sty/IAENGtran}
 
-
-
-
-
-% Some very useful LaTeX packages include:
-% (uncomment the ones you want to load)
-
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
-% Also, note that IAENGtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-
-% *** CITATION PACKAGES ***
-%
-%\usepackage{cite}
-% cite.sty was written by Donald Arseneau
-% V1.6 and later of IAENGtran pre-defines the format of the cite.sty package
-% \cite{} output to follow that of IAENG. Loading the cite package will
-% result in citation numbers being automatically sorted and properly
-% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
-% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
-% \cite will automatically add leading space, if needed. Use cite.sty's
-% noadjust option (cite.sty V3.8 and later) if you want to turn this off.
-% cite.sty is already installed on most LaTeX systems. Be sure and use
-% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
-% not currently provide for hyperlinked citations.
-% The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
-% The documentation is contained in the cite.sty file itself.
-
-
-
-
-
-
-% *** GRAPHICS RELATED PACKAGES ***
-%
 \ifCLASSINFOpdf
    \usepackage[pdftex]{graphicx}
   % declare the path(s) where your graphic files are
@@ -135,256 +18,12 @@
   % every instance of \includegraphics
    \DeclareGraphicsExtensions{.eps}
 \fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation can
-% be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found as epslatex.ps or
-% epslatex.pdf at: http://www.ctan.org/tex-archive/info/
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). IAENG frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
-
-
-% *** MATH PACKAGES ***
-%
-%\usepackage[cmex10]{amsmath}
-% A popular package from the American Mathematical Society that provides
-% many useful and powerful commands for dealing with mathematics. If using
-% it, be sure to load this package with the cmex10 option to ensure that
-% only type 1 fonts will utilized at all point sizes. Without this option,
-% it is possible that some math symbols, particularly those within
-% footnotes, will be rendered in bitmap form which will result in a
-% document that can not be IAENG compliant!
-%
-% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
-% thus preventing page breaks from occurring within multiline equations. Use:
-%\interdisplaylinepenalty=2500
-% after loading amsmath to restore such page breaks as IAENGtran.cls normally
-% does. amsmath.sty is already installed on most LaTeX systems. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
-
-
-
-
-
-% *** SPECIALIZED LIST PACKAGES ***
-%
-%\usepackage{algorithmic}
-% algorithmic.sty was written by Peter Williams and Rogerio Brito.
-% This package provides an algorithmic environment for describing algorithms.
-% You can use the algorithmic environment in-text or within a figure
-% environment to provide for a floating algorithm. Do NOT use the algorithm
-% floating environment provided by algorithm.sty (by the same authors) or
-% algorithm2e.sty (by Christophe Fiorio) as IAENG does not use dedicated
-% algorithm float types and packages that provide these will not provide
-% correct IAENG style captions. The latest version and documentation of
-% algorithmic.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
-% There is also a support site at:
-% http://algorithms.berlios.de/index.html
-% Also of interest may be the (relatively newer and more customizable)
-% algorithmicx.sty package by Szasz Janos:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
-
-
-
-
-% *** ALIGNMENT PACKAGES ***
-%
-%\usepackage{array}
-% Frank Mittelbach's and David Carlisle's array.sty patches and improves
-% the standard LaTeX2e array and tabular environments to provide better
-% appearance and additional user controls. As the default LaTeX2e table
-% generation code is lacking to the point of almost being broken with
-% respect to the quality of the end results, all users are strongly
-% advised to use an enhanced (at the very least that provided by array.sty)
-% set of table tools. array.sty is already installed on most systems. The
-% latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/required/tools/
-
-
-%\usepackage{mdwmath}
-%\usepackage{mdwtab}
-% Also highly recommended is Mark Wooding's extremely powerful MDW tools,
-% especially mdwmath.sty and mdwtab.sty which are used to format equations
-% and tables, respectively. The MDWtools set is already installed on most
-% LaTeX systems. The lastest version and documentation is available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
-
-
-% IAENGtran contains the IAENGeqnarray family of commands that can be used to
-% generate multiline equations as well as matrices, tables, etc., of high
-% quality.
-
-
-%\usepackage{eqparbox}
-% Also of notable interest is Scott Pakin's eqparbox package for creating
-% (automatically sized) equal width boxes - aka "natural width parboxes".
-% Available at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
-
-
-
-
-
-% *** SUBFIGURE PACKAGES ***
-%\usepackage[tight,footnotesize]{subfigure}
-% subfigure.sty was written by Steven Douglas Cochran. This package makes it
-% easy to put subfigures in your figures. e.g., "Figure 1a and 1b". For IAENG
-% work, it is a good idea to load it with the tight package option to reduce
-% the amount of white space around the subfigures. subfigure.sty is already
-% installed on most LaTeX systems. The latest version and documentation can
-% be obtained at:
-% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
-% subfigure.sty has been superceeded by subfig.sty.
-
-
-
-%\usepackage[caption=false]{caption}
-%\usepackage[font=footnotesize]{subfig}
-% subfig.sty, also written by Steven Douglas Cochran, is the modern
-% replacement for subfigure.sty. However, subfig.sty requires and
-% automatically loads Axel Sommerfeldt's caption.sty which will override
-% IAENGtran.cls handling of captions and this will result in nonIAENG style
-% figure/table captions. To prevent this problem, be sure and preload
-% caption.sty with its "caption=false" package option. This is will preserve
-% IAENGtran.cls handing of captions. Version 1.3 (2005/06/28) and later
-% (recommended due to many improvements over 1.2) of subfig.sty supports
-% the caption=false option directly:
-%\usepackage[caption=false,font=footnotesize]{subfig}
-%
-% The latest version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
-% The latest version and documentation of caption.sty can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
-
-
-
-
-% *** FLOAT PACKAGES ***
-%
-%\usepackage{fixltx2e}
-% fixltx2e, the successor to the earlier fix2col.sty, was written by
-% Frank Mittelbach and David Carlisle. This package corrects a few problems
-% in the LaTeX2e kernel, the most notable of which is that in current
-% LaTeX2e releases, the ordering of single and double column floats is not
-% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
-% single column figure to be placed prior to an earlier double column
-% figure. The latest version and documentation can be found at:
-% http://www.ctan.org/tex-archive/macros/latex/base/
-
-
-
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
-% Documentation is contained in the stfloats.sty comments as well as in the
-% presfull.pdf file. Do not use the stfloats baselinefloat ability as IAENG
-% does not allow \baselineskip to stretch. Authors submitting work to the
-% IAENG should note that IAENG rarely uses double column equations and
-% that authors should try to avoid such use. Do not be tempted to use the
-% cuted.sty or midfloat.sty packages (also by Sigitas Tolusis) as IAENG does
-% not format its papers in such ways.
-
-
-%\ifCLASSOPTIONcaptionsoff
-%  \usepackage[nomarkers]{endfloat}
-% \let\MYoriglatexcaption\caption
-% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
-%\fi
-% endfloat.sty was written by James Darrell McCauley and Jeff Goldberg.
-% This package may be useful when used in conjunction with IAENGtran.cls'
-% captionsoff option. Some IAENG journals/societies require that submissions
-% have lists of figures/tables at the end of the paper and that
-% figures/tables without any captions are placed on a page by themselves at
-% the end of the document. If needed, the draftcls IAENGtran class option or
-% \CLASSINPUTbaselinestretch interface can be used to increase the line
-% spacing as well. Be sure and use the nomarkers option of endfloat to
-% prevent endfloat from "marking" where the figures would have been placed
-% in the text. The two hack lines of code above are a slight modification of
-% that suggested by in the endfloat docs (section 8.3.1) to ensure that
-% the full captions always appear in the list of figures/tables - even if
-% the user used the short optional argument of \caption[]{}.
-% IAENG papers do not typically make use of \caption[]'s optional argument,
-% so this should not be an issue. A similar trick can be used to disable
-% captions of packages such as subfig.sty that lack options to turn off
-% the subcaptions:
-% For subfig.sty:
-% \let\MYorigsubfloat\subfloat
-% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
-% For subfigure.sty:
-% \let\MYorigsubfigure\subfigure
-% \renewcommand{\subfigure}[2][\relax]{\MYorigsubfigure[]{#2}}
-% However, the above trick will not work if both optional arguments of
-% the \subfloat/subfig command are used. Furthermore, there needs to be a
-% description of each subfigure *somewhere* and endfloat does not add
-% subfigure captions to its list of figures. Thus, the best approach is to
-% avoid the use of subfigure captions (many IAENG journals avoid them anyway)
-% and instead reference/explain all the subfigures within the main caption.
-% The latest version of endfloat.sty and its documentation can obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/endfloat/
-%
-% The IAENGtran \ifCLASSOPTIONcaptionsoff conditional can also be used
-% later in the document, say, to conditionally put the References on a
-% page by themselves.
-
-
-
-
-
-% *** PDF, URL AND HYPERLINK PACKAGES ***
-%
-%\usepackage{url}
-% url.sty was written by Donald Arseneau. It provides better support for
-% handling and breaking URLs. url.sty is already installed on most LaTeX
-% systems. The latest version can be obtained at:
-% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
-% Read the url.sty source comments for usage information. Basically,
-% \url{my_url_here}.
-
-
-
-
-
-% *** Do not adjust lengths that control margins, column widths, etc. ***
-% *** Do not use packages that alter fonts (such as pslatex).         ***
-% There should be no need to do such things with IAENGtran.cls V1.6 and later.
-% (Unless specifically asked to do so by the journal or conference you plan
-% to submit to, of course. )
-
-
-% correct bad hyphenation here
-% \hyphenation{op-tical net-works semi-conduc-tor}
-
 
 \begin{document}
 %
 % paper title
 % can use linebreaks \\ within to get better formatting as desired
+% ユーザの既訪問スポットの位置づけに基づく未訪問スポットの説明手法
 \title{An Explanation Method of Unfamiliar Tourist Spots based on Roles of User's Familiar Spots}
 %
 %
@@ -414,7 +53,6 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 \thanks{J. Doe and J. Doe are with Anonymous University.}}% <-this % stops a space
 
 
-% make the title area
 \maketitle
 
 \pagestyle{empty}
@@ -423,27 +61,25 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-%\boldmath
-
 % 近年，観光スポットを決める時にWeb上の観光情報を活用して計画を立てることが多くなっている．
 In recent years, when planning tourist spots, planning is often made by utilizing tourist information on the Web.
 % しかし，ユーザが多くのエリアから訪問したいエリアを決めた上で，さらに自分のイメージに合う観光スポットを探すのは膨大な時間と労力を必要とする．
 However, after deciding the area you want to visit from many areas, the user also needs enormous amount of time and effort to find tourist spots that match your image.
 % また，ユーザが未訪問スポットに対して期待と不安を感じる場合がある．
-In addition, there are cases where the user feels expectation and anxiety with respect to the unvisited spot.
+In addition, there are cases where the user feels expectation and anxiety with respect to the unfamiliar spot.
 % 本研究では，ユーザの未知なスポットに対する理解を支援するためには，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
-In this research, in order to support understanding of users' unknown spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have already visited to unvisited spots.
+In this research, in order to support understanding of users' unknown spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have familiar spots to unfamiliar spots.
 % 観光スポット自身の特徴を重視するため，各観光スポットの特徴抽出に，ユーザが入力した観光スポットのすべてのレビュー，対象エリアの観光スポットのすべてのレビューを使用する．
 In order to emphasize the features of the tourist spots themselves, extraction of features of each tourist spot is done by work using all reviews of tourist spots entered by the user, all reviews of tourist spots in the target area.
 % また，プロトタイプシステムを構築し，既訪問スポットと未訪問スポットとの説明情報の効果を検証する評価実験を行う．
-We also conduct an evaluation experiment to construct the prototype system and verify the effect of the explanatory information between the visited spot and the unvisited spot.
+We also conduct an evaluation experiment to construct the prototype system and verify the effect of the explanatory information between the familiar spot and the unfamiliar spot.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{IAENGkeywords}
-% 観光スポット，理解支援，レビュー，コサイン類似度，TFIDF，調和平均
-tourist spots, understanding support, reviews, cosine similarity, TFIDF, harmonic mean
+% 観光スポット，理解支援，レビュー，調和平均，パラグラフベクトル
+tourist spots, understanding support, reviews, harmonic mean, paragraph vector
 \end{IAENGkeywords}
 
 \IAENGpeerreviewmaketitle
@@ -474,19 +110,19 @@ This way of thinking is equivalent to analogy which applies to the things by pre
 % たとえば，金沢の「にし茶屋街」という未知なスポットに対して既訪問の京都の「花見小路」と似ていると説明するとイメージの理解がしやすくすることがある．
 For example, whereas unknown spots such as ``Kanazawa's Nisityayagai'', if you explain that it is similar to the already visited ``Kyoto Hanamikoj'', it may make it easier to understand the image.
 
-% 本研究では，ユーザの未知なスポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
-In this research, in order to support understanding of users' unknown spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have already visited to unvisited spots.
+% 本研究では，ユーザの未訪問スポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
+In this research, in order to support understanding of users' unfamiliar spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have familiar spots to unfamiliar spots.
 % 具体的には，ユーザが入力した既訪問スポットと未訪問エリアから，レビュを用いて既訪問スポット内の各スポットの独特な特徴と未訪問エリア内の各スポットの独特な特徴を抽出し，比較を行って説明情報を提示する．
-Specifically, from the already visited spot and the unvisited area entered by the user, we use the review to extract the unique features of each spot in the already visited spot and the unique features of each spot in the unvisited area, compare and present explanatory information.
+Specifically, from the familiar spots and the unfamiliar area entered by the user, we use the review to extract the unique features of each spot in the familiar spots and the unique features of each spot in the unfamiliar area, compare and present explanatory information.
 % このプロトタイプシステムにより，ユーザが未訪問スポットに対する理解の支援を目指す．
-With this prototype system, users aim to support understanding of unvisited spots.
+With this prototype system, users aim to support understanding of unfamiliar spots.
 % 図\ref{fig:Photo_Image}は提案手法の概念図である．
 Fig. \ref{fig:Photo_Image} is a conceptual diagram of the proposed method.
 
 % 本論文の構成は下記のとおりである．2節では関連研究について述べる．3節では提案手法の概要について述べる．4節では構築したプロトタイプシステムの効果を検証する評価実験と考察について述べる．最後に5節ではまとめと今後の課題について述べる．
 The structure of this paper is as follows.
 Section \ref{sec:Related Work} describes related research.
-Section \ref{sec:An Explaination Method of Unfamiliar Tourist Spots} gives an overview of the proposed method.
+Section \ref{sec:An Explainaton Method of Unfamiliar Tourist Spots} gives an overview of the proposed method.
 Section \ref{sec:Evaluation Experiment} describes evaluation experiments and considerations to verify the effect of the constructed prototype system.
 Section \ref{sec:Conclusions and Future Work} describes with conclusions and future work.
 
@@ -535,7 +171,7 @@ Analogies were pointed out as contributing to creative thinking\cite{Codd04}.
 % 既知の知識(ベースと呼ぶ)から概念(ターゲットと呼ぶ)を獲得するときに類推思考が働くとされる\cite{Codd05}．
 Analogical thinking works when acquiring a concept (called the target) from known knowledge (called the bases)\cite{Codd05}.
 % 類推に関する研究の多くは，ベースとなる学習データとターゲットとなる問題が与えられ，物事の特徴を問題の特徴にマッピングして問題を解決するもの\cite{Codd06}である．
-Many of the researches on analogy are given the base learning data and targeted problems, and the problems are solved by mapping the features of things to the characteristics of the problem\cite{Codd06}.
+Many of the researches on analogy are given the base learning data and targeted problems, and the problems are solved by mapping the features of things to the feature of the problem\cite{Codd06}.
 % Gickらは，不確定な問題の解を見つけるためのガイドとして，異種ドメイン間の類推の使用を調査するように設計した．
 Gick et al. designed to investigate the use of analogies between disparate domains as a guide to finding solutions for an ill-defined problem.
 % 学習データの与え方や機能について研究したもの\cite{Codd07}や，認知的な熟達度に応じて問題を解決するかどうかを明らかにしたもの\cite{Codd08}がある．
@@ -549,8 +185,8 @@ There are three types of structural similarities``similarity of object level'' d
 In the conventional method of using the user's experience history, many researches that analyze the geotag information of the history photograph and make it user's preference are performed.
 % また，類推技術に関して学習支援でよくて使われている．
 In addition, it is well used in learning support on analogy technology.
-% 本研究では，既訪問スポットと未訪問エリアのレビューを使って，ユーザ既訪問スポット集合と未訪問スポット集合のそれぞれ集合の各スポットの相対的な特徴を求め，関連付けることによって，スポットに対する理解を支援するため説明情報を提示することができる．
-In this research, using the review of visited spots and unvisited areas, the relative features of each spot in each set of user visited spot set and unvisited spot set are determined and associated, thereby supporting understanding of spots explanation information can be presented.
+% 本研究では，既訪問スポットと未訪問スポットのレビューを使って，ユーザ既訪問スポット集合と未訪問スポット集合のそれぞれ集合の各スポットの相対的な特徴を求め，関連付けることによって，スポットに対する理解を支援するため説明情報を提示することができる．
+In this research, using the review of familiar spots and unfamiliar spots, the relative features of each spot in each set of user familiar spot set and unfamiliar spot set are determined and associated, thereby supporting understanding of spots explanation information can be presented.
 % また，本研究では，類推の質を明示的扱うため，構造の類似性「関係レベルの類似性」に近いと考えられる．
 Moreover, because the quality of analogy is treated explicitly, it is considered to be similar to the similarity of structure "similarity of relationship level" by this research.
 
@@ -558,29 +194,30 @@ Moreover, because the quality of analogy is treated explicitly, it is considered
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 未訪問スポットの説明手法
-\section{An Explaination Method of Unfamiliar Tourist Spots}
-\label{sec:An Explaination Method of Unfamiliar Tourist Spots}
+
+\section{An Explanation Method of Unfamiliar Tourist Spots}
+\label{sec:An Explainaton Method of Unfamiliar Tourist Spots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 我々は，ユーザの既訪問スポットの位置づけに基づく未訪問スポットの説明手法を提案する．
-We propose an explanation method of unfamiliar tourist spots based on roles of user’s familiar spots
+We propose an explanation method of unfamiliar tourist spots based on roles of user's familiar spots
 % 具体的にはまず，ユーザが既訪問の複数個の観光スポットと訪問したい観光スポットエリア情報を入力する．
 Specifically, first, the user inputs a plurality of tourist spots that have been visited and tourist spot area information that user wishes to visit.
 % 既訪問スポットレビューベクトルを使って既訪問スポット毎の特徴ベクトルを求める．
-Use the already visited spot review vector to find the feature vector for each visited spot.
+Use the familiar spot review vector to find the feature vector for each familiar spot.
 % 未訪問スポットも同様にエリア内の各スポットの特徴ベクトルを求める．
-Similarly, the feature vector of each spot in the area is obtained for an unvisited spot.
+Similarly, the feature vector of each spot in the area is obtained for an unfamiliar spot.
 % 次に，既訪問スポットレビューベクトルと未訪問スポットレビューベクトルの差分特徴に類似する特徴を持つ未既訪問観光スポット関連付けを行う．
-Next, we associate unvisited tourist spots with features similar to the difference features between the visited spot review vector and the unvisited spot review vector.
+Next, we associate familiar spots with features similar to the difference features between the familiar spot review vector and the unfamiliar spot review vector.
 % 最後に，TFIDFを用いて未訪問スポットの理解支援のための説明手法を定義し，ユーザに提示する．
-Finally, explanation method for supporting understanding of unvisited spot is defined using TFIDF and presented to the user.
+Finally, explanation method for supporting understanding of unfamiliar spot is defined using TFIDF and presented to the user.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % スポットのレビューから特徴ベクトル生成
 \subsection{Generating feature vector from reviews of spot}
 \label{subsec:Generating feature vector from reviews of spot}
 % 既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器「mecab-ipadic-NEologd」で分かち書き(原型)したレビューを利用して作成する．
-Review vectors of previously visited spots and unvisited spots are created using a discriminated (original) review with the morphological analyzer\cite{Codd10} ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
+Review vectors of familiar spots and unfamiliar spots are created using a discriminated (original) review with the morphological analyzer\cite{Codd10} ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
 % その後，Doc2VecのDistributed Bag-of-Wordsを利用して，各スポットの全レビューを使って300次元で作成したベクトルを使う．
 After that, using Distributed\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} Bag-of-Words of Doc2Vec, we use a vector created in 300 dimensions using all reviews of each spot.
 % 本稿に置いて，レビューデータは2016年09月末までじゃらんから取得したものを用いる．
@@ -627,13 +264,13 @@ The spot differential vector is defined as formula \ref{math:Vector difference}.
 % スポット差分ベクトルを求めるスポットを除いたスポット集合の各スポットのスポットベクトルの平均値を引いた値となる．
 Is the value obtained by subtracting the average value of the spot vectors of the spots of the spot group excluding the spot for which the spot differential vector is found.
 % $spot_{set} =\{s_1,s_2,\dots,s_i,\dots,s_n\}$は既訪問スポット集合や未訪問スポット集合となっている．
-$spot_{set} =\{s_1,s_2,\dots,s_i,\dots,s_n\}$1 is an already visited spot set or an unvisited spot set.
+$spot_{set} =\{s_1,s_2,\dots,s_i,\dots,s_n\}$1 is a familiar spot set or an unfamiliar spot set.
 % また，$s_i$は集合内のある観光スポットを示している．
 $s_i$ is a tourist spot in the set.
 
 \begin{equation}
   v_i=s_i-average(spot_{set}-s_i)
-    \label{math:Vector difference}
+  \label{math:Vector difference}
 \end{equation}
 
 
@@ -643,34 +280,33 @@ $s_i$ is a tourist spot in the set.
 \label{subsec:Determination of explainable spot}
 
 % 既訪問スポットの各特徴差分ベクトル$v_i$と未訪問スポットの各特徴差分ベクトル$v_j$から，既訪問スポットと未訪問スポット間の相対的な特徴の類似度（図\ref{fig:photo_cossim}）を求める．
-From the feature difference vector $v_i$ of the visited spot and the feature difference vector $v_j$ of the unvisited spot, the relative feature similarity between the visited spot and the unvisited spot (Fig. \ref{fig:Photo_CosSim} ).
+From the feature difference vector $v_i$ of the familiar spot and the feature difference vector $v_j$ of the unfamiliar spot, the relative feature similarity between the familiar spot and the unfamiliar spot (Fig. \ref{fig:Photo_CosSim} ).
 % 類似度計算には，コサイン尺度(式\ref{math:CosSim})を用いる．
 For the similarity calculation, use the cosine scale (formula \ref{math:CosSim}).
 
 \begin{eqnarray}
-cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}
-{\sqrt{v^2_{i1}+\cdots+v^2_{in}}\times\sqrt{v^2_{j1}+\cdots+v^2_{jn}}}
-\label{math:CosSim}
+  cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}{\sqrt{v^2_{i1}+\cdots+v^2_{in}}\times\sqrt{v^2_{j1}+\cdots+v^2_{jn}}}
+  \label{math:CosSim}
 \end{eqnarray}
 
 % 既訪問スポットの各特徴ベクトルと未訪問エリア内の各特徴ベクトルの類似度が0.125以上かつ，類似度が最も高い既訪問スポットと未訪問スポットの関連付けを行う．
-A correlation between the already visited spot having similarity of each feature vector of the already visited spot and each feature vector in the unvisited area of 0.125 or more and the highest similarity and the unvisited spot is performed.
+A correlation between the familiar spot having similarity of each feature vector of the familiar spot and each feature vector in the unfamiliar area of 0.125 or more and the highest similarity and the unfamiliar spot is performed.
 % また，既訪問スポットと未訪問スポットとの関連をつけるとき以下の2つの方法がある．
-In addition, there are two ways to establish an association between an already visited spot and an unvisited spot.
+In addition, there are two ways to establish an association between a familiar spot and an unfamiliar spot.
 
 \begin{enumerate}
   % \item 既訪問スポットをベースにして未訪問スポットと関連付ける方法
-  \item how to relate to unvisited spots based on already visited spots
+  \item how to relate to unfamiliar spots based on already familiar spots
   % \item 未訪問スポットをベースにして既訪問スポットと関連付ける方法
-  \item how to relate to already visited spots based on unvisited spots
+  \item how to relate to already familiar spots based on unfamiliar spots
 \end{enumerate}
 
 % 方法1では，既訪問スポットをベースにすると未訪問エリア内のスポットが複数の特徴を保持する場合は同じ未訪問スポットと関連付ける場合がある．
-In the method 1, if the spot in the unvisited area holds a plurality of features when using the already visited spot as the base, there are cases where the spot is associated with the same unvisited spot.
+In the method 1, if the spot in the unfamiliar area holds a plurality of features when using the familiar spot as the base, there are cases where the spot is associated with the same unfamiliar spot.
 % 方法2では，未訪問スポットをベースにすることによって，既訪問スポット集合から各スポットの特徴を取り出し，未訪問スポットと関連付けることができるため，方法2を利用する．
-In method 2, method 2 is used as it is possible to extract features of each spot from the already visited spot set based on the unvisited spot and associate with the unvisited spot.
+In method 2, method 2 is used as it is possible to extract features of each spot from the familiar spot set based on the unfamiliar spot and associate with the unfamiliar spot.
 % また，本研究では，未訪問スポットを説明するため未訪問スポットをベースにすることが妥当と考えられる．
-In addition, in this research, it is considered reasonable to base on unvisited spots to explain unvisited spots.
+In addition, in this research, it is considered reasonable to base on unfamiliar spots to explain unfamiliar spots.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 説明するための役割語の抽出
@@ -680,11 +316,12 @@ In addition, in this research, it is considered reasonable to base on unvisited 
 All tourist spots review words by using morphological analyzer ``mecab-ipadic-NEologd''.
 % しかし，これらを用いて得られた単語は，日本語として成立しない語が含まれており，これらノイズの削除が必要となる．
 However, words obtained by using these words contain words that do not hold Japanese, and it is necessary to delete these noises.
-% 具体的には，助詞，助動詞，連体詞，記号を削除する．
-Specifically, delete particles, auxiliary verbs, rentaishi, symbols.
+% 具体的には，助詞，助動詞，連体詞，記号，ストップワードを削除する．
+Specifically, delete particles, auxiliary verbs, rentaishi, symbols, stopwords.
 
 % 節\ref{subsec:Determination of explainable spot}で関連付けした既訪問スポットと未訪問スポットの説明情報は単語形式でユーザに提示するため，ある観光スポットのレビュー集合を文書$i$とし，$i$に対する単語$j$が出現するスポット集合の出現回数を$TF_{i,j}$，単語$j$がスポット集合の文書数を$DF_{j}$，スポット集合内の全スポット数を$|D|$とした時，そのスポットにおける単語の特徴量は，式\ref{math:TFIDF}で定義される．
-Since the explanation information of the visited spot and the unvisited spot associated in section \ref{subsec:Determination of explainable spot} is presented to the user in word format, a review set of a certain tourist spot is assumed to be a document $i$ and a spot where the word $j$ for $i$ appears When the number of occurrences of the set is $TF_{i,j}$, the word $j$ is the number of documents in the spot set is $DF_{j}$, and the total number of spots in the spot set is $|D|$ The feature quantity of a word in a spot is defined by the formula \ref{math:TFIDF}.
+Since the explanation information of the fami
+ spot and the unfamiliar spot associated in section \ref{subsec:Determination of explainable spot} is presented to the user in word format, a review set of a certain tourist spot is assumed to be a document $i$ and a spot where the word $j$ for $i$ appears When the number of occurrences of the set is $TF_{i,j}$, the word $j$ is the number of documents in the spot set is $DF_{j}$, and the total number of spots in the spot set is $|D|$ The feature quantity of a word in a spot is defined by the formula \ref{math:TFIDF}.
 
 \begin{equation}
   word_{i,j} = TF_{i,j} \times IDF_{j}
@@ -696,39 +333,110 @@ Since the explanation information of the visited spot and the unvisited spot ass
 \end{equation}
 
 % 本手法では，既訪問スポットに関して，ユーザが複数個のスポットを入力する．
-In this method, for visited spots, the user inputs plurality of spots.
+In this method, for familiar spots, the user inputs plurality of spots.
 % それぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，既訪問スポット毎の特徴語とする．
-By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unvisited area.
+By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unfamiliar area.
 
 % 未訪問エリアに関して，ユーザがエリアを指定して入力する．
-Regarding the unvisited area, the user designates an area and inputs it.
+Regarding the unfamiliar area, the user designates an area and inputs it.
 % エリア内のそれぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，未訪問エリアのスポット毎の特徴語とする．
-By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unvisited area.
+By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unfamiliar area.
 
 % 関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
-The explanation information on the associated visited spots and unvisited spots associated with each other is determined by using harmonic averages according to feature words of each spot obtained by TFIDF.
+The explanation information on the associated familiar spots and unfamiliar spots associated with each other is determined by using harmonic averages according to feature words of each spot obtained by TFIDF.
 % 調和平均とは，逆数の算術平均の逆数である．
 The harmonic mean is the reciprocal of the arithmetic mean of the reciprocal.
 % 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
-Extracts commonly appearing words in the review document of the already visited spot and the review document of the unvisited spot.
+Extracts commonly appearing words in the review document of the familiar spot and the review document of the unfamiliar spot.
 % 抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
 The score of the extracted word is defined by the formula \ref{math:Harmonic Mean}.
-% $word_{visited}$と$word_{unvisited}$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．
-$word_{visited}$ and $word_{unvisited}$ indicate the TFIDF value of the visited spot and the TFIDF value of the unvisited spot, respectively.
+% $word_{familiar}$と$word_{unfamiliar}$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．
+$word_{familiar}$ and $word_{unfamiliar}$ indicate the TFIDF value of the familiar spot and the TFIDF value of the unfamiliar spot, respectively.
 % 単語スコアの値が大きと既訪問スポットと未訪問スポットのそれぞれのTFIDF値が大きい，つまり単語がそれぞれの文書に置いて重要度が高いことを示している．
-When the value of the word score is large, the TFIDF value of each of the visited spot and the unvisited spot is large, that is, the word has high importance in each document.
-% よって，単語スコアの上位10個の単語を説明情報としてユーザに提示する．
-Therefore, the top ten words of the word score are presented to the user as explanation information.
+When the value of the word score is large, the TFIDF value of each of the familiar spot and the unfamiliar spot is large, that is, the word has high importance in each document.
+% よって，単語スコアの上位10個の単語を説明情報としてユーザに提示する(図\ref{fig:photo_map})．
+Therefore, the top ten words of the word score are presented to the user as explanation information (Fig. \ref{fig:photo_map}).
 
 \begin{eqnarray}
-  score=\frac{1}{\frac{1}{2}(\frac{1}{word_{visited}}+\frac{1}{word_{unvisited}})}
+  score = \frac{2\cdot{word_{familiar}}\cdot{word_{unfamiliar}}}{word_{familiar}\cdot{word_{unfamiliar}}}
   \label{math:Harmonic Mean}
 \end{eqnarray}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Example of explained unfamiliar tourist spots}
-\label{subsec:Example of explained unfamiliar tourist spots}
+% \begin{eqnarray}
+%   score=\frac{1}{\frac{1}{2}(\frac{1}{word_{familiar}}+\frac{1}{word_{unfamiliar}})}
+%   \label{math:Harmonic Mean}
+% \end{eqnarray}
 
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[clip,width=8.5cm,bb=0 0 1289 750]{picture/Photo_Map.png}
+    \caption{Output interface}
+    \label{fig:photo_map}
+   \end{center}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Example of explained unfamiliar spots}
+\label{subsec:Example of explained unfamiliar spots}
+
+% 表\ref{table:Familiar spots and Unfamiliar spots}は，ユーザが既に訪問したことがあるスポットと，未訪問スポットの集合の例である．
+Table \ref{table:Familiar spot group and Unfamiliar spot group} is an example of a spot that a user has familiar spots and unfamiliar spots.
+
+% 未訪問スポットは東京都内からランダムに選んだ5つのスポットである．
+Unfamiliar spots are five spots randomly selected from within Tokyo.
+% 節\ref{sec:An Explanation Method of Unfamiliar Tourist Spots}の提案手法を使って説明単語を求めた結果は表\ref{table:Explanation information}である．
+Table \ref{table:Explanation information} shows the results of explaining the explanatory words using the proposed method in Section \ref{sec:An Explanation Method of Unfamiliar Tourist Spots}.
+
+% 公園という特徴に注目すると，未訪問スポット集合内で最も公園に近いスポットは新宿御苑であると考えられる．
+Focusing on the feature of the park, it is thought that the spot closest to the park in the unfamiliar spot group is ``Shinjuku Gyoen''.
+% 既訪問スポット集合内には小田原城址公園と奈良公園の二つの公園がある．
+In the set of familiar spots there are two parks, `Odawara-jo Park'' and ``Nara Park''.
+% 小田原城址公園には花や遊具に対する記述が多く，奈良公園は鹿や草に対する記述が多い．
+``Odawara-jo Park'' has a lot of descriptions about flowers and play equipments, and there are many descriptions for deers and grass at ``Nara Park''.
+% 新宿御苑は花や遊具に対する記述が多いため，小田原城址公園との関連性があると考えられる．
+Because ``Shinjuku Gyoen'' has a lot of descriptions about flowers and play equipments, it seems to be related to ``Odawara-jo Park''.
+
+% 三島スカイウォークは既訪問スポット集合内で眺めがいい，高いの特徴が一番強いことが考えられる．
+``Mishima Skywalk'' has a view in the set of familiar spots, and it can be considered that the feature of the highest is the strongest.
+% 未訪問スポット集合内で眺めがいい，高いの特徴が強いのは東京スカイツリーや東京タワー大展望台の2つがある．
+There are two of ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' that have good views with a high view in the unfamiliar spot group.
+% 東京スカイツリーはより高いによって三島スカイウォークと考えられるが，説明情報を見ると富士山が入っている．
+``Tokyo Skytree'' is thought to be ``Mishima Skywalk'' to its higher level, but ``Mount Fuji'' is included when I look at the explanation information.
+% 2つスポットの高さは富士山という単語によって強調されている．
+The height of the two spots is highlighted by the word ``Mount Fuji''.
+% 提案手法は各集合のスポット毎の特徴を表すことができる．
+The proposed method can show the feature of each set of spots.
+
+\begin{table}[t]
+  \caption{Familiar spot group and Unfamiliar spot group}
+  \label{table:Familiar spot group and Unfamiliar spot group}
+  \centering
+  \begin{tabular}{l|l}
+  \hline
+  \multicolumn{1}{c|}{Familiar Spot Name} & \multicolumn{1}{c}{Unfamiliar Spot Name} \\ \hline
+  Sensoji Temple                          & Tokyo Disneyland (R)                     \\
+  Odawara-jo Park                         & Shinjuku Gyoen                           \\
+  Fushimiinari-taisha Shrine              & Tokyo Skytree                            \\
+  Nara Park                               & Tokyo Tower Main Deck            \\
+  Mishima Skywalk                         & Meiji Jingu                              \\ \hline
+  \end{tabular}
+\end{table}
+
+\begin{table*}[t]
+  \caption{Explanation information}
+  \label{table:Explanation information}
+  \centering
+  \begin{tabular}{l|l|l}
+  \hline
+  \multicolumn{1}{c|}{Unfamiliar Spot} & \multicolumn{1}{c|}{Familiar Spot} & \multicolumn{1}{c}{Explanation Information}                     \\ \hline
+  % 新宿御苑                      &  小田原城址公園                        & お花見，咲き誇る，園内，桜の時，のんびり，手入れ，自然，遊具，ツツジ          \\ \hline
+  Shinjuku Gyoen                      & Odawara-jo Park                         & flower viewing, bloom, inside the park, cherry-blossoms, carefree, care, nature, play equipment, azalea          \\ \hline
+  % 東京スカイツリー                     & 三島スカイウォーク                    & 富士山，揺れ，高所恐怖症，揺れる，天井，絶景，エレベーター，パノラマ，展望デッキ，昇る \\
+  Tokyo Skytree                     & Mishima Skywalk                    & mount fuji, tremor, high fear, trembling, ceiling, magnificent view, elevator, panorama, observation deck, rising
+ \\ \hline
+  \end{tabular}
+\end{table*}
 
 
 
@@ -738,13 +446,118 @@ Therefore, the top ten words of the word score are presented to the user as expl
 \label{sec:Evaluation Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Experiment of feature word representing relation}
-\label{subsec:Experiment of feature word representing relation}
+\subsection{Experiment contents}
+\label{subsec:Experiment contents}
 
+% 絶対的な特徴と提案手法の相対的な特徴による説明情報を提示する方法の比較を行う．
+We compare absolute features and methods to present explanatory information by relative features of the proposed method.
+% また，相対的な特徴を利用する場合において，調和平均を利用して単語スコアを算出する方法と相加平均を利用して単語スコアを算出する方法の比較を行った．
+In addition, in the case of using relative features, we compare the method of calculating word scores using harmonic mean and the method of calculating word score using arithmetic mean.
 
+% クラウドソーシングのサービスである，CrowdWorks\footnote{https://crowdworks.jp/}を利用して24人の被験者を集めた．
+We collected 24 subjects using CrowdWorks\footnote{https://crowdworks.jp/}, a crowdsourcing service.
+% じゃらんで取得した観光スポットを使って，被験者の既訪問スポットの選択による未訪問スポットの説明情報の提示を行った．
+We presented presentation information on unfamiliar spots by selecting subjects' familiar spots using tourist spots acquired by Jalan taking place.
+% 絶対的な特徴と相対的な特徴の説明情報のパターンは以下の4つとなる．
+The patterns of explanatory information of absolute feature and relative features are as follows.
+\begin{description}
+\item[A]Absolute feature (category, duration time, season)
+\item[B]Absolute feature (feature vector)
+\item[C]Relative features (differential vector, harmonic mean)
+\item[D]Relative features (differential vector, arithmetic mean)
+\end{description}
 
-\subsection{Comparative experiment of correspondence}
-\label{subsec:Comparative experiment of correspondence}
+% 説明情報Aは，観光スポット検索サイトでスポットを検索するためで使う絞り込み情報である．絞り込み情報は例は以下の3つである．
+The explanation information A is narrowing-down information used for searching spots on the sightseeing spots search site. Three examples of narrowing down information are as follows.
+
+\begin{itemize}
+\item category: Shrine / Temple，Tourist facilities / Tourist tours etc.
+\item duration time: less than 1 hour，1\verb|~|2 hour etc.
+\item season: 1 month\verb|~|12 month, spring, summer, autumn, winnter
+\end{itemize}
+
+% まず，既訪問スポットを使って，未訪問スポットとのカテゴリが一致がどうか，滞在時間と一致かどうか，訪問時期と一致かどうかの順で徐々に情報を絞って，既訪問スポットと未訪問スポットの対応付けを行う．
+First, using the familiar spot, we gradually narrow down the information in order of whether the categories with unfamiliar spot match, whether it matches the duration time or not, and whether or not it matches the season, and the familiar and the unfamiliar spot.
+% 次に，絞った後の未訪問スポットが複数残った場合，レビュー数が1番多い未訪問スポットを利用する．
+Next, if there are multiple unfamiliar spots after squeezing, use the unfamiliar spot with the most review number.
+% 最後に，節\ref{subsec:説明するための役割語の抽出}を使って説明するための役割語を抽出し，被験者に提示する．
+Finally, we extract the role words for explanation using section \ref{subsec:Extraction of explainable words for role} and present them to the subjects.
+% 説明情報Bは，節\ref{subsec:スポットのレビューから特徴ベクトル生成}で作成した特徴ベクトルを使って，各スポットの特徴とする．
+The explanation information B is the feature of each spot using the feature vector created in section \ref{subsec:Generating feature vector from reviews of spot}.
+% 説明情報Cは，提案手法である．
+The explanation information C is the proposed method.
+% 説明情報Dは，関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
+The explanation information D, explanation information on the familiar spot and the unfamiliar spot associated with each other is determined by using harmonic averages according to feature words of each spot obtained by TFIDF.
+% 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
+Extracts commonly appearing words in the review document of the familiar spot and the review document of the unfamiliar spot.
+% また，抽出した単語のはぞれぞれのスポットのTFIDFの値の平均を以上である必要がある．
+In addition, it is necessary for the extracted word to have an average value of the TFIDF values ​​of the respective spots.
+% 既訪問スポット単語のTFIDF値と未訪問スポット単語のTFIDF値の差の絶対値を単語スコアとして算出し，単語スコアが最も0に近い10個の単語を説明情報として被験者に提示する．
+The absolute value of the difference between the TFIDF value of the familiar spot word and the TFIDF value of the unfamiliar spot word is calculated as the word score and ten words whose word score is the closest to 0 are posted on the subject as explanation information.
+
+% まず，被験者は既に訪問したことがあり，気に入った観光スポットを4つ以上10つ以下入力した．
+First, the subjects have familiar spot, favorite spot and enter between 4 to 10.
+% 入力するスポットは，検索候補から選んでもらう．
+Have the input spots be selected from the search candidates.
+% 例えば，新宿御苑---新宿，清水寺---京都などがある．
+For example,Shinjuku Gyoen---Shinjuku, Kiyomizudera---Kyoto etc.
+% 次に，被験者は旅行等で行ったことがなく，これから行ってみたい都道府県・エリアを入力した．
+Next, the subjects never went on a trip etc and entered prefectures / areas that we would like to visit.
+% 説明情報のパターンのAからDの順で処理を行って，ユーザに未訪問スポット名，キーワード，既訪問スポット名を提示し，以下の5つの評価から1つを選択した．
+Processing was carried out in the order of A to D of the pattern of explanation information, and the unfamiliar spot name, keyword, and familiar spot name were presented to the user, and one of the following 5 evaluations was selected.
+\begin{enumerate}
+  \item No keyword
+  \item There is a relationship between the two spots in the first place, the relationship became clear by the keyword.
+  \item To the relationship of the two spots noticed for the first time by keyword.
+  \item There is a relationship between the two spots, but the keyword does not represent the relation.
+  \item There is no relationship between the two spots.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{result}
+\label{subsec:result}
+
+\begin{table*}[t]
+  \caption{Statistics on the number of data of experiment results}
+  \label{table:Statistics on the number of data of experiment results}
+  \centering
+  \begin{tabular}{c|r|r|r|r|r}
+  \hline
+  Evaluation & \multicolumn{1}{c|}{Explanation information A} & \multicolumn{1}{c|}{Explanation information B} & \multicolumn{1}{c|}{Explanation information C} & \multicolumn{1}{c|}{Explanation information D} & \multicolumn{1}{c}{Total} \\ \hline
+  1  & 0                      & 0                      & 0                      & 4                      & 4                      \\
+  2  & 19                     & 44                     & 32                     & 26                     & 121                    \\
+  3  & 20                     & 62                     & 53                     & 56                     & 191                    \\
+  4  & 1                      & 3                      & 3                      & 3                      & 10                     \\
+  5  & 6                      & 21                     & 21                     & 20                     & 68                     \\ \hline
+  Total & 46                     & 130                    & 109                    & 109                    & 394                    \\ \hline
+  \end{tabular}
+\end{table*}
+
+% 表\ref{table:Statistics on the number of data of experiment results}は評価1から5の説明情報AからDのそれぞれの実験結果のデータの数である．
+Table 10 shows the number of data of each experimental result of explanation information A to D of Evaluations 1 to 5.
+% 評価実験では，使用可能のデータの合計は394件である．
+In the evaluation experiment, the total of usable data is 394.
+% 説明情報Aの方が未訪問スポットと関連がある既訪問スポットの数が最も少ない．
+The explanation information A has the smallest number of familiar spots associated with unfamiliar spots.
+% 説明情報Bの方が未訪問スポットと関連がある既訪問スポットの数が最も多い．
+The explanation information B has the largest number of familiar spots related to unfamiliar spots.
+% 説明情報Cと説明情報Dについて，未訪問スポットと既訪問スポットの関連付け手法は同じであるため，数が同じとなる．
+The explanation information C and explanation information D, the association method between the unfamiliar spot and the familiar spot is the same, so the numbers are the same.
+
+\begin{table*}[t]
+  \caption{Percentage of evaluation in explanation information}
+  \label{table:Percentage of evaluation in explanation information}
+  \centering
+  \begin{tabular}{c|r|r|r|r}
+  \hline
+  Evaluation & \multicolumn{1}{c|}{Explanation information A} & \multicolumn{1}{c|}{Explanation information B} & \multicolumn{1}{c|}{Explanation information C} & \multicolumn{1}{c}{Explanation information D} \\ \hline
+  1  & 0.00\%                     & 0.00\%                     & 0.00\%                     & 3.67\%                    \\
+  2  & 41.30\%                    & 33.85\%                    & 29.36\%                    & 23.85\%                   \\
+  3  & 43.48\%                    & 47.69\%                    & 48.62\%                    & 51.38\%                   \\
+  4  & 2.17\%                     & 2.31\%                     & 2.75\%                     & 2.75\%                    \\
+  5  & 13.04\%                    & 16.15\%                    & 19.27\%                    & 18.35\%                   \\ \hline
+  \end{tabular}
+\end{table*}
 
 
 
@@ -754,6 +567,12 @@ Therefore, the top ten words of the word score are presented to the user as expl
 \label{sec:Conclusions and Future Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 本研究では，ユーザが行きたい観光スポットが決まっていない場合，ランキング，おすすめ情報やカテゴリーなどに観光検索情報を使用することによって，検索した観光スポットがに対する理解が困難であることを着目した．
+% 未訪問なスポットに対する理解を支援するために，ユーザが既に訪問したことがあるスポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案した．
+
+
+
+
 
 
 

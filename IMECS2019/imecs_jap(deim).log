@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  30 NOV 2018 22:03
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  18 DEC 2018 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -139,35 +139,35 @@ LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 36.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 49.
+(Font)              <12> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 49.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 49.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 49.
+(Font)              <6> on input line 50.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 50.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 49.
+(Font)              size <10.95> substituted on input line 50.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 49.
+(Font)              size <10.95> substituted on input line 50.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.5> on input line 49.
+(Font)              <10.5> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.34996> on input line 49.
+(Font)              <7.34996> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.25> on input line 49.
+(Font)              <5.25> on input line 50.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 54.
+(Font)              <9> on input line 55.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 54.
+(Font)              <5> on input line 55.
 File: picture/Photo_Image_jap.png Graphic file (type bmp)
 <picture/Photo_Image_jap.png>
 [1
@@ -175,44 +175,34 @@ File: picture/Photo_Image_jap.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 156.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 157.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 156.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 157.
 File: picture/Photo_CosSim_jap.png Graphic file (type bmp)
 <picture/Photo_CosSim_jap.png>
  [2]
-
-LaTeX Warning: Reference `subsec:Calculation of similarity by cosine similarity' on page 3 undefined on input line 244.
-
-
-LaTeX Warning: Reference `subsec:Presenting similar information by harmonic mean' on page 3 undefined on input line 287.
-
-
-LaTeX Warning: Reference `subsec:Calculation of similarity by cosine similarity' on page 3 undefined on input line 305.
-
-
-LaTeX Warning: Reference `subsec:Calculation of similarity by cosine similarity' on page 3 undefined on input line 310.
-
-[3]
-
-LaTeX Warning: Reference `subsec:Calculation of similarity by cosine similarity' on page 4 undefined on input line 348.
-
-[4] (./imecs_jap(deim).aux)
+File: picture/Photo_map.png Graphic file (type bmp)
+<picture/Photo_map.png>
+ [3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 347.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 347.
+ [4] [5] (./imecs_jap(deim).aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 1655 strings out of 493281
- 22401 string characters out of 6145040
- 110535 words of memory out of 5000000
- 5612 multiletter control sequences out of 15000+600000
+ 1674 strings out of 493281
+ 22473 string characters out of 6145040
+ 115520 words of memory out of 5000000
+ 5627 multiletter control sequences out of 15000+600000
  19006 words of font info for 73 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,13n,23p,853b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,9n,23p,822b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_jap(deim).dvi (4 pages, 38892 bytes).
+Output written on imecs_jap(deim).dvi (5 pages, 48880 bytes).
