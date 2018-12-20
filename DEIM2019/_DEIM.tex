@@ -256,7 +256,7 @@ $s_i$は集合$S_{state}$の観光スポットの特徴ベクトルを示して�
 スポット内のキーワード特徴値は，式\ref{math:TFIDF}で定義する．
 
 \begin{equation}
-  TFIDF(t,d,state) = TF(t,d) \times log(\frac{|S_{state}|}{DF(t,state)})
+  TFIDF(t,d,state) = TF(t,d) \times log\Biggr(\frac{|S_{state}|}{DF(t,state)}\Biggr)
   \label{math:TFIDF}
 \end{equation}
 
@@ -274,7 +274,7 @@ $|S_{state}|$はスポットの総数である．
 関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
 調和平均とは，逆数の算術平均の逆数である．
 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
-$word_{familiar}$と$word_{unfamiliar}$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．
+$TFIDF(t,d,f)$と$TFIDF(t,d,u)$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．
 単語スコアの値が大きと既訪問スポットと未訪問スポットのそれぞれのTFIDF値が大きい，つまり単語がそれぞれの文書に置いて重要度が高いことを示している．
 よって，単語スコアの上位10個の単語を説明情報としてユーザに提示する(図\ref{fig:photo_map})．
 

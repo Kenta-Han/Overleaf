@@ -337,7 +337,7 @@ We show the explanation information of the familiar spot and the unfamiliar spot
 % スポット内のキーワード特徴値は，式\ref{math:TFIDF}で定義する．
 We calculate the feature value of a keyword in a spot is defined by the formula \ref{math:TFIDF}.
 \begin{equation}
-  TFIDF(t,d,state) = TF(t,d) \times log(\frac{|S_{state}|}{DF(t,state)})
+  TFIDF(t,d,state) = TF(t,d) \times log\Biggr(\frac{|S_{state}|}{DF(t,state)}\Biggr)
   \label{math:TFIDF}
 \end{equation}
 % $TF(t,d)$は，文書$d$内の単語$t$の値を返している．
@@ -414,7 +414,7 @@ Therefore, the top ten words of the word score are presented to the user as expl
   \hline
   \multicolumn{1}{c|}{Unfamiliar Spot} & \multicolumn{1}{c|}{Familiar Spot} & \multicolumn{1}{c}{Explanation Information}                     \\ \hline
   % 新宿御苑                      &  小田原城址公園                        & お花見，咲き誇る，園内，桜の時，のんびり，手入れ，自然，遊具，ツツジ          \\ \hline
-  Shinjuku Gyoen                      & Odawara-jo Park                         & flower viewing, bloom, inside the park, cherry-blossoms, carefree, care, nature, play equipment, azalea          \\ \hline
+  Shinjuku Gyoen                      & Odawara-jo Park                         & flower viewing, bloom, inside the park, cherry-blossoms, carefree, care, nature, play equipment, azalea          \\ 
   % 東京スカイツリー                     & 三島スカイウォーク                    & 富士山，揺れ，高所恐怖症，揺れる，天井，絶景，エレベーター，パノラマ，展望デッキ，昇る \\
   Tokyo Skytree                     & Mishima Skywalk                    & mount fuji, tremor, high fear, trembling, ceiling, magnificent view, elevator, panorama, observation deck, rising
  \\ \hline
