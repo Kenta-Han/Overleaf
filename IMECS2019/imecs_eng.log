@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  20 DEC 2018 16:08
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  20 DEC 2018 23:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,11 +228,11 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <5> not available
 
 
 LaTeX Font Warning: Font shape `JT1/mc/m/sc' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 79.
+(Font)              using `JT1/mc/m/n' instead on input line 81.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/sc' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 79.
+(Font)              using `JY1/mc/m/n' instead on input line 81.
 
 File: picture/Photo_Image_eng.png Graphic file (type eps)
 <picture/Photo_Image_eng.png> [1
@@ -240,59 +240,56 @@ File: picture/Photo_Image_eng.png Graphic file (type eps)
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 213.
+(Font)              <7> on input line 218.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 213.
+(Font)              <5> on input line 218.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 213.
+(Font)              <8> on input line 218.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 213.
+(Font)              <6> on input line 218.
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--213
+Underfull \hbox (badness 10000) in paragraph at lines 218--218
 [][][]\OT1/ptm/m/n/8 Jalan is a re-view post-ing site on tourist spots in Japan.
  []
-
-
-LaTeX Warning: Citation `paragraph vector„ÅÆË´ñÊñá„ÇíÂºï„Åè' on page 2 undefined on input line 215.
 
 File: picture/Photo_CosSim_eng.png Graphic file (type eps)
 <picture/Photo_CosSim_eng.png> [2]
 File: picture/Photo_Map.png Graphic file (type eps)
  <picture/Photo_Map.png>
-Overfull \hbox (9.91693pt too wide) in paragraph at lines 395--404
+Overfull \hbox (9.91693pt too wide) in paragraph at lines 413--422
  [][][][] 
  []
 
 
-LaTeX Warning: Reference `sec:An Explanation Method of Unfamiliar Tourist Spots' on page 3 undefined on input line 412.
+LaTeX Warning: Reference `sec:An Explanation Method of Unfamiliar Tourist Spots' on page 3 undefined on input line 430.
 
 [3] (I search kanjifont definition file: . . ) (I search font definition file: . . . . . . . )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 468.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 486.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-./imecs_eng.tex:487: Package inputenc Error: Unicode character ‚^^80^^8b (U+200B)
+./imecs_eng.tex:505: Package inputenc Error: Unicode character ‚^^80^^8b (U+200B)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.487 ...ge value of the TFIDF values ^^e2^^80^^8b
+l.505 ...ge value of the TFIDF values ^^e2^^80^^8b
                                                   ^^e2^^80^^8bof the respect...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-./imecs_eng.tex:487: Package inputenc Error: Unicode character ‚^^80^^8b (U+200B)
+./imecs_eng.tex:505: Package inputenc Error: Unicode character ‚^^80^^8b (U+200B)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.487 ...the TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
+l.505 ...the TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
                                                   of the respective spots.
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -308,12 +305,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1441 strings out of 493281
- 23879 string characters out of 6145040
+ 1442 strings out of 493281
+ 23930 string characters out of 6145040
  102217 words of memory out of 5000000
- 5398 multiletter control sequences out of 15000+600000
+ 5399 multiletter control sequences out of 15000+600000
  39476 words of font info for 109 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 27i,13n,21p,475b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,13n,21p,450b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_eng.dvi (6 pages, 43988 bytes).
+Output written on imecs_eng.dvi (6 pages, 44260 bytes).

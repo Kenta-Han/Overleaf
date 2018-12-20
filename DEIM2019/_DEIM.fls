@@ -1,10 +1,10 @@
-PWD /Users/hankenta/Desktop/Overleaf/IMECS2019
+PWD /Users/hankenta/Desktop/Overleaf/DEIM2019
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf.cnf
 INPUT /usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt
-INPUT imecs_jap(deim).tex
-OUTPUT imecs_jap(deim).log
+INPUT _DEIM.tex
+OUTPUT _DEIM.log
 INPUT deimj.cls
 INPUT deimj.cls
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map
@@ -36,9 +36,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/multirow/multirow.sty
-INPUT imecs_jap(deim).aux
-INPUT imecs_jap(deim).aux
-OUTPUT imecs_jap(deim).aux
+INPUT _DEIM.aux
+INPUT _DEIM.aux
+OUTPUT _DEIM.aux
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min10.tfm
@@ -77,11 +77,11 @@ INPUT extractbb -B cropbox -O picture/Photo_Image_jap.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-OUTPUT imecs_jap(deim).dvi
+OUTPUT _DEIM.dvi
 INPUT picture/Photo_CosSim_jap.png
 INPUT extractbb -B cropbox -O picture/Photo_CosSim_jap.png
 INPUT picture/Photo_Map.png
 INPUT extractbb -B cropbox -O picture/Photo_Map.png
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
-INPUT imecs_jap(deim).aux
+INPUT _DEIM.aux

@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  20 DEC 2018 23:05
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  20 DEC 2018 23:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**imecs_jap(deim).tex
-(./imecs_jap(deim).tex
+**_DEIM.tex
+(./_DEIM.tex
 pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./deimj.cls
@@ -115,8 +115,8 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@cntb=\count107
 \multirow@dima=\skip47
 \bigstrutjot=\dimen138
-) (./imecs_jap(deim).aux)
-\openout1 = `imecs_jap(deim).aux'.
+) (./_DEIM.aux)
+\openout1 = `_DEIM.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -184,15 +184,15 @@ File: picture/Photo_CosSim_jap.png Graphic file (type bmp)
 File: picture/Photo_Map.png Graphic file (type bmp)
 <picture/Photo_Map.png>
  [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 366.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 365.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 366.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 365.
  [4] [5] [6
 
-] (./imecs_jap(deim).aux)
+] (./_DEIM.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
@@ -200,11 +200,11 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  1675 strings out of 493281
- 22541 string characters out of 6145040
- 110524 words of memory out of 5000000
+ 22451 string characters out of 6145040
+ 110461 words of memory out of 5000000
  5628 multiletter control sequences out of 15000+600000
  19006 words of font info for 73 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,13n,23p,822b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,13n,23p,812b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_jap(deim).dvi (6 pages, 53992 bytes).
+Output written on _DEIM.dvi (6 pages, 53856 bytes).
