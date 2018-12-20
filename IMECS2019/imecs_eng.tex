@@ -37,6 +37,7 @@
 %
 
 \author{Kenta~Han and Daisuke~Kitayama
+
 % \thanks{Manuscript received January 8, 2017; revised February 3, 2017. }
 \thanks{K. T. Han is with the Graduate School of Engineering, Kogakuin University, Japan; e-mail: em18011@ns.kogakuin.ac.jp.}% <-this % stops a space
 \thanks{D. Kitayama is with the Faculty of Informatics, Kogakuin University, Japan;  e-mail: kitayama@cc.kogakuin.ac.jp.}}% <-this % stops a space
@@ -50,24 +51,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 % 近年，観光スポットを決める時にWeb上の観光情報を活用して計画を立てることが多くなっている．
-In recent years, when planning tourist spots, planning is often made by utilizing tourist information on the Web.
+In recent years, when user plans to travel, users often use tourist information on the Web.
 % しかし，ユーザが多くのエリアから訪問したいエリアを決めた上で，さらに自分のイメージに合う観光スポットを探すのは膨大な時間と労力を必要とする．
-However, after deciding the area you want to visit from many areas, the user also needs enormous amount of time and effort to find tourist spots that match your image.
+However, travel often goes to an unfamiliar area, therefore it is difficult to get the tourist information properly.
 % また，ユーザが未訪問スポットに対して期待と不安を感じる場合がある．
-In addition, there are cases where the user feels expectation and anxiety with respect to the unfamiliar spot.
+%In addition, there are cases where the user feels expectation and anxiety with respect to the unfamiliar spot.
 % 本研究では，ユーザの未知なスポットに対する理解を支援するためには，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
-In this research, in order to support understanding of users' unknown spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have familiar spots to unfamiliar spots.
+Therefore, in order to support understanding of users' unfamiliar spots, we propose a method to explain tourist spots of unfamiliar area using tourist spots that have visited by users.
 % 観光スポット自身の特徴を重視するため，各観光スポットの特徴抽出に，ユーザが入力した観光スポットのすべてのレビュー，対象エリアの観光スポットのすべてのレビューを使用する．
-In order to emphasize the features of the tourist spots themselves, extraction of features of each tourist spot is done by work using all reviews of tourist spots entered by the user, all reviews of tourist spots in the target area.
+In this paper, at first, we generate the feature vector using user reviews of the tourist spot. Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user. Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
 % また，プロトタイプシステムを構築し，既訪問スポットと未訪問スポットとの説明情報の効果を検証する評価実験を行う．
-We also conduct an evaluation experiment to construct the prototype system and verify the effect of the explanatory information between the familiar spot and the unfamiliar spot.
+We also develop the prototype system, and we evaluate the effect of the explanatory information between the familiar spot and the unfamiliar spot.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{IAENGkeywords}
 % 観光スポット，理解支援，レビュー，調和平均，パラグラフベクトル
-tourist spots, understanding support, reviews, harmonic mean, paragraph vector
+tourist spots, explainability, user reviews, paragraph vector
 \end{IAENGkeywords}
 
 \IAENGpeerreviewmaketitle
@@ -80,39 +81,41 @@ tourist spots, understanding support, reviews, harmonic mean, paragraph vector
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 旅行先を決定する時，旅行者は観光スポット検索サイトや観光情報に関連する書籍を見て観光スポットを選び，旅行計画を立てる．
-\IAENGPARstart{W}{hen} deciding the travel destination, the traveler selects tourist spots by planning a travel plan, watching tourist spots search sites and books related to tourist information.
+\IAENGPARstart{W}{hen} deciding the travel destination, the traveler selects tourist spots by planning a travel, browsing web pages of tourist spots and tourist guidebooks.
 % しかし，ユーザにとって訪問したいエリアを決定した後，さらにエリア内に数多く存在する観光スポットから，自身のイメージから外れない観光スポットを見つけることは容易ではない．
-However, after deciding the area you want to visit from many areas,and further from their many tourist spots in the area is not easy to find.
+However, travel often goes to an unfamiliar area, therefore it is difficult to get the tourist information properly.
 % 行きたい観光スポットが決まっていない場合ではランキングやおすすめ情報を見て観光スポットを決めることが多くなると考えられる．
-In the case where the tourist spots desired to go are not decided, it is considered that it is more likely to decide tourist spots by looking at ranking and recommendation information.
+At this time, it is considered that the user often decides the tourist spot by looking at the ranking and recommendation information of the tourist spot search engine.
+In a tourist spot search engine such as Tripadvisor and Jalan, the user who visited there about a certain tourist spot posted reviews and there is a wealth of information on tourist spots.
+However, since the user has no prior knowledge about the search area, what kind of tourist spot is to be confirmed one by one.
 % この時，ユーザが選択した観光スポットに対するイメージが曖昧になるため不安を感じる場合がある．
-At this time, the image for the tourist spots selected by the user becomes ambiguous, which may cause anxiety.
-
-
+%At this time, the image for the tourist spots selected by the user becomes ambiguous, which may cause anxiety.
 % 近年，観光業とソーシャルネットワーキングサービスの発展スピードが加速しており，体験した観光スポットに対するレビューを観光スポット検索サイトに投稿しているユーザが増加している．
-In recent years, the speed of development of tourism industry and social networking service is accelerating, and the number of users who post reviews on tourist spots experienced to the tourist spot search site is increasing.
+%In recent years, the speed of development of tourism industry and social networking service is accelerating, and the number of users who post reviews on tourist spots experienced to the tourist spot search site is increasing.
+
 % さまざまな観光スポットを効果的に理解するためには，既存の情報をもとにして，未知な情報と既知な情報との対応関係を考えることが不可欠となる．
-In order to effectively understand various tourist spots, it is essential to consider the correspondence between unknown information and existing information based on existing information.
+Therefore, in order to effectively understand various tourist spots, we think that it is effective if we compare an unfamiliar spot using a visited spot of user.
 % この考え方は，以前に経験した事柄(ベースと呼ぶ)を，現在直面している事柄あるいは問題(ターゲットと呼ぶ)にあてはめる類推に相当する．
-This way of thinking is equivalent to analogy which applies to the things by previous experiences (called the base), or problems (called the target).
+This is a kind of analogy that applies the matters that the user previously experienced to the current matter. In this case, the previous experience is the already visited spot and the current matter is the spot in the unfamiliar area.
 % たとえば，金沢の「にし茶屋街」という未知なスポットに対して既訪問の京都の「花見小路」と似ていると説明するとイメージの理解がしやすくすることがある．
-For example, whereas unknown spots such as ``Kanazawa's Nisityayagai'', if you explain that it is similar to the already visited ``Kyoto Hanamikoj'', it may make it easier to understand the image.
+For example, whereas unfamiliar spots such as ``Omotesando'' in Tokyo, Japan, if you explain that it is similar to the already visited ``Avenue des Champs-Elysees'' in Paris, it may make it easier to understand.
 
 % 本研究では，ユーザの未訪問スポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
-In this research, in order to support understanding of users' unfamiliar spots, we propose explanatory method that supports the understanding by fitting the features of tourist spots that have familiar spots to unfamiliar spots.
+In this paper, in order to support understanding of users' unfamiliar spots, we propose a method to explain tourist spots of unfamiliar area using tourist spots that have visited by users.
 % 具体的には，ユーザが入力した既訪問スポットと未訪問エリアから，レビュを用いて既訪問スポット内の各スポットの独特な特徴と未訪問エリア内の各スポットの独特な特徴を抽出し，比較を行って説明情報を提示する．
-Specifically, from the familiar spots and the unfamiliar area entered by the user, we use the review to extract the unique features of each spot in the familiar spots and the unique features of each spot in the unfamiliar area, compare and present explanatory information.
+In our method, the user inputs already visited spots and unfamiliar area. At this time, we generate the feature vector using user reviews of the tourist spot. Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user. Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
+By this way, we aim to rise understandability of unfamiliar spots.
 % このプロトタイプシステムにより，ユーザが未訪問スポットに対する理解の支援を目指す．
-With this prototype system, users aim to support understanding of unfamiliar spots.
+%With this prototype system, users aim to support understanding of unfamiliar spots.
 % 図\ref{fig:Photo_Image}は提案手法の概念図である．
-Fig. \ref{fig:Photo_Image} is a conceptual diagram of the proposed method.
+Fig. \ref{fig:Photo_Image} shows a concept of the proposed method.
 
 % 本論文の構成は下記のとおりである．2節では関連研究について述べる．3節では提案手法の概要について述べる．4節では構築したプロトタイプシステムの効果を検証する評価実験と考察について述べる．最後に5節ではまとめと今後の課題について述べる．
 The structure of this paper is as follows.
-Section \ref{sec:Related Work} describes related research.
-Section \ref{sec:An Explainaton Method of Unfamiliar Tourist Spots} gives an overview of the proposed method.
-Section \ref{sec:Evaluation Experiment} describes evaluation experiments and considerations to verify the effect of the constructed prototype system.
-Section \ref{sec:Conclusions and Future Work} describes with conclusions and future work.
+In section \ref{sec:Related Work}, we introduce related works.
+In section \ref{sec:An Explainaton Method of Unfamiliar Tourist Spots}, we describe the proposed method.
+In section \ref{sec:Evaluation Experiment}, we discuss evaluation experiments and its results.
+In section \ref{sec:Conclusions and Future Work}, we describe conclusions of this paper and our future work.
 
 \begin{figure}[t]
   \begin{center}
@@ -130,7 +133,7 @@ Section \ref{sec:Conclusions and Future Work} describes with conclusions and fut
 \label{sec:Related Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Research using user history}
+\subsection{Tourist spot retrieval and recommendation system}
 \label{subsec:Research using user history}
 
 % ユーザの体験履歴を利用した検索や推薦システムに関する研究が数多く発表されている．
@@ -151,7 +154,7 @@ In addition, present a user interface that visualizes a graph with travel photos
 Cheng et al.\cite{Codd03} used photographs of freely available community contributions to focus on personalized trip recommendations, considering specific user profiles or attributes, suggested to consider personalized travel recommendations.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Research on analogy}
+\subsection{The analogy and its applications}
 \label{subsec:Research on analogy}
 
 % 類推は創造的思考に貢献すると指摘されてた\cite{Codd04}．
@@ -167,7 +170,7 @@ Some studied about how to give learning data and functions\cite{Codd07}, and cla
 % これらを含む従来研究の多くにおいては，類推に用いるベースとターゲットを与えたうえで，一定の手順に従って問題解決を行っている.
 In many of the conventional research including these, after giving bases and targets for analogy, we solve problems according to a certain procedure.
 % また，構造の類似性には3種類あり，特徴の共有数で決まる「対象レベルの類似性」，ベースに存在する関係とターゲットに存在する関係の共有度に基づく「関係レベルの類似性」，および題の解法あるいは目標レベルでの類似性である「プラグマティックな類似性」とがある\cite{Codd05}，\cite{Codd09}．
-There are three types of structural similarities``similarity of object level'' determined by the number of shared features, ``relationship similarity'' based on the degree of sharedness of relationships existing in the base and the relationship existing in the base, and similarity in the title solution or target level There is a certain ``pragmatic similarity''\cite{Codd05}，\cite{Codd09}.
+There are three types of structural similarities ``similarity of object level'' determined by the number of shared features, ``relationship similarity'' based on the degree of sharedness of relationships existing in the base and the relationship existing in the base, and similarity in the title solution or target level There is a certain ``pragmatic similarity''\cite{Codd05}，\cite{Codd09}.
 
 % 従来のユーザの体験履歴を利用する手法では，履歴写真のジオタグ情報を分析し，ユーザの嗜好とする研究が多く行われている．
 In the conventional method of using the user's experience history, many researches that analyze the geotag information of the history photograph and make it user's preference are performed.
@@ -188,28 +191,32 @@ Moreover, because the quality of analogy is treated explicitly, it is considered
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 我々は，ユーザの既訪問スポットの位置づけに基づく未訪問スポットの説明手法を提案する．
-We propose an explanation method of unfamiliar tourist spots based on roles of user's familiar spots
+We propose an explanation method of unfamiliar tourist spots based on roles of user's familiar spots.
 % 具体的にはまず，ユーザが既訪問の複数個の観光スポットと訪問したい観光スポットエリア情報を入力する．
-Specifically, first, the user inputs a plurality of tourist spots that have been visited and tourist spot area information that user wishes to visit.
+At first, the user inputs a set of tourist spots that have been visited and tourist area that user wishes to visit.
 % 既訪問スポットレビューベクトルを使って既訪問スポット毎の特徴ベクトルを求める．
-Use the familiar spot review vector to find the feature vector for each familiar spot.
+In our method, we generate the feature vector using user reviews of the tourist spot.
+Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
+%Use the familiar spot review vector to find the feature vector for each familiar spot.
 % 未訪問スポットも同様にエリア内の各スポットの特徴ベクトルを求める．
-Similarly, the feature vector of each spot in the area is obtained for an unfamiliar spot.
+Similarly, we calculate the relative feature vector of each tourist spot in the unfamiliar area by comparing with other tourist spots in that area.
 % 次に，既訪問スポットレビューベクトルと未訪問スポットレビューベクトルの差分特徴に類似する特徴を持つ未既訪問観光スポット関連付けを行う．
-Next, we associate familiar spots with features similar to the difference features between the familiar spot review vector and the unfamiliar spot review vector.
+Then, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector.
 % 最後に，TFIDFを用いて未訪問スポットの理解支援のための説明手法を定義し，ユーザに提示する．
-Finally, explanation method for supporting understanding of unfamiliar spot is defined using TFIDF and presented to the user.
+Finally, we extract keywords that explain the relation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % スポットのレビューから特徴ベクトル生成
-\subsection{Generating feature vector from reviews of spot}
+\subsection{Generating feature vector using user reviews of spot}
 \label{subsec:Generating feature vector from reviews of spot}
-% 既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器「mecab-ipadic-NEologd」で分かち書き(原型)したレビューを利用して作成する．
-Review vectors of familiar spots and unfamiliar spots are created using a discriminated (original) review with the morphological analyzer\cite{Codd10} ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
-% その後，Doc2VecのDistributed Bag-of-Wordsを利用して，各スポットの全レビューを使って300次元で作成したベクトルを使う．
-After that, using Distributed\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} Bag-of-Words of Doc2Vec, we use a vector created in 300 dimensions using all reviews of each spot.
 % 本稿に置いて，レビューデータは2016年09月末までじゃらんから取得したものを用いる．
-In this paper, we will use the review data obtained from ``Jalan''\footnote{https://www.jalan.net/kankou/} until the end of September 2016.
+In this paper, we will use the review data obtained from ``Jalan''\footnote{Jalan is a review posting site on tourist spots in Japan. https://www.jalan.net/kankou/} until the end of September 2016.
+% その後，Doc2VecのDistributed Bag-of-Wordsを利用して，各スポットの全レビューを使って300次元で作成したベクトルを使う．
+We generate feature vectors of tourist spots using paragraph vector\cite{paragraph vectorの論文を引く}.
+At this time, we combine all the reviews on a tourist spot and treat it as one document about the tourist spot. In this paper, we use gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} that is a library of python for calculate paragraph vector.
+We used Distributed Bag-of-Words as a learning method, and the number of dimensions was 300.
+% 既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器「mecab-ipadic-NEologd」で分かち書き(原型)したレビューを利用して作成する．
+User reviews in Jalan are written by Japanese. Therefore, we use mecab\cite{Codd10} that is the Japanese morphological analyzer with dictionary ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %観光スポットの役割に関する相対的な特徴
@@ -228,19 +235,19 @@ In this paper, we will use the review data obtained from ``Jalan''\footnote{http
 % 本研究では，観光スポットの特徴は相対的な特徴を利用する．
 In this research, features of tourist spots make use of relative features.
 % 相対的な特徴とは，特定の観光スポットが，ある観光スポット集合に含まれた他の観光スポットと比較した場合における独特な特徴である．
-The relative feature is a unique feature when a specific tourist spot is compared with other tourist spots included in a set of tourist spots.
+We define that the relative feature is a unique feature when a tourist spot is compared with other tourist spots in a set of tourist spots.
 % 例として，観光スポット集合内に鹿苑寺と清水寺が存在する場合を考える．
-As an example, consider the case where there are ``Rokuonji'' and ``Kiyomizudera'' in the tourist spot group.
+As an example, we consider the case where there are ``Kinkakuji Temple'' and ``Kiyomizudera Temple'' in the set of tourist spots.
 % このとき鹿苑寺の特徴は，金色，金箔，輝き等となり，清水寺の特徴は，舞台，胎内，一望等となる．
-At this time, the features of ``Rokuonji'' will be gold color, gold leaf, glow, etc., the features of ``Kiyomizudera'' are the stage, the womb inside, the panoramic view etc.
+At this time, the features of ``Kinkakuji Temple'' are gold color, gold leaf, glow, and so on. On the other hand, the features of ``Kiyomizudera Temple'' are the stage, the womb inside, the panoramic view, and so on.
 % どちらも京都に存在する寺院であるため，京都や寺院に関連する特徴は独特な特徴として現れることがない．
 Because both are temples existing in Kyoto, features related to Kyoto and temples do not appear as unique features.
 % 次に，観光スポット集合内に東京都庁舎展望台と鹿苑寺が存在する場合を考える．
-Next, consider the case where ``the Tokyo Metropolitan Government Building Observatories'' and ``Rokuonji'' exist within the tourist spot group.
+Next, we consider the case where ``the Tokyo Metropolitan Government Building Observatories'' and ``Kinkakuji Temple'' exist within the set of tourist spots.
 % このとき鹿苑寺の特徴は，金閣寺，お寺，金色，京都等となり，東京都庁舎の特徴は，展望，夜景，新宿等となる．
-Features of ``Rokuonji'' at this time will be Kinkakuji, a temple, golden color, Kyoto etc.
+At this time, features of ``Kinkakuji Temple'' is Kinkakuji, a temple, golden color, Kyoto, and so on.
+On the other hand, features of ``the Tokyo Metropolitan Government Building Observatories'' is perspectives, night view, Shinjuku, and so on.
 % 観光スポットのカテゴリーが大きく異なる場合であれば，カテゴリーとしての特徴が現れる．
-Features of ``the Tokyo Metropolitan Government Building Observatories'' will be perspectives, night view, Shinjuku etc.
 % また，スポット自身の特徴を表すことができる．
 If the categories of tourist spots are largely different, features as categories will appear.
 % 本研究では，あるスポットが集合内の他のスポットと比較するとき，より各スポットの特徴を明らかにできる相対的な特徴に着目して研究を行う．
@@ -248,16 +255,17 @@ Also, it can show the features of the spot itself.
 In this research, when a certain spot compares with other spots in the set, we focus on the relative features that make it possible to clarify the features of each spot.
 
 % スポット差分ベクトルは式\ref{math:Vector difference}として定義される．
-The spot differential vector is defined as formula \ref{math:Vector difference}.
+The relative feature vector $r_{state,i}$ is defined as formula \ref{math:Vector difference}.
 % スポット差分ベクトルを求めるスポットを除いたスポット集合の各スポットのスポットベクトルの平均値を引いた値となる．
-Is the value obtained by subtracting the average value of the spot vectors of the spots of the spot group excluding the spot for which the spot differential vector is found.
+Is the value obtained by subtracting the average value of the spot vectors of the spots of the set of spots excluding the spot for which the relative feature vector is found.
 % $spot_{set} =\{s_1,s_2,\dots,s_i,\dots,s_n\}$は既訪問スポット集合や未訪問スポット集合となっている．
-$spot_{set} =\{s_1,s_2,\dots,s_i,\dots,s_n\}$1 is a familiar spot set or an unfamiliar spot set.
+$S_{state} =\{s_1,s_2,\dots,s_n\}$ is a familiar spot set or an unfamiliar spot set.
+When $state$ is $'f'$, it means familiar spot set. When $state$ is $'u'$, it means unfamiliar spot set.
 % また，$s_i$は集合内のある観光スポットを示している．
-$s_i$ is a tourist spot in the set.
+$s_i$ is a feature vector of a tourist spot in the set $S_{state}$.
 
 \begin{equation}
-  v_i=s_i-average(spot_{set}-s_i)
+  r_{state,i}=s_i-average(S_{state}-s_i)
   \label{math:Vector difference}
 \end{equation}
 
@@ -268,12 +276,12 @@ $s_i$ is a tourist spot in the set.
 \label{subsec:Determination of explainable spot}
 
 % 既訪問スポットの各特徴差分ベクトル$v_i$と未訪問スポットの各特徴差分ベクトル$v_j$から，既訪問スポットと未訪問スポット間の相対的な特徴の類似度（図\ref{fig:photo_cossim}）を求める．
-From the feature difference vector $v_i$ of the familiar spot and the feature difference vector $v_j$ of the unfamiliar spot, the relative feature similarity between the familiar spot and the unfamiliar spot (Fig. \ref{fig:Photo_CosSim} ).
+From the relative feature vector $r_{f,i}$ of the familiar spot and the relative feature vector $r_{u,j}$ of the unfamiliar spot, the relative feature similarity between the familiar spot and the unfamiliar spot (Fig. \ref{fig:Photo_CosSim} ).
 % 類似度計算には，コサイン尺度(式\ref{math:CosSim})を用いる．
 For the similarity calculation, use the cosine scale (formula \ref{math:CosSim}).
 
 \begin{eqnarray}
-  cos(v_i,v_j)=\frac{v_{i1}v_{j1}+v_{i2}v_{j2}+\cdots+v_{in}v_{jn}}{\sqrt{v^2_{i1}+\cdots+v^2_{in}}\times\sqrt{v^2_{j1}+\cdots+v^2_{jn}}}
+  cos(r_{f,i},r_{u,j})=\frac{r_{f,i} \cdot r_{u,j}}{|r_{f,i}| \times |r_{u,j}|}
   \label{math:CosSim}
 \end{eqnarray}
 
@@ -284,9 +292,9 @@ In addition, there are two ways to establish an association between a familiar s
 
 \begin{enumerate}
   % \item 既訪問スポットをベースにして未訪問スポットと関連付ける方法
-  \item how to relate to unfamiliar spots based on already familiar spots
+  \item how to relate to unfamiliar spots based on familiar spots
   % \item 未訪問スポットをベースにして既訪問スポットと関連付ける方法
-  \item how to relate to already familiar spots based on unfamiliar spots
+  \item how to relate to familiar spots based on unfamiliar spots
 \end{enumerate}
 
 % 方法1では，既訪問スポットをベースにすると未訪問エリア内のスポットが複数の特徴を保持する場合は同じ未訪問スポットと関連付ける場合がある．
@@ -294,7 +302,7 @@ In the method 1, if the spot in the unfamiliar area holds a plurality of feature
 % 方法2では，未訪問スポットをベースにすることによって，既訪問スポット集合から各スポットの特徴を取り出し，未訪問スポットと関連付けることができるため，方法2を利用する．
 In method 2, method 2 is used as it is possible to extract features of each spot from the familiar spot set based on the unfamiliar spot and associate with the unfamiliar spot.
 % また，本研究では，未訪問スポットを説明するため未訪問スポットをベースにすることが妥当と考えられる．
-In addition, in this research, it is considered reasonable to base on unfamiliar spots to explain unfamiliar spots.
+In addition, in this research, we considered that it is reasonable to base on unfamiliar spots for explaining unfamiliar spots.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 説明するための役割語の抽出
@@ -308,45 +316,42 @@ However, words obtained by using these words contain words that do not hold Japa
 Specifically, delete particles, auxiliary verbs, rentaishi, symbols, stopwords.
 
 % 節\ref{subsec:Determination of explainable spot}で関連付けした既訪問スポットと未訪問スポットの説明情報は単語形式でユーザに提示するため，ある観光スポットのレビュー集合を文書$i$とし，$i$に対する単語$j$が出現するスポット集合の出現回数を$TF_{i,j}$，単語$j$がスポット集合の文書数を$DF_{j}$，スポット集合内の全スポット数を$|D|$とした時，そのスポットにおける単語の特徴量は，式\ref{math:TFIDF}で定義される．
-Since the explanation information of the fami
- spot and the unfamiliar spot associated in section \ref{subsec:Determination of explainable spot} is presented to the user in word format, a review set of a certain tourist spot is assumed to be a document $i$ and a spot where the word $j$ for $i$ appears When the number of occurrences of the set is $TF_{i,j}$, the word $j$ is the number of documents in the spot set is $DF_{j}$, and the total number of spots in the spot set is $|D|$ The feature quantity of a word in a spot is defined by the formula \ref{math:TFIDF}.
-
+We show the explanation information of the familiar spot and the unfamiliar spot associated in section \ref{subsec:Determination of explainable spot} to the user as the set of keywords.
+We calculate the feature value of a keyword in a spot is defined by the formula \ref{math:TFIDF}.
 \begin{equation}
-  word_{i,j} = TF_{i,j} \times IDF_{j}
+  TFIDF(t,d,state) = TF(t,d) \times log(\frac{|S_{state}|}{DF(t,state)})
   \label{math:TFIDF}
 \end{equation}
-\begin{equation}
-  IDF_{j} = log(\frac{|D|}{DF_{j}})
-  \label{math:IDF}
-\end{equation}
+Where function $TF(t,d)$ returns the number of the word $t$ in the document $d$. $d$ is a document combining all reviews of a spot into one.
+Function $DF(t,state)$ retuns the number of documents that include keyword $t$.
+$|S_{state}|$ is the total number of spots.
 
 % 本手法では，既訪問スポットに関して，ユーザが複数個のスポットを入力する．
 In this method, for familiar spots, the user inputs plurality of spots.
 % それぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，既訪問スポット毎の特徴語とする．
-By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unfamiliar area.
+By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, and use it as the feature words for each spot in the unfamiliar area.
 
 % 未訪問エリアに関して，ユーザがエリアを指定して入力する．
 Regarding the unfamiliar area, the user designates an area and inputs it.
 % エリア内のそれぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}，\ref{math:IDF}によってTFIDF値を算出し，未訪問エリアのスポット毎の特徴語とする．
-By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, \ref{math:IDF}, and use it as the feature words for each spot in the unfamiliar area.
+By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, and use it as the feature words for each spot in the unfamiliar area.
 
 % 関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
 The explanation information on the associated familiar spots and unfamiliar spots associated with each other is determined by using harmonic averages according to feature words of each spot obtained by TFIDF.
 % 調和平均とは，逆数の算術平均の逆数である．
 The harmonic mean is the reciprocal of the arithmetic mean of the reciprocal.
 % 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
-Extracts commonly appearing words in the review document of the familiar spot and the review document of the unfamiliar spot.
-% 抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
+We extract commonly appearing words in the review document of the familiar spot and the unfamiliar spot.% 抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
 The score of the extracted word is defined by the formula \ref{math:Harmonic Mean}.
 % $word_{familiar}$と$word_{unfamiliar}$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．
-$word_{familiar}$ and $word_{unfamiliar}$ indicate the TFIDF value of the familiar spot and the TFIDF value of the unfamiliar spot, respectively.
+$TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar spot and the TFIDF value of the unfamiliar spot, respectively.
 % 単語スコアの値が大きと既訪問スポットと未訪問スポットのそれぞれのTFIDF値が大きい，つまり単語がそれぞれの文書に置いて重要度が高いことを示している．
 When the value of the word score is large, the TFIDF value of each of the familiar spot and the unfamiliar spot is large, that is, the word has high importance in each document.
 % よって，単語スコアの上位10個の単語を説明情報としてユーザに提示する(図\ref{fig:photo_map})．
 Therefore, the top ten words of the word score are presented to the user as explanation information (Fig. \ref{fig:photo_map}).
 
 \begin{eqnarray}
-  score = \frac{2\cdot{word_{familiar}}\cdot{word_{unfamiliar}}}{word_{familiar}\cdot{word_{unfamiliar}}}
+  score(t,d) = \frac{2 \times TFIDF(t,d,f) \times TFIDF(t,d,u)}{TFIDF(t,d,f) + TFIDF(t,d,u)}
   \label{math:Harmonic Mean}
 \end{eqnarray}
 
@@ -367,34 +372,6 @@ Therefore, the top ten words of the word score are presented to the user as expl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Example of explained unfamiliar spots}
 \label{subsec:Example of explained unfamiliar spots}
-
-% 表\ref{table:Familiar spots and Unfamiliar spots}は，ユーザが既に訪問したことがあるスポットと，未訪問スポットの集合の例である．
-Table \ref{table:Familiar spot group and Unfamiliar spot group} is an example of a spot that a user has familiar spots and unfamiliar spots.
-
-% 未訪問スポットは東京都内からランダムに選んだ5つのスポットである．
-Unfamiliar spots are five spots randomly selected from within Tokyo.
-% 節\ref{sec:An Explanation Method of Unfamiliar Tourist Spots}の提案手法を使って説明単語を求めた結果は表\ref{table:Explanation information}である．
-Table \ref{table:Explanation information} shows the results of explaining the explanatory words using the proposed method in Section \ref{sec:An Explanation Method of Unfamiliar Tourist Spots}.
-
-% 公園という特徴に注目すると，未訪問スポット集合内で最も公園に近いスポットは新宿御苑であると考えられる．
-Focusing on the feature of the park, it is thought that the spot closest to the park in the unfamiliar spot group is ``Shinjuku Gyoen''.
-% 既訪問スポット集合内には小田原城址公園と奈良公園の二つの公園がある．
-In the set of familiar spots there are two parks, ``Odawara-jo Park'' and ``Nara Park''.
-% 小田原城址公園には花や遊具に対する記述が多く，奈良公園は鹿や草に対する記述が多い．
-``Odawara-jo Park'' has a lot of descriptions about flowers and play equipments, and there are many descriptions for deers and grass at ``Nara Park''.
-% 新宿御苑は花や遊具に対する記述が多いため，小田原城址公園との関連性があると考えられる．
-Because ``Shinjuku Gyoen'' has a lot of descriptions about flowers and play equipments, it seems to be related to ``Odawara-jo Park''.
-
-% 三島スカイウォークは既訪問スポット集合内で眺めがいい，高いの特徴が一番強いことが考えられる．
-``Mishima Skywalk'' has a view in the set of familiar spots, and it can be considered that the feature of the highest is the strongest.
-% 未訪問スポット集合内で眺めがいい，高いの特徴が強いのは東京スカイツリーや東京タワー大展望台の2つがある．
-There are two of ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' that have good views with a high view in the unfamiliar spot group.
-% 東京スカイツリーはより高いによって三島スカイウォークと考えられるが，説明情報を見ると富士山が入っている．
-``Tokyo Skytree'' is thought to be ``Mishima Skywalk'' to its higher level, but ``Mount Fuji'' is included when I look at the explanation information.
-% 2つスポットの高さは富士山という単語によって強調されている．
-The height of the two spots is highlighted by the word ``Mount Fuji''.
-% 提案手法は各集合のスポット毎の特徴を表すことができる．
-The proposed method can show the feature of each set of spots.
 
 \begin{table}[t]
   \caption{Familiar spot group and Unfamiliar spot group}
@@ -426,6 +403,34 @@ The proposed method can show the feature of each set of spots.
   \end{tabular}
 \end{table*}
 
+% 表\ref{table:Familiar spots and Unfamiliar spots}は，ユーザが既に訪問したことがあるスポットと，未訪問スポットの集合の例である．
+Table \ref{table:Familiar spot group and Unfamiliar spot group} is an example of a spot that a user has familiar spots and unfamiliar spots.
+
+% 未訪問スポットは東京都内からランダムに選んだ5つのスポットである．
+Unfamiliar spots are five spots randomly selected from within Tokyo.
+% 節\ref{sec:An Explanation Method of Unfamiliar Tourist Spots}の提案手法を使って説明単語を求めた結果は表\ref{table:Explanation information}である．
+Table \ref{table:Explanation information} shows the results of explaining the explanatory words using the proposed method in Section \ref{sec:An Explanation Method of Unfamiliar Tourist Spots}.
+
+% 公園という特徴に注目すると，未訪問スポット集合内で最も公園に近いスポットは新宿御苑であると考えられる．
+Focusing on the feature of the park, it is thought that the spot closest to the park in the unfamiliar spot group is ``Shinjuku Gyoen''.
+% 既訪問スポット集合内には小田原城址公園と奈良公園の二つの公園がある．
+In the set of familiar spots there are two parks, ``Odawara-jo Park'' and ``Nara Park''.
+% 小田原城址公園には花や遊具に対する記述が多く，奈良公園は鹿や草に対する記述が多い．
+``Odawara-jo Park'' has a lot of descriptions about flowers and play equipments, and there are many descriptions for deers and grass at ``Nara Park''.
+% 新宿御苑は花や遊具に対する記述が多いため，小田原城址公園との関連性があると考えられる．
+Because ``Shinjuku Gyoen'' has a lot of descriptions about flowers and play equipments, it seems to be related to ``Odawara-jo Park''.
+
+% 三島スカイウォークは既訪問スポット集合内で眺めがいい，高いの特徴が一番強いことが考えられる．
+``Mishima Skywalk'' has a view in the set of familiar spots, and it can be considered that the feature of the highest is the strongest.
+% 未訪問スポット集合内で眺めがいい，高いの特徴が強いのは東京スカイツリーや東京タワー大展望台の2つがある．
+There are two of ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' that have good views with a high view in the unfamiliar spot group.
+% 東京スカイツリーはより高いによって三島スカイウォークと考えられるが，説明情報を見ると富士山が入っている．
+``Tokyo Skytree'' is thought to be ``Mishima Skywalk'' to its higher level, but ``Mount Fuji'' is included when I look at the explanation information.
+% 2つスポットの高さは富士山という単語によって強調されている．
+The height of the two spots is highlighted by the word ``Mount Fuji''.
+% 提案手法は各集合のスポット毎の特徴を表すことができる．
+The proposed method can show the feature of each set of spots.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -434,7 +439,7 @@ The proposed method can show the feature of each set of spots.
 \label{sec:Evaluation Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Experiment contents}
+\subsection{Settings of experiment}
 \label{subsec:Experiment contents}
 
 % 絶対的な特徴と提案手法の相対的な特徴による説明情報を提示する方法の比較を行う．
@@ -451,8 +456,8 @@ The patterns of explanatory information of absolute feature and relative feature
 \begin{description}
 \item[A]Absolute feature (category, duration time, season)
 \item[B]Absolute feature (feature vector)
-\item[C]Relative features (differential vector, harmonic mean)
-\item[D]Relative features (differential vector, arithmetic mean)
+\item[C]Relative features (relative feature vector, harmonic mean)
+\item[D]Relative features (relative feature vector, arithmetic mean)
 \end{description}
 
 % 説明情報Aは，観光スポット検索サイトでスポットを検索するためで使う絞り込み情報である．絞り込み情報は例は以下の3つである．
@@ -477,16 +482,16 @@ The explanation information C is the proposed method.
 % 説明情報Dは，関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
 The explanation information D, explanation information on the familiar spot and the unfamiliar spot associated with each other is determined by using harmonic averages according to feature words of each spot obtained by TFIDF.
 % 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
-Extracts commonly appearing words in the review document of the familiar spot and the review document of the unfamiliar spot.
+We extracts commonly appearing words in the review document of the familiar spot and the unfamiliar spot.
 % また，抽出した単語のはぞれぞれのスポットのTFIDFの値の平均を以上である必要がある．
-In addition, it is necessary for the extracted word to have an average value of the TFIDF values of the respective spots.
+In addition, it is necessary for the extracted word to have an average value of the TFIDF values ​​of the respective spots.
 % 既訪問スポット単語のTFIDF値と未訪問スポット単語のTFIDF値の差の絶対値を単語スコアとして算出し，単語スコアが最も0に近い10個の単語を説明情報として被験者に提示する．
 The absolute value of the difference between the TFIDF value of the familiar spot word and the TFIDF value of the unfamiliar spot word is calculated as the word score and ten words whose word score is the closest to 0 are posted on the subject as explanation information.
 
 % まず，被験者は既に訪問したことがあり，気に入った観光スポットを4つ以上10つ以下入力した．
 First, the subjects have familiar spot, favorite spot and enter between 4 to 10.
 % 入力するスポットは，検索候補から選んでもらう．
-Have the input spots be selected from the search candidates.
+The subjects have selected from the search candidates as the input spots.
 % 例えば，新宿御苑---新宿，清水寺---京都などがある．
 For example,Shinjuku Gyoen---Shinjuku, Kiyomizudera---Kyoto etc.
 % 次に，被験者は旅行等で行ったことがなく，これから行ってみたい都道府県・エリアを入力した．
@@ -571,16 +576,16 @@ However, since the number of relevant spots is limited to categories, there are 
 % また，別カテゴリのスポット情報を被験者に提示できないため意外性を求めることができないといえる．
 In addition, it can not be said that unexpectedness can not be obtained because spot information of another category can not be presented to subjects.
 % 2番目は特徴ベクトル利用する場合，3番目は差分ベクトルと調和平均の組み合わせるとき，最も良くないのは説明情報Dの差分ベクトルと相加平均の組み合わせである．
-The second is to use the feature vector, the third to combine the difference vector and the harmonic mean, the combination which is not the best is the combination of the difference vector of the explanation information D and the arithmetic mean.
+The second is to use the feature vector, the third to combine the relative feature vector and the harmonic mean, the combination which is not the best is the combination of the relative feature vector of the explanation information D and the arithmetic mean.
 % 説明情報Cと説明情報Dの関連性があるスポットの数が同じであるが，相加平均を使って単語スコアを算出することによって被験者に提示するキーワードの理解支援の役割が減少したといえる．
 Although the number of spots with relevance between explanation information C and explanation information D is the same, it can be said that the role of understanding support of keywords presented to subjects is reduced by calculating word scores using arithmetic mean.
 
 % 評価2は差分ベクトルと相加平均の組み合わせが最も良い，差分ベクトルと調和平均の組み合わせが2番目良い，3番目は特徴ベクトル利用する場合，最も良くないのはカテゴリを用いる場合である．
-Evaluation 2 is the combination of the difference vector and arithmetic mean, the combination of the difference vector and the harmonic mean is the second best, the third is the case where the feature vector is used, and the case where the category is not the best is used.
+Evaluation 2 is the combination of the relative feature vector and arithmetic mean, the combination of the relative feature vector and the harmonic mean is the second best, the third is the case where the feature vector is used, and the case where the category is not the best is used.
 % よって，説明情報Bの特徴ベクトルと説明情報Cの差分ベクトルと調和平均の組み合わせが良い結果を示すことができるといえる．
-Therefore, it can be said that a combination of a difference vector between the feature vector of the explanation information B and the explanation information C and a harmonic mean can show a good result.
+Therefore, it can be said that a combination of a relative feature vector between the feature vector of the explanation information B and the explanation information C and a harmonic mean can show a good result.
 % また，差分ベクトルを利用することによって被験者に意外性があり，カテゴリに拘らない未訪問スポットを提示することができる．
-In addition, by using the difference vector, subjects have unexpectedness, and it is possible to present unfamiliar spots irrespective of categories.
+In addition, by using the relative feature vector, subjects have unexpectedness, and it is possible to present unfamiliar spots irrespective of categories.
 
 \begin{table*}[t]
   \caption{When the categories of the familiar spots are different or  percentage of evaluation when similar}
@@ -601,7 +606,7 @@ For explanation information B and explanation information C, the case where the 
 % 提案手法である説明情報Cを使うと，被験者が既に訪問したあるスポットと関係なしで，被験者が有意味のキーワードを提示することができる．
 Using explanation information C, which is the proposed method, subjects can present meaningful keywords without relation to a certain spot that the subject has familiar visited.
 % 差分ベクトルを利用することによって，カテゴリに渡って各スポットの特徴を求めることができるといえる．
-By using the difference vector, it can be said that the characteristics of each spot can be found over the category.
+By using the relative feature vector, it can be said that the characteristics of each spot can be found over the category.
 % 既訪問スポットのジャンルが類似する場合では説明情報Bの方かより良い評価となっている．
 In the case where the genres of the familiar visited spots are similar, the explanation information B is better than the case.
 
@@ -613,41 +618,62 @@ In the case where the genres of the familiar visited spots are similar, the expl
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 本研究では，ユーザが行きたい観光スポットが決まっていない場合，ランキング，おすすめ情報やカテゴリなどに観光検索情報を使用することによって，検索した観光スポットがに対する理解が困難であることを着目した．
-In this research, we focused on the difficulty of understanding the sightseeing spots searched by using the sightseeing search information in ranking, recommendation information, categories etc, if the sights where the user wants to visit have not been decided.
+We focused on the difficulty of understanding the tourist spots searched by using the tourist spot search engine in ranking, recommendation information, categories, and so on., if the presented tourist spots are unfamiliar for the user.
 % 未訪問スポットに対する理解を支援するために，ユーザが既に訪問したことがあるスポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案した．
-In order to support understanding of unfamiliar spots, we proposed an explanatory method to support understanding by fitting the characteristics of spots that users have already visited to unfamiliar spots.
+In order to support understanding of unfamiliar spots, we proposed an explanatory method to support understanding by comparing unfamiliar spots with familiar spots that users have already visited.
 
 % 評価実験では4つの説明情報パターンを用いて比較を行った．
-In the evaluation experiment, comparison was made using four explanatory information patterns.
+In the evaluation experiment, we evaluate four method of explanatory information.
 % 結果，カテゴリを利用する場合では，未訪問スポットと関連する既訪問スポットが最も少ない．
 As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
 % 差分ベクトルと相加平均を利用する場合では，キーワードの理解を支援する役割が最も少ない．
-In the case of using the difference vector and arithmetic mean, the role of supporting the understanding of keywords is the least.
+In the case of using the relative feature vector and arithmetic mean, the role of supporting the understanding of keywords is the least.
 % 差分ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
-By using the difference vector and harmonic mean, the characteristics of each spot can be obtained.
+By using the relative feature vector and harmonic mean, the characteristics of each spot can be obtained.
 % また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を引き出すことができる可能性があることを確認した．
-In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with already familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
+In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
 
 % 今後の課題としては，実験時に得られたユーザに提示するキーワード，未訪問スポットと既訪問スポットのカテゴリの関連性を分析する．
-As future tasks, we analyze the relevance between keywords presented to users obtained at the time of experiment, categories of unfamiliar spots and familiar spots.
+As future works, we analyze experimental result such as the relevance between keywords presented to users.
 % また，ユーザに提示する各キーワードの有効性と関連性についての評価を行う予定である．
 We also plan to evaluate the effectiveness and relevance of each keyword presented to the user.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% use section* for acknowledgement
 \section*{Acknowledgment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
 \ifCLASSOPTIONcaptionsoff
   \newpage
 \fi
 
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IAENGtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IAENGtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IAENGtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/IAENGtran/bibtex/
+%\bibliographystyle{IAENGtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IAENGabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
   \bibitem{Codd01}
     T. Kurashima, T. Iwata, G. Irie and K. Fujimura.,
