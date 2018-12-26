@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  24 DEC 2018 11:55
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  26 DEC 2018 19:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -234,83 +234,204 @@ LaTeX Font Warning: Font shape `JT1/mc/m/sc' undefined
 LaTeX Font Warning: Font shape `JY1/mc/m/sc' undefined
 (Font)              using `JY1/mc/m/n' instead on input line 81.
 
-File: picture/Photo_Image_eng.png Graphic file (type eps)
-<picture/Photo_Image_eng.png> [1
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 92.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 92.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 92.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 92.
 
-
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 218.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 218.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 218.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 218.
-
-Underfull \hbox (badness 10000) in paragraph at lines 218--218
+Underfull \hbox (badness 10000) in paragraph at lines 92--92
 [][][]\OT1/ptm/m/n/8 Jalan is a re-view post-ing site on tourist spots in Japan.
  []
 
+
+LaTeX Warning: Reference `fig:Photo_Image' on page 1 undefined on input line 117.
+
+
+LaTeX Warning: Reference `sec:Related Work' on page 1 undefined on input line 121.
+
+
+LaTeX Warning: Reference `sec:An Explainaton Method of Unfamiliar Tourist Spots' on page 1 undefined on input line 122.
+
+
+LaTeX Warning: Reference `sec:Evaluation Experiment' on page 1 undefined on input line 123.
+
+
+LaTeX Warning: Reference `sec:Conclusions and Future Work' on page 1 undefined on input line 124.
+
+File: picture/Photo_Image_eng.png Graphic file (type eps)
+<picture/Photo_Image_eng.png>
+
+LaTeX Warning: Citation `Codd01' on page 1 undefined on input line 148.
+
+
+LaTeX Warning: Citation `Codd02' on page 1 undefined on input line 154.
+
+
+LaTeX Warning: Citation `Codd03' on page 1 undefined on input line 160.
+
+[1
+
+
+]
+
+LaTeX Warning: Citation `Codd04' on page 2 undefined on input line 167.
+
+
+LaTeX Warning: Citation `Codd05' on page 2 undefined on input line 169.
+
+
+LaTeX Warning: Citation `Codd06' on page 2 undefined on input line 171.
+
+
+LaTeX Warning: Citation `Codd07' on page 2 undefined on input line 175.
+
+
+LaTeX Warning: Citation `Codd08' on page 2 undefined on input line 175.
+
+
+LaTeX Warning: Citation `Codd05' on page 2 undefined on input line 179.
+
+
+LaTeX Warning: Citation `Codd09' on page 2 undefined on input line 179.
+
+
+LaTeX Warning: Citation `Codd10' on page 2 undefined on input line 220.
+
+
+LaTeX Warning: Citation `Codd11' on page 2 undefined on input line 230.
+
 File: picture/Photo_CosSim_eng.png Graphic file (type eps)
-<picture/Photo_CosSim_eng.png> [2]
+<picture/Photo_CosSim_eng.png>
+
+LaTeX Warning: Reference `math:Vector difference' on page 2 undefined on input line 273.
+
+[2]
+
+LaTeX Warning: Reference `fig:Photo_CosSim' on page 3 undefined on input line 295.
+
+
+LaTeX Warning: Reference `math:CosSim' on page 3 undefined on input line 297.
+
+
+LaTeX Warning: Reference `subsec:Generating feature vector using user reviews of spot' on page 3 undefined on input line 329.
+
+
+./imecs_eng.tex:337: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.337 ...armonic mean of tfidf values ^^e2^^80^^8b
+                                                  ^^e2^^80^^8bas a score for...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./imecs_eng.tex:337: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.337 ... of tfidf values ^^e2^^80^^8b^^e2^^80^^8b
+                                                  as a score for feature wor...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Reference `math:TFIDF' on page 3 undefined on input line 342.
+
+
+./imecs_eng.tex:367: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.367 ...nic mean of the TFIDF values ^^e2^^80^^8b
+                                                  ^^e2^^80^^8bof the feature...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+./imecs_eng.tex:367: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.367 ...the TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
+                                                  of the feature words commo...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Reference `math:Harmonic Mean' on page 3 undefined on input line 373.
+
+
+LaTeX Warning: Reference `fig:photo_map' on page 3 undefined on input line 379.
+
 File: picture/Photo_Map.png Graphic file (type eps)
- <picture/Photo_Map.png>
-Overfull \hbox (9.91693pt too wide) in paragraph at lines 413--422
+<picture/Photo_Map.png>
+Overfull \hbox (10.90863pt too wide) in paragraph at lines 418--427
  [][][][] 
  []
 
 
-LaTeX Warning: Reference `sec:An Explanation Method of Unfamiliar Tourist Spots' on page 3 undefined on input line 430.
-
-[3] (I search kanjifont definition file: . . ) (I search font definition file: . . . . . . . )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 486.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-
-./imecs_eng.tex:505: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.505 ...ge value of the TFIDF values ^^e2^^80^^8b
-                                                  ^^e2^^80^^8bof the respect...
-You may provide a definition with
-\DeclareUnicodeCharacter 
+LaTeX Warning: Reference `table:Familiar spot group and Unfamiliar spot group' on page 3 undefined on input line 430.
 
 
-./imecs_eng.tex:505: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
+LaTeX Warning: Reference `table:Explanation information' on page 3 undefined on input line 434.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.505 ...the TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
-                                                  of the respective spots.
-You may provide a definition with
-\DeclareUnicodeCharacter 
 
-[4] [5] [6
+LaTeX Warning: Reference `sec:An Explanation Method of Unfamiliar Tourist Spots' on page 3 undefined on input line 434.
 
-] (./imecs_eng.aux)
+[3]
+
+LaTeX Warning: Reference `subsec:Extraction of explainable words for role' on page 4 undefined on input line 489.
+
+
+LaTeX Warning: Reference `subsec:Generating feature vector using user reviews of spot' on page 4 undefined on input line 492.
+
+
+LaTeX Warning: Reference `subsec:Extraction of explainable words for role' on page 4 undefined on input line 493.
+
+
+LaTeX Warning: Reference `table:Statistics on the number of data of experiment results' on page 4 undefined on input line 550.
+
+
+LaTeX Warning: Reference `table:Percentage of evaluation in explanation information' on page 4 undefined on input line 576.
+
+
+LaTeX Warning: Reference `table:When the categories different or similar' on page 4 undefined on input line 619.
+
+[4] [5] (./imecs_eng.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 1442 strings out of 493281
- 23930 string characters out of 6145040
- 102217 words of memory out of 5000000
- 5399 multiletter control sequences out of 15000+600000
- 39476 words of font info for 109 fonts, out of 8000000 for 9000
+ 1400 strings out of 493281
+ 23382 string characters out of 6145040
+ 103217 words of memory out of 5000000
+ 5369 multiletter control sequences out of 15000+600000
+ 39260 words of font info for 108 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 27i,13n,21p,450b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,13n,21p,425b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_eng.dvi (6 pages, 44316 bytes).
+Output written on imecs_eng.dvi (5 pages, 39844 bytes).

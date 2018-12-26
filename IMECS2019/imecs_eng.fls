@@ -92,8 +92,6 @@ OUTPUT imecs_eng.aux
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT picture/Photo_Image_eng.png
-OUTPUT imecs_eng.dvi
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -103,15 +101,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT picture/Photo_Image_eng.png
+OUTPUT imecs_eng.dvi
 INPUT picture/Photo_CosSim_eng.png
 INPUT picture/Photo_Map.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlpcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/t1pcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omspcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
 INPUT imecs_eng.aux
