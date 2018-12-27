@@ -55,9 +55,9 @@ However, travel often goes to an unfamiliar area, therefore it is difficult to g
 Therefore, in order to support understanding of users' unfamiliar spots, we propose a method to explain tourist spots of unfamiliar area using tourist spots that have visited by users.
 % 本研究では，まず，観光スポットのユーザレビューを用いて特徴ベクトルを生成する．
 In this paper, at first, we generate the feature vector using user reviews of the tourist spot.
-% 次に，既に訪問したスポットと比較した差分ベクトルを用いて，観光スポットの独特な特徴を抽出する．
+% 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出する．
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-% 最後に，差分ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連づけし，その関係を説明するためのキーワードを抽出する．
+% 最後に，相対的な特徴ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連づけし，その関係を説明するためのキーワードを抽出する．
 Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
 % また，プロトタイプシステムを構築し，既訪問スポットと未訪問スポットとの説明情報の効果を検証する評価実験を行う．
 We also develop the prototype system, and we evaluate the effect of the explanatory information between the familiar spot and the unfamiliar spot.
@@ -100,9 +100,9 @@ In this paper, in order to support understanding of users' unfamiliar spots, we 
 In our method, the user inputs already visited spots and unfamiliar area.
 % そのとき，観光スポットのユーザレビューを用いて特徴ベクトルを生成する．
 At this time, we generate the feature vector using user reviews of the tourist spot.
-% 次に，既に訪問したスポットと比較した差分ベクトルを用いて，観光スポットの独特な特徴を抽出する．
+% 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出する．
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-% 最後に，差分ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連づけし，その関係を説明するためのキーワードを抽出する．
+% 最後に，相対的な特徴ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連づけし，その関係を説明するためのキーワードを抽出する．
 Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
 % このプロトタイプシステムにより，ユーザが未訪問スポットに対する理解の支援を目指す．
 By this way, we aim to rise understandability of unfamiliar spots.
@@ -193,11 +193,11 @@ We propose an explanation method of unfamiliar tourist spots based on roles of u
 At first, the user inputs a set of tourist spots that have been visited and tourist area that user wishes to visit.
 % 本手法では，観光スポットのユーザレビューを用いて特徴ベクトルを生成する．
 In our method, we generate the feature vector using user reviews of the tourist spot.
-% 次に，既に訪問したスポットと比較した差分ベクトルを用いて，観光スポットの独特な特徴を抽出する．
+% 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出する．
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
 % 未訪問スポットも同様にエリア内の各スポットの特徴ベクトルを求める．
 Similarly, we calculate the relative feature vector of each tourist spot in the unfamiliar area by comparing with other tourist spots in that area.
-% 次に，既訪問スポットレビューベクトルと未訪問スポットレビューベクトルの差分特徴に類似する特徴を持つ未既訪問観光スポット関連付けを行う．
+% 次に，既訪問スポットレビューベクトルと未訪問スポットレビューベクトルの相対的な特徴に類似する特徴を持つ未既訪問観光スポット関連付けを行う．
 Then, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector.
 % 最後に，TFIDFを用いて未訪問スポットの理解支援のための説明手法を定義し，ユーザに提示する．
 Finally, we extract keywords that explain the relation.
@@ -600,7 +600,7 @@ Therefore, we need to improve the method of keyword extraction.
 For method B and method C, the case where the category of the familiar spot inputted by the subject is different is similar to the case where the categories of the familiar spots input by the subject are different, the ratio of the evaluation of the option 2 and the option 3 is the table \ref{table:When the categories different or similar}.
 % 提案手法である方法Cを使用すると，被験者が既訪問スポットと関係なしで，被験者に有意味なキーワードを提示することができる．
 Using method C, which is the proposed method, subjects can present meaningful keywords without relation to a certain spot that the subject has familiar visited.
-% 差分ベクトルを利用することによって，カテゴリに渡って各スポットの特徴を求めることができるといえる．
+% 相対的な特徴ベクトルを利用することによって，カテゴリに渡って各スポットの特徴を求めることができるといえる．
 By using the relative feature vector, it can be said that the characteristics of each spot can be found over the category.
 % 既訪問スポットのジャンルが類似する場合では，方法Bの方かより良い評価となっている．
 In the case where the genres of the familiar spots are similar, the method B is better than the case.
@@ -618,7 +618,7 @@ In order to support understanding of unfamiliar spots, we proposed an explanator
 In the evaluation experiment, we evaluate three method of explanatory information.
 % 結果，カテゴリを利用する場合では，未訪問スポットと関連する既訪問スポットが最も少ない．
 As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
-% 差分ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
+% 相対的な特徴ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
 By using the relative feature vector and harmonic mean, the characteristics of each spot can be obtained.
 % また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を集めることができる可能性があることを確認した．
 In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.

@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1545917730 "imecs_eng2.dvi" "imecs_eng2.pdf" "imecs_eng2" 1545917733
-  "imecs_eng2.dvi" 1545917730 39264 fb18cee879ddd1ab21a49d511b88ce97 "latex"
+["dvipdf"] 1545919009 "imecs_eng2.dvi" "imecs_eng2.pdf" "imecs_eng2" 1545919011
+  "imecs_eng2.dvi" 1545919009 39264 923180dd71f84d04b442872d7e9ab782 "latex"
   (generated)
   "imecs_eng2.pdf"
-["latex"] 1545917730 "imecs_eng2.tex" "imecs_eng2.dvi" "imecs_eng2" 1545917733
+["latex"] 1545919009 "imecs_eng2.tex" "imecs_eng2.dvi" "imecs_eng2" 1545919011
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1480098689 2172 fd0c924230362ff848a33632ed45dc23 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmbi7t.tfm" 1480098689 2228 e564491c42a4540b5ebb710a75ff306c ""
@@ -41,12 +41,12 @@
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
   "IAENGtran.cls" 1542215776 203149 9471e5de82c69aa397b96d0945566985 ""
-  "imecs_eng2.aux" 1545917730 4739 77051cbff417bb1067ce2ab080f7fbe6 ""
-  "imecs_eng2.tex" 1545917730 32152 0278538e02375ec5540b4bfc4a1880e5 ""
+  "imecs_eng2.aux" 1545919009 4739 e39b7ac750a5e79f991f73bd23f7f25f ""
+  "imecs_eng2.tex" 1545919008 32152 55348ca9fa52d1f86aceadb5410d81a4 ""
   "picture/Photo_CosSim_eng.png" 1545917612 48956 f5a7343e234d496312795ef9ab7e100c ""
   "picture/Photo_Image_eng.png" 1545917536 108500 e39dd455eca9094d29b924c5959cb66b ""
   "picture/Photo_Map.png" 1542264569 1202799 153a3c07198620adba82b015998923b7 ""
   (generated)
-  "imecs_eng2.aux"
   "imecs_eng2.log"
+  "imecs_eng2.aux"
   "imecs_eng2.dvi"

@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1545917708 "imecs_jap(deim).dvi" "imecs_jap(deim).pdf" "imecs_jap(deim)" 1545917711
-  "imecs_jap(deim).dvi" 1545917708 49792 0d4099cafb069d6483475e752593c405 "latex"
+["dvipdf"] 1545919493 "imecs_jap(deim).dvi" "imecs_jap(deim).pdf" "imecs_jap(deim)" 1545919495
+  "imecs_jap(deim).dvi" 1545919493 49452 4faace24faec591f46571cc37c642a56 "latex"
   (generated)
   "imecs_jap(deim).pdf"
-["latex"] 1545917707 "imecs_jap(deim).tex" "imecs_jap(deim).dvi" "imecs_jap(deim)" 1545917711
+["latex"] 1545919492 "imecs_jap(deim).tex" "imecs_jap(deim).dvi" "imecs_jap(deim)" 1545919495
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1480098698 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth9.tfm" 1480098698 1196 b274fc006918dea9e5263e2117f4bddb ""
@@ -53,12 +53,12 @@
   "extractbb -B cropbox -O picture/Photo_CosSim_jap.png" 0 -1 0 ""
   "extractbb -B cropbox -O picture/Photo_Image_jap.png" 0 -1 0 ""
   "extractbb -B cropbox -O picture/Photo_Map.png" 0 -1 0 ""
-  "imecs_jap(deim).aux" 1545917708 1715 27317e4547c14ca12e2c47dc6283d760 ""
-  "imecs_jap(deim).tex" 1545917706 39360 9da054b361b98ee0ccca2ba16a178dbd ""
+  "imecs_jap(deim).aux" 1545919493 1715 27317e4547c14ca12e2c47dc6283d760 ""
+  "imecs_jap(deim).tex" 1545919492 39126 4e91d12dce121bd2156c88c81d57d4b4 ""
   "picture/Photo_CosSim_jap.png" 1545917522 52080 64c3651bf40fc93ce4b94258b92fb351 ""
   "picture/Photo_Image_jap.png" 1545917511 109970 2de19b8d6bedfccc060896cb607ea69c ""
   "picture/Photo_Map.png" 1542264569 1202799 153a3c07198620adba82b015998923b7 ""
   (generated)
   "imecs_jap(deim).log"
-  "imecs_jap(deim).aux"
   "imecs_jap(deim).dvi"
+  "imecs_jap(deim).aux"

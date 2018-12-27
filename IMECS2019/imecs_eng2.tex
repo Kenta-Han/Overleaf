@@ -201,7 +201,7 @@ At first, we extract commonly appearing words in the review document of the fami
 Next, we calculate the score of the extracted word by the formula \ref{math:Harmonic Mean}.
 $TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar spot and the unfamiliar spot, respectively.
 When the value of the score is large, the word has high importance in each spot.
-Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:photo_map}).
+Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:Photo_Map}).
 
 \begin{eqnarray}
   score(t,d) = \frac{2 \times TFIDF(t,d,f) \times TFIDF(t,d,u)}{TFIDF(t,d,f) + TFIDF(t,d,u)}
@@ -212,7 +212,7 @@ Therefore, the top $N$ words of the score are presented to the user as explanati
   \begin{center}
     \includegraphics[clip,width=8.5cm,bb=0 0 1289 750]{picture/Photo_Map.png}
     \caption{User interface of prototype system}
-    \label{fig:photo_map}
+    \label{fig:Photo_Map}
    \end{center}
 \end{figure}
 
