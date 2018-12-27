@@ -19,6 +19,7 @@
    \DeclareGraphicsExtensions{.eps}
 \fi
 
+
 \begin{document}
 %
 % paper title
@@ -80,8 +81,6 @@ tourist spots, explainability, user reviews, paragraph vector
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:Introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 旅行先を決定する時，旅行者は観光スポット検索サイトや観光情報に関連する書籍を見て観光スポットを選び，旅行計画を立てる．
 \IAENGPARstart{W}{hen} deciding the travel destination, the traveler selects tourist spots by planning a travel, browsing web pages of tourist spots and tourist guidebooks.
 % しかし，ユーザにとって訪問したいエリアを決定した後，さらにエリア内に数多く存在する観光スポットから，自身のイメージから外れない観光スポットを見つけることは容易ではない．
@@ -101,7 +100,6 @@ For example, whereas unfamiliar spots such as ``Omotesando'' in Tokyo, Japan, if
 
 % 本研究では，ユーザの未訪問スポットに対する理解を支援するため，既に訪問したことがある観光スポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案する．
 In this paper, in order to support understanding of users' unfamiliar spots, we propose a method to explain tourist spots of unfamiliar area using tourist spots that have visited by users.
-% 具体的には，ユーザが入力した既訪問スポットと未訪問エリアから，レビュを用いて既訪問スポット内の各スポットの独特な特徴と未訪問エリア内の各スポットの独特な特徴を抽出し，比較を行って説明情報を提示する．
 % 具体的には，ユーザは既に訪問したスポットおよび未訪問エリアを入力する．
 In our method, the user inputs already visited spots and unfamiliar area.
 % そのとき，観光スポットのユーザレビューを用いて特徴ベクトルを生成する．
@@ -110,9 +108,8 @@ At this time, we generate the feature vector using user reviews of the tourist s
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
 % 最後に，差分ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連づけし，その関係を説明するためのキーワードを抽出する．
 Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
-By this way, we aim to rise understandability of unfamiliar spots.
 % このプロトタイプシステムにより，ユーザが未訪問スポットに対する理解の支援を目指す．
-%With this prototype system, users aim to support understanding of unfamiliar spots.
+By this way, we aim to rise understandability of unfamiliar spots.
 % 図\ref{fig:Photo_Image}は提案手法の概念図である．
 Fig. \ref{fig:Photo_Image} shows a concept of the proposed method.
 
@@ -135,10 +132,11 @@ In section \ref{sec:Conclusions and Future Work}, we describe conclusions of thi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 関連研究
 \section{Related Work}
 \label{sec:Related Work}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 観光スポット検索と推薦システム
 \subsection{Tourist spot retrieval and recommendation system}
 \label{subsec:Tourist spot retrieval and recommendation system}
 
@@ -193,8 +191,6 @@ Moreover, because the quality of analogy is treated explicitly, it is considered
 % 未訪問スポットの説明手法
 \section{An Explanation Method of Unfamiliar Tourist Spots}
 \label{sec:An Explainaton Method of Unfamiliar Tourist Spots}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 我々は，ユーザの既訪問スポットの位置づけに基づく未訪問スポットの説明手法を提案する．
 We propose an explanation method of unfamiliar tourist spots based on roles of user's familiar spots.
 % まず，ユーザが既訪問の複数個の観光スポットと訪問したい観光スポットエリア情報を入力する．
@@ -243,55 +239,56 @@ Therefore, we use MeCab\cite{Codd11} that is the Japanese morphological analyzer
   \end{center}
 \end{figure}
 
-% 本研究では，観光スポットの特徴は相対的な特徴を利用する．
+% 本手法では，他の観光スポットと比較したとき相対的な特徴を用いて観光スポットの特徴を抽出する．
 In our method, we extract the role of tourist spots by using the relative features of spots compared with other tourist spots.
-% 相対的な特徴とは，特定の観光スポットが，ある観光スポット集合に含まれた他の観光スポットと比較した場合における独特な特徴である．
+% 相対的な特徴とは，ターゲットである観光スポットが，ある観光スポット集合の平均的な特徴と比較した場合における独特な特徴と定義する．
 We define the relative feature as the feature of the target spot when compared to the average feature of a set of tourist spots.
-% 次に，観光スポット集合内に東京都庁舎展望台と鹿苑寺が存在する場合を考える．
+% たとえば，日本の有名な観光スポットの中に「東京都庁舎展望台」と「鹿苑寺」が存在する場合を考える．
 As an example, we consider the case where ``the Tokyo Metropolitan Government Building Observatories(TMGBO)'' and ``Kinkakuji Temple'' exist within the set of famous tourist spots in Japan.
-% このとき，鹿苑寺の特徴は，金閣寺，お寺，金色，京都等である．
+% このとき，「金閣寺」の相対的な特徴は，お寺，金色，京都などである．
 At this time, relative features of ``Kinkakuji Temple'' is the temple, golden color, Kyoto, and so on.
-% 一方，東京都庁舎の特徴は，展望，夜景，新宿等である．
+% 一方，「東京都庁舎展望台」の相対的な特徴は，展望，夜景，建物，新宿などである．
 On the other hand, relative features of ``TMGBO'' is the panoramic view, night view, building, Shinjuku, and so on.
-% 観光スポットのカテゴリーが大きく異なる場合であれば，カテゴリーとしての特徴が現れる．
+% さまざまな観光スポットと比較すると，相対的な特徴は一般的な特徴，カテゴリ，場所となる．
 When compared with various tourist spots, relative features tend to be general features, categories, places.
-% また，スポット自体の特徴を表示することもできる。
-%Also, it can show the features of the spot itself.
 
-% 例として，観光スポット集合内に鹿苑寺と清水寺が存在する場合を考える．
-We will show other example. We consider the case where there are ``Kinkakuji Temple'' and ``Kiyomizudera Temple'' in the set of temples in Kyoto, Japan.
-% このとき鹿苑寺の特徴は，金色，金箔，輝き等である．
+% 他の例をあげる．
+We will show other example.
+% 京都の寺院の中に「金閣寺」と「清水寺」が存在する場合を考える．
+We consider the case where there are ``Kinkakuji Temple'' and ``Kiyomizudera Temple'' in the set of temples in Kyoto, Japan.
+% このとき，「金閣寺」の相対的な特徴は，金色，金箔，輝きなどである．
 At this time, the relative features of ``Kinkakuji Temple'' are gold color, gold leaf, brilliance, and so on.
-% 一方，清水寺の特徴は，舞台，胎内，一望等である．
+% 一方，「清水寺」の相対的な特徴は，舞台や一望などである．
 On the other hand, the relative features of ``Kiyomizudera Temple'' are the stage, the panoramic view, and so on.
-% どちらも京都に存在する寺院であるため，京都や寺院に関連する特徴は独特な特徴として現れることがない．
-Because both are temples existing in Kyoto, features related to Kyoto and temples do not appear as relative features. Instead, more detailed features are obtained as relative features.
-% 本研究では，あるスポットが集合内の他のスポットと比較するとき，より各スポットの特徴を明らかにできる相対的な特徴に着目して研究を行う．
-%In this research, when a certain spot compares with other spots in the set, we focus on the relative features that make it possible to clarify the features of each spot.
+% どちらも京都にある寺院であるため，京都や寺院に関連する特徴は相対的な特徴として表示されません．
+Because both are temples existing in Kyoto, features related to Kyoto and temples do not appear as relative features.
+% その代わりに，より詳細な特徴が相対的な特徴として得られる．
+Instead, more detailed features are obtained as relative features.
 
-% スポット差分ベクトルは式\ref{math:Vector difference}として定義される．
+% 相対的な特徴ベクトル$r_{state,i}$は，式\ref{math:Vector difference}として定義される．
 The relative feature vector $r_{state,i}$ is defined as formula \ref{math:Vector difference}.
-% スポット差分ベクトルを求めるスポットを除いたスポット集合の各スポットのスポットベクトルの平均値を引いた値となる．
+% 相対的な特徴ベクトルは，そのスポット自体の特徴ベクトルから他のスポットの特徴ベクトルの平均を引いた値によって得られる．
 The relative feature vector is obtained by subtracting the average of feature vectors of other spots from its own feature vector.
 \begin{equation}
   r_{state,i}=s_i-average(S_{state}-s_i)
   \label{math:Vector difference}
 \end{equation}
-% $S_{state} =\{s_1,s_2,\dots,s_n\}$は既訪問スポット集合や未訪問スポット集合となっている．
+% $S_{state} =\{s_1,s_2,\dots,s_n\}$は，既訪問スポット集合や未訪問スポット集合となっている．
 Where, $S_{state} =\{s_1,s_2,\dots,s_n\}$ is a familiar spot set or an unfamiliar spot set.
-% $state$は$'f'$のとき，既訪問スポット集合と定義する．
+% $state$は$'f'$のとき，既訪問スポット集合として定義する．
 When $state$ is $'f'$, it means familiar spot set.
-% $state$は$'u'$のとき，未訪問スポット集合と定義する．
+% $state$は$'u'$のとき，未訪問スポット集合として定義する．
 When $state$ is $'u'$, it means unfamiliar spot set.
-% $s_i$は集合$S_{state}$の観光スポットの特徴ベクトルを示している．
+% $s_i$は集合$S_{state}$内の観光スポットの特徴ベクトルを示している．
 $s_i$ is a feature vector of a tourist spot in the set $S_{state}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %説明スポットの決定
 \subsection{Determination of explainable spot}
 \label{subsec:Determination of explainable spot}
-% 既訪問スポットの各特徴差分ベクトル$v_i$と未訪問スポットの各特徴差分ベクトル$v_j$から，既訪問スポットと未訪問スポット間の相対的な特徴の類似度（図\ref{fig:photo_cossim}）を求める．
+% 未訪問エリア内のスポットは既訪問スポットを使って説明する．
 We use a familiar spot as an explanation of the spot in an unfamiliar area.
+% したがって，未訪問スポットと既訪問スポットを，既訪問スポット$r_{f,i}$と未訪問スポット$r_{u,j}$の相対的な特徴ベクトルによって計算された類似度に基づいて関連付けを行う．（図\ref{fig:photo_cossim}）．
 Therefore, we associate unfamiliar spots and familiar spots with similarity that is calculated by the relative feature vector of the familiar spot $r_{f,i}$ and the unfamiliar spot $r_{u,j}$ (Fig. \ref{fig:Photo_CosSim} ).
 % 類似度計算には，コサイン尺度(式\ref{math:CosSim})を用いる．
 For the similarity calculation, we use the cosine scale (formula \ref{math:CosSim}).
@@ -300,43 +297,46 @@ For the similarity calculation, we use the cosine scale (formula \ref{math:CosSi
   \label{math:CosSim}
 \end{eqnarray}
 
-% 既訪問スポットの各特徴ベクトルと未訪問エリア内の各特徴ベクトルの類似度が0.125以上かつ，類似度が最も高い既訪問スポットと未訪問スポットの関連付けを行う．
-We explain the associating procedure. First, we associate a spot with the highest degree of similarity to a certain spot. At this time, if the similarity falls below the threshold (0.125 in this paper), we do not make association.
-% また，既訪問スポットと未訪問スポットとの関連をつけるとき以下の2つの方法がある．
+% 関連付け手順について説明する．
+We explain the associating procedure.
+% まず，特定のスポットに最も類似度が高いスポットと関連付ける．
+First, we associate a spot with the highest degree of similarity to a certain spot.
+% このとき，類似度が閾値(本研究では0.125)以下である場合は関連付けを行わない．
+At this time, if the similarity falls below the threshold (0.125 in this paper), we do not make association.
+% また，未訪問スポットと類似度が最も高い既訪問スポットと関連付けられているか，既訪問スポットと類似度が最も高い未訪問スポットと関連付けられているかによって結果が異なる．
 At this time, the result changes depending on whether the familiar spot having the highest degree of similarity to the unfamiliar spot is associated or the unfamiliar spot having the maximum similarity to the familiar spot is associated.
-%\begin{enumerate}
-  % \item 既訪問スポットをベースにして未訪問スポットと関連付ける方法
-%  \item how to relate to unfamiliar spots based on familiar spots
-  % \item 未訪問スポットをベースにして既訪問スポットと関連付ける方法
-%  \item how to relate to familiar spots based on unfamiliar spots
-%\end{enumerate}
-%
-% 方法1では，既訪問スポットをベースにすると未訪問エリア内のスポットが複数の特徴を保持する場合は同じ未訪問スポットと関連付ける場合がある．
+
+% 前者の方法では，すべての類似度が閾値を超えると，すべての既訪問スポットが対応するスポットがあるが，すべての未訪問スポットが対応するスポットがあるわけではない．
 In the former the method, when all similarities exceed the threshold, all familiar spots have corresponding spots but not all unfamiliar spots have corresponding spots.
-% 方法2では，未訪問スポットをベースにすることによって，既訪問スポット集合から各スポットの特徴を取り出し，未訪問スポットと関連付けることができるため，方法2を利用する．
+% 一方，後者の方法では，すべての類似度が閾値を超えると，すべての未訪問スポットが対応するスポットがある．
 On the other hand, in latter method, when all similarities exceed the threshold, all unfamiliar spots have corresponding spots.
-% また，本研究では，未訪問スポットを説明するため未訪問スポットをベースにすることが妥当と考えられる．
+% 本手法では，未訪問スポットを説明するために後者の方法を採用する．
 In our method, in order to give an explanation for unfamiliar spot, we adopt the latter method.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 説明するための役割語の抽出
 \subsection{Extraction of explainable words for role}
 \label{subsec:Extraction of explainable words for role}
+% 未訪問スポットと既訪問スポットの関係性を表すため，ユーザにキーワードを提示する．
 We present to users the keywords that represent the viewpoints of association between unfamiliar spots and familiar spots.
+% しかし，相対的な特徴ベクトルから単語の特徴を得ることはできないので，他の方法を使って単語を抽出する．
 However, since we can not obtain the feature of a word from the relative feature vector, we extract words by another method.
 
-% 観光スポットのレビューはすべて形態素解析器「mecab-ipadic-NEologd」を使用することで，単語抽出処理を行う．
-As a premise, all reviews are divided into words by the Japanese morphological analyzer MeCab. We use ``mecab-ipadic-NEologd'' as the dictionary as in Section \ref{subsec:Generating feature vector using user reviews of spot}. However, the particle, auxiliary verb, adnominal, symbol, stop word are deleted.
+% 前提として，すべてのレビューは日本語の形態素解析器MeCabによって単語を分割する．
+As a premise, all reviews are divided into words by the Japanese morphological analyzer MeCab.
+% \ref{subsec:Generating feature vector using user reviews of spot}節の``mecab-ipadic-NEologd''辞書を利用する．
+We use ``mecab-ipadic-NEologd'' as the dictionary as in Section \ref{subsec:Generating feature vector using user reviews of spot}.
+% しかし，助詞，助動詞，連体詞，記号，ストップワードを削除する．
+However, the particle, auxiliary verb, adnominal, symbol, stop word are deleted.
 
-%All tourist spots review words by using morphological analyzer ``mecab-ipadic-NEologd''.
-% しかし，これらを用いて得られた単語は，日本語として成立しない語が含まれており，これらノイズの削除が必要となる．
-%However, words obtained by using these words contain words that do not hold Japanese, and it is necessary to delete these noises.
-% 具体的には，助詞，助動詞，連体詞，記号，ストップワードを削除する．
-%Specifically, delete particles, auxiliary verbs, rentaishi, symbols, stopwords.
-
-We explain the procedure of keyword extraction. First, we obtain the feature word and tfidf value by the tfidf method from the target familiar spot and unfamiliar spot. Next, we calculate the harmonic mean of tfidf values ​​as a score for feature words common to the two spots. Finally, we extract feature words with high scores as explainable words.
-% 節\ref{subsec:Determination of explainable spot}で関連付けした既訪問スポットと未訪問スポットの情報はキーワード集合としてユーザに提示する．
-%We show the explanation information of the familiar spot and the unfamiliar spot associated in section \ref{subsec:Determination of explainable spot} to the user as the set of keywords.
+% キーワード抽出手順について説明する．
+We explain the procedure of keyword extraction.
+% まず，TFIDF法を使って対象となる既訪問スポットと未訪問スポットの特徴語とTFIDF値を取得する．
+First, we obtain the feature word and TFIDF value by the TFIDF method from the target familiar spot and unfamiliar spot.
+% 次に，2つのスポットの共通する特徴語のスコアとしてTFIDF値の調和平均を計算する．
+Next, we calculate the harmonic mean of TFIDF values ​​as a score for feature words common to the two spots.
+% 最後に，スコアが高い特徴語を説明可能な単語として抽出する．
+Finally, we extract feature words with high scores as explainable words.
 
 % スポット内のキーワード特徴値は，式\ref{math:TFIDF}で定義する．
 We calculate the feature value of a keyword in a spot is defined by the formula \ref{math:TFIDF}.
@@ -344,38 +344,30 @@ We calculate the feature value of a keyword in a spot is defined by the formula 
   TFIDF(t,d,state) = TF(t,d) \times log\Biggr(\frac{|S_{state}|}{DF(t,state)}\Biggr)
   \label{math:TFIDF}
 \end{equation}
-% $TF(t,d)$は，文書$d$内の単語$t$の値を返している．
+% $TF(t,d)$は，文書$d$においてのキーワード$t$の数である．
 Where function $TF(t,d)$ returns the number of the keyword $t$ in the document $d$.
 % $d$は，スポットのすべ手のレビューを1つにまとめた文書である．
 $d$ is a document combining all reviews of a spot into one.
 % $DF(t,state)$は，キーワード$t$を含む文書の数である．
 Function $DF(t,state)$ retuns the number of documents that include keyword $t$.
+% $|S_{state}|$はスポットの総数である．
 $|S_{state}|$ is the total number of spots.
+% $state$が$f$の場合，ユーザが入力した既訪問スポット集合を使用してTFIDF値を計算する．
 When $state$ is $f$, we calculate TFIDF value using a set of familiar spots that inputted by user.
+% $state$が$u$の場合，ユーザが入力したエリアに含まれている未訪問スポット集合を使用してTFIDF値を計算する．
 When $state$ is $u$, we calculate TFIDF value using a set of unfamiliar spots that included in inputted area by user.
-% 本手法では，既訪問スポットに関して，ユーザが複数個のスポットを入力する．
-%In this method, the user inputs a set of familiar spots.
-% それぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}によってTFIDF値を算出し，既訪問スポット毎の特徴語とする．
-%By considering all reviews of each spot as one document at a time and by considering all reviews of the other spots as documents, the TFIDF value is calculated by the formula \ref{math:TFIDF}, and use it as the feature words for each spot in the unfamiliar area.
 
-% 未訪問エリアに関して，ユーザがエリアを指定して入力する．
-%Regarding the unfamiliar area, the user designates an area and inputs it.
-% エリア内のそれぞれのスポットの全レビューをまとめて1つの文書と見なし，それ以外のスポットの全レビューも文書とみなすことで，式\ref{math:TFIDF}によってTFIDF値を算出し，未訪問エリアのスポット毎の特徴語とする．
-%By considering all reviews of each spot in the area as one document and considering all reviews of the other spots as a document, the TFIDF value is calculated by the formula \ref{math:TFIDF}, and use it as the feature words for each spot in the unfamiliar area.
-
-% 関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
+% 2つのスポットに共通する特徴語のTFIDF値の調和平均を用いて，関連付けした既訪問スポットと未訪問スポットの説明可能なキーワードを抽出する．
 We extract the explainable keywords of the associated familiar spots and unfamiliar spots using the harmonic mean of the TFIDF values ​​of the feature words common to the two spots.
-% 調和平均とは，逆数の算術平均の逆数である．
-% The harmonic mean is the reciprocal of the arithmetic mean of the reciprocal.
-% 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
+% まず，既訪問スポットと未訪問スポットのレビュー文書でよく出現する単語を抽出する．
 At first, we extract commonly appearing words in the review document of the familiar spot and the unfamiliar spot.
-% 抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
+% 次に，抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
 Next, we calculate the score of the extracted word by the formula \ref{math:Harmonic Mean}.
 % $word_{familiar}$と$word_{unfamiliar}$は同じ単語がそれぞれ既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．
 $TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar spot and the unfamiliar spot, respectively.
-% 単語スコアの値が大きと既訪問スポットと未訪問スポットのそれぞれのTFIDF値が大きい，つまり単語がそれぞれの文書に置いて重要度が高いことを示している．
+% 単語スコアの値が大きいのとき，その単語は各スポットにおいて重要度が高いことを示している．
 When the value of the score is large, the word has high importance in each spot.
-% よって，単語スコアの上位10個の単語を説明情報としてユーザに提示する(図\ref{fig:photo_map})．
+% よって，単語スコアの上位$N$個の単語が説明情報としてユーザに提示する(図\ref{fig:photo_map})．
 Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:photo_map}).
 
 \begin{eqnarray}
@@ -387,10 +379,9 @@ Therefore, the top $N$ words of the score are presented to the user as explanati
   \begin{center}
     \includegraphics[clip,width=8.5cm,bb=0 0 1289 750]{picture/Photo_Map.png}
     \caption{User interface of prototype system}
-    \label{fig:photo_map}
+    \label{fig:Photo_Map}
    \end{center}
 \end{figure}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Example of explained unfamiliar spots}
@@ -426,31 +417,35 @@ Therefore, the top $N$ words of the score are presented to the user as explanati
   \end{tabular}
 \end{table*}
 
-% 表\ref{table:Familiar spots and Unfamiliar spots}は，ユーザが既に訪問したことがあるスポットと，未訪問スポットの集合の例である．
+% 表\ref{table:Familiar spots and Unfamiliar spots}は，ユーザが既に訪問したことがあるスポットと，未訪問スポットの集合の例を示している．
 Table \ref{table:Familiar spot group and Unfamiliar spot group} shows an example of a set of user's familiar spots and unfamiliar spots.
 % 未訪問スポットは東京都内からランダムに選んだ5つのスポットである．
 Unfamiliar spots are five spots randomly selected from within Tokyo.
-% 節\ref{sec:An Explanation Method of Unfamiliar Tourist Spots}の提案手法を使って説明単語を求めた結果は表\ref{table:Explanation information}である．
-Table \ref{table:Explanation information} shows the results of explainable words using the proposed method in Section \ref{sec:An Explanation Method of Unfamiliar Tourist Spots}.
+% 表\ref{table:Explanation information}は，\ref{sec:An Explanation Method of Unfamiliar Tourist Spots}節で提案して方法を用いて説明可能な単語の結果を示している．
+Table \ref{table:Explanation information} shows the results of explainable words using the proposed method in Section \ref{sec:An Explainaton Method of Unfamiliar Tourist Spots}.
 
-% 公園という特徴に注目すると，未訪問スポット集合内で最も公園に近いスポットは新宿御苑であると考えられる．
+% 公園という特徴に注目すると，未訪問スポット集合の中で公園に最も近いスポットは「新宿御苑」であると考えられる．
 Focusing on the feature of the park, it is thought that the spot closest to the park in the set of unfamiliar spots is ``Shinjuku Gyoen''.
-% 既訪問スポット集合内には小田原城址公園と奈良公園の2つの公園がある．
+% 既訪問スポット集合の中には，「小田原城址公園」と「奈良公園」の2つの公園がある．
 In the set of familiar spots there are two parks, ``Odawara-jo Park'' and ``Nara Park''.
-% 小田原城址公園には花や遊具に対する記述が多く，奈良公園は鹿や草に対する記述が多い．
+% 「小田原城址公園」には花や遊具に対する記述が多く，「奈良公園」には鹿や草に対する記述が多い．
 ``Odawara-jo Park'' has a lot of descriptions about flowers and play equipments, on the other hand, ``Nara Park'' has a lot of descriptions about deers and grass.
-% 新宿御苑は花や遊具に対する記述が多いため，小田原城址公園との関連性があると考えられる．
+% 「新宿御苑」には花や遊具に対する記述が多いため，「小田原城址公園」との関連性があると考えられる．
 Because ``Shinjuku Gyoen'' has a lot of descriptions about flowers and play equipments, it seems to be related to ``Odawara-jo Park''.
 
-% 三島スカイウォークは既訪問スポット集合内で眺めがいい，高いの特徴が一番強いことが考えられる．
+% 「三島スカイウォーク」は既訪問スポット集合の中で眺めがいい，高いの特徴が最も強いことが考えられる．
 ``Mishima Skywalk'' is considered to be a feature with a good view and high in the set of familiar spots.
-% 未訪問スポット集合内で眺めがいい，高いの特徴が強いのは東京スカイツリーや東京タワー大展望台の2つがある．
+% 一方，未訪問スポット集合の中で眺めがいい，高いの特徴が強いのは「東京スカイツリー」や「東京タワー大展望台」の2つがある．
 On the other hand, ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' are the scenes with a good view and high in the set of unfamiliar spots.
-% 東京スカイツリーはより高いによって三島スカイウォークと考えられるが，説明情報を見ると富士山が入っている．
-In this case, we think both are correct answers. In this example, it was associated with ``Tokyo Skytree'' which is considered to have better view.
-% 2つスポットの高さは富士山という単語によって強調されている．
-Also, ``Mt. Fuji'' is extracted as an explainable keyword. It is common as a word that emphasizes the good view and it seems that it expresses the relationship appropriately.
-% 提案手法は各集合のスポット毎の特徴を表すことができる．
+% このとき，どちらも正しい回答だと思う．
+In this case, we think both are correct answers.
+% この例では，「東京スカイツリー」はより見やすいと考えられるため関連付けされる．
+In this example, it was associated with ``Tokyo Skytree'' which is considered to have better view.
+% また，説明キーワードとして「富士山」が抽出される．
+Also, ``Mt. Fuji'' is extracted as an explainable keyword.
+% 良い景色を強調する言葉として一般的であり，これによって関係を適切に表現している．
+It is common as a word that emphasizes the good view and it seems that it expresses the relationship appropriately.
+% 提案手法の方は各関係の特徴を示すことができる．
 The proposed method can show the feature of each relationship.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -458,65 +453,58 @@ The proposed method can show the feature of each relationship.
 \section{Evaluation Experiment}
 \label{sec:Evaluation Experiment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Settings of experiment}
 \label{subsec:Settings of experiment}
-
-% 絶対的な特徴と提案手法の相対的な特徴による説明情報を提示する方法の比較を行う．
+% 提案手法を他の手法と比較して評価を行う．
 We evaluate proposed method by comparing with other method.
+% 以下の3つの方法を使って比較する．
 We compare following three methods.
-% また，相対的な特徴を利用する場合において，調和平均を利用して単語スコアを算出する方法と相加平均を利用して単語スコアを算出する方法の比較を行った．
-% 絶対的な特徴と相対的な特徴の説明情報のパターンは以下の4つとなる．
 \begin{description}
 \item[A]Metadata (category, duration time, season)
 \item[B]Paragraph vector (feature vector)
 \item[C]Proposed Method (relative feature vector)
 \end{description}
 
-% 説明情報Aは，観光スポット検索サイトでスポットを検索するためで使う絞り込み情報である．絞り込み情報は例は以下の3つである．
+% 方法Aは，観光スポット検索サイトでスポットを検索するためのメタデータである．
 The method A is metadata used for searching spots on the sightseeing spots search site.
+% 次のように，検索によく使われる3つのメタデータを選択する．
 We selected three metadata that are often used for search as follows.
 \begin{itemize}
 \item category: e.g.) Shrine / Temple，Tourist facilities / Tourist tours etc.
 \item duration time: e.g.) less than 1 hour，1 to 2 hour etc.
 \item season: e.g.) 1 to 12 month, spring, summer, autumn, winnter
 \end{itemize}
-% まず，既訪問スポットを使って，未訪問スポットとのカテゴリが一致がどうか，滞在時間と一致かどうか，訪問時期と一致かどうかの順で徐々に情報を絞って，既訪問スポットと未訪問スポットの対応付けを行う．
-In method A, familiar spot and unfamiliar spot of the same category, same duration time, same season are extracted. If it can not be extracted, delete the conditions in order of season, duration time, category.
-% 次に，絞った後の未訪問スポットが複数残った場合，レビュー数が1番多い未訪問スポットを利用する．
+% 方法Aでは，同じカテゴリ，同じ滞在時間，同じ季節の既訪問スポットと未訪問スポットを抽出する．
+In method A, familiar spot and unfamiliar spot of the same category, same duration time, same season are extracted.
+% 抽出できない場合は，季節，滞在時間，カテゴリの順に情報を削除している．
+If it can not be extracted, delete the conditions in order of season, duration time, category.
+% 未訪問スポットが複数ある場合は，レビュー数が最も多いスポットを選択する．
 If there are multiple unfamiliar spots, we select the one with the largest number of reviews.
-% 最後に，節\ref{subsec:説明するための役割語の抽出}を使って説明するための役割語を抽出し，被験者に提示する．
+% 最後に，\ref{subsec:Extraction of explainable words for role}節を用いて説明可能な単語を抽出し，被験者に提示する．
 Finally, we extract the explainable words using section \ref{subsec:Extraction of explainable words for role} and present them to the subjects.
 
-% 説明情報Bは，節\ref{subsec:スポットのレビューから特徴ベクトル生成}で作成した特徴ベクトルを使って，各スポットの特徴とする．
+% 方法Bでは，各スポットの特徴として\ref{subsec:Generating feature vector using user reviews of spot}節で作成された特徴ベクトルを使用する．
 The method B use the feature of each spot using the feature vector created in section \ref{subsec:Generating feature vector using user reviews of spot}.
+% そして，\ref{subsec:Extraction of explainable words for role}節を用いて説明可能な単語を抽出し，被験者に提示する．
 And, we extract the explainable words using section \ref{subsec:Extraction of explainable words for role} and present them to the subjects.
-
-% 説明情報Dは，関連付けした既訪問スポットと未訪問スポットの説明情報は，TFIDFで求めた各スポットの特徴語による調和平均を用いて決定する．
-%The method C use the relative feature vector as same as proposed method.
-%However, instead of method in section \ref{subsec:Extraction of explainable words for role}, arithmetic mean is used for explainable keyword extraction.
-% 既訪問スポットのレビュー文書と，未訪問スポットのレビュー文書に，共通して出現する単語を抽出する．
-%We extracts commonly appearing words in the review document of the familiar spot and the unfamiliar spot.
-% また，抽出した単語のはぞれぞれのスポットのTFIDFの値の平均を以上である必要がある．
-%In addition, it is necessary for the extracted word to have an average value of the TFIDF values ​​of the respective spots.
-% 既訪問スポット単語のTFIDF値と未訪問スポット単語のTFIDF値の差の絶対値を単語スコアとして算出し，単語スコアが最も0に近い10個の単語を説明情報として被験者に提示する．
-%The absolute value of the difference between the TFIDF value of the familiar spot word and the TFIDF value of the unfamiliar spot word is calculated as the word score and ten words whose word score is the closest to 0 are posted on the subject as explanation information.
 
 % クラウドソーシングのサービスである，CrowdWorks\footnote{https://crowdworks.jp/}を利用して24人の被験者を集めた．
 We collected 24 subjects using CrowdWorks\footnote{CrowdWorks is a crowdsourcing service in Japan. https://crowdworks.jp/}.
-% じゃらんで取得した観光スポットを使って，被験者の既訪問スポットの選択による未訪問スポットの説明情報の提示を行った．
+% 各方法を用いて，被験者の既訪問スポットに基づいて，未訪問スポットの説明可能な情報を提示した．
 We presented explainable information of unfamiliar spots based on subjects' familiar spots using each method.
-% まず，被験者は既に訪問したことがあり，気に入った観光スポットを4つ以上10つ以下入力した．
-First, the subject inputted tourist spots that he/she had already visited and he/she likes. The number of spots to be input by the subject is four to ten.
-% 入力するスポットは，検索候補から選んでもらう．
+% まず，被験者は自分が既に訪れたことのある観光スポットを入力した．
+First, the subject inputted tourist spots that he/she had already visited and he/she likes.
+% 被験者は4から10個のスポットを入力すると指示した．
+The number of spots to be input by the subject is four to ten.
+% 本実験では，入力文字列とシステム内のスポット名と照会するために，入力文字列と同様にスポット名候補の中から対象スポットを選択した．
 In this experiment, in order to match the input character string with the spot name in the system, the subject selected from the spot name candidates similar to the input character string.
-% 例えば，新宿御苑---新宿，清水寺---京都などがある．
-%For example,Shinjuku Gyoen---Shinjuku, Kiyomizudera---Kyoto etc.
-% 次に，被験者は旅行等で行ったことがなく，これから行ってみたい都道府県・エリアを入力した．
+% 次に，被験者は旅行などに行ったことがなく，これから訪れたい都道府県を入力した．
 Next, the subjects never went on a trip etc and entered prefectures / areas that we would like to visit.
-% 説明情報のパターンのAからDの順で処理を行って，ユーザに未訪問スポット名，キーワード，既訪問スポット名を提示し，以下の5つの評価から1つを選択した．
+% 関連付けした既訪問スポットと未訪問スポット，および方法Aから方法Cとそれぞれの説明可能なキーワードを提示した．
 We presented familiar and unfamiliar spots associated with methods A to C and their explainable keywords.
+% キーワードは最大5つを提示した(N = 5)．
 We presented up to five keywords (N = 5).
+% 結果を評価するために，被験者は以下の5つの選択肢から1つを選んでもらった．
 Subjects evaluated the results by choosing one out of the following five options.
 \begin{enumerate}
   \item No keyword.
@@ -529,77 +517,41 @@ Subjects evaluated the results by choosing one out of the following five options
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Result}
 \label{subsec:Result}
-
-\begin{table*}[t]
+\begin{table}[t]
   \caption{Experimental results}
-  \label{table:Statistics on the number of data of experiment results}
-  \centering
-  \begin{tabular}{c|r|r|r|r|r}
-  \hline
-  Evaluation & \multicolumn{1}{c|}{Method A} & \multicolumn{1}{c|}{Method B} & \multicolumn{1}{c|}{Method C} & \multicolumn{1}{c|}{Method D} & \multicolumn{1}{c}{Total} \\ \hline
-  1  & 0                      & 0                      & 0                      & 4                      & 4                      \\
-  2  & 19                     & 44                     & 32                     & 26                     & 121                    \\
-  3  & 20                     & 62                     & 53                     & 56                     & 191                    \\
-  4  & 1                      & 3                      & 3                      & 3                      & 10                     \\
-  5  & 6                      & 21                     & 21                     & 20                     & 68                     \\ \hline
-  Total & 46                     & 130                    & 109                    & 109                    & 394                    \\ \hline
-  \end{tabular}
-\end{table*}
-
-% 表\ref{table:Statistics on the number of data of experiment results}は評価1から5の説明情報AからDのそれぞれの実験結果のデータの数である．
-Table \ref{table:Statistics on the number of data of experiment results} shows the number of each experimental result of method A to C.
-% 評価実験では，使用可能のデータの合計は394件である．
-In the evaluation experiment, the total of usable data is 285.
-% 説明情報Aの方が未訪問スポットと関連がある既訪問スポットの数が最も少ない．
-The method A has the smallest number of familiar spots associated with unfamiliar spots.
-% 説明情報Bの方が未訪問スポットと関連がある既訪問スポットの数が最も多い．
-The method B has the largest number of familiar spots related to unfamiliar spots.
-% 説明情報Cと説明情報Dについて，未訪問スポットと既訪問スポットの関連付け手法は同じであるため，数が同じとなる．
-%The method C, the association method is the same, so the numbers are the same.
-
-\begin{table*}[t]
-  \caption{Percentage of evaluation in explanation information}
-  \label{table:Percentage of evaluation in explanation information}
+  \label{table:Experimental results}
   \centering
   \begin{tabular}{c|r|r|r|r}
   \hline
-  Evaluation & \multicolumn{1}{c|}{Method A} & \multicolumn{1}{c|}{Method B} & \multicolumn{1}{c|}{Method C} & \multicolumn{1}{c}{Method D} \\ \hline
-  1  & 0.00\%                     & 0.00\%                     & 0.00\%                     & 3.67\%                    \\
-  2  & 41.30\%                    & 33.85\%                    & 29.36\%                    & 23.85\%                   \\
-  3  & 43.48\%                    & 47.69\%                    & 48.62\%                    & 51.38\%                   \\
-  4  & 2.17\%                     & 2.31\%                     & 2.75\%                     & 2.75\%                    \\
-  5  & 13.04\%                    & 16.15\%                    & 19.27\%                    & 18.35\%                   \\ \hline
+  Evaluation & \multicolumn{1}{c|}{Method A} & \multicolumn{1}{c|}{Method B} & \multicolumn{1}{c|}{Method C} &  \multicolumn{1}{c}{Total} \\ \hline
+  1  & 0                      & 0                      & 0                      & 0                      \\
+  2  & 19                     & 44                     & 32                     & 95                    \\
+  3  & 20                     & 62                     & 53                     & 135                    \\
+  4  & 1                      & 3                      & 3                      & 7                     \\
+  5  & 6                      & 21                     & 21                     & 48                     \\ \hline
+  Total & 46                     & 130                    & 109                    & 285                    \\ \hline
   \end{tabular}
-\end{table*}
+\end{table}
 
-% 表\ref{table:Percentage of evaluation in explanation information}は説明情報AからDにおいて評価1から5の実験結果のデータの数の割合である．
-Table \ref{table:Percentage of evaluation in explanation information} shows the ratio of the number of the experimental results as the option 1 to 5 in the method A to C.
-% 被験者に提示する説明情報Aは，未訪問スポットと既訪問スポットがそもそも関連性があり，またキーワードを提示することによってさらに明確となった．
-Many subjects choose option No.2 for Method A. From this, it can be seen that the method A can associate spots having apparent relationships.
-% 説明情報Cと説明情報Dは，被験者に提示する未訪問スポットと既訪問スポットがそもそも関連性がない割合が多い．
-Compared to the other methods, in Method C (proposed method), the ratio of No.2 option decreases and the ratio of No.3 option increases. From this, we think that method C finds and presents hidden relationships. However, as the ratio of option No. 5 also increases, we can say that it is easier to extract irrelevant spots.
+Table \ref{table:Experimental results} shows the number of each experimental result of method A to C.
+In the evaluation experiment, the total of usable data is 285.
+The method A has the smallest number of familiar spots associated with unfamiliar spots.
+The method B has the largest number of familiar spots related to unfamiliar spots.
 
-% 評価1と評価2はから，被験者に提示する未訪問スポットと既訪問スポットがそもそも関連性があるカテゴリを利用する場合が1番良いでる．
-When option 2 and option 3 are summed, method A is the highest. From this, we can say that the accuracy of the association of spots for explanation is the highest. However, as described above, the meaning of option 2 is a natural relationship, and Method A can extract only a small number.
-For us, options 2 and 3 are observed to be in a trade-off relationship. Option 2 is a relationship which does not need to explain botherly, option 3 is a relationship worthy of explanation.
-We think that it is important to increase choice 3 as much as possible while maintaining option 2. From this point of view, it is considered that Method B and the proposed method show the same degree of accuracy.
-
-Option 3 has a high possibility of changing to option 5 if keyword extraction fails. Therefore, we need to improve the method of keyword extraction.
-% しかし，関連性のあるスポットの数はカテゴリに制限しているため被験者に提示できる数も少ない．
-%However, since the number of relevant spots is limited to categories, there are also few numbers that can be presented to subjects.
-% また，別カテゴリのスポット情報を被験者に提示できないため意外性を求めることができないといえる．
-%In addition, it can not be said that unexpectedness can not be obtained because spot information of another category can not be presented to subjects.
-% 2番目は特徴ベクトル利用する場合，3番目は差分ベクトルと調和平均の組み合わせるとき，最も良くないのは説明情報Dの差分ベクトルと相加平均の組み合わせである．
-%The second is to use the feature vector, the third to combine the relative feature vector and the harmonic mean, the combination which is not the best is the combination of the relative feature vector of the method C and the arithmetic mean.
-% 説明情報Cと説明情報Dの関連性があるスポットの数が同じであるが，相加平均を使って単語スコアを算出することによって被験者に提示するキーワードの理解支援の役割が減少したといえる．
-%Although the number of spots with relevance between method D and method C is the same, it can be said that the role of understanding support of keywords presented to subjects is reduced by calculating word scores using arithmetic mean.
-
-% 評価2は差分ベクトルと相加平均の組み合わせが最も良い，差分ベクトルと調和平均の組み合わせが2番目良い，3番目は特徴ベクトル利用する場合，最も良くないのはカテゴリを用いる場合である．
-%Evaluation 2 is the combination of the relative feature vector and arithmetic mean, the combination of the relative feature vector and the harmonic mean is the second best, the third is the case where the feature vector is used, and the case where the category is not the best is used.
-% よって，説明情報Bの特徴ベクトルと説明情報Cの差分ベクトルと調和平均の組み合わせが良い結果を示すことができるといえる．
-%Therefore, it can be said that a combination of a relative feature vector between the feature vector of the method B and the method D and a harmonic mean can show a good result.
-% また，差分ベクトルを利用することによって被験者に意外性があり，カテゴリに拘らない未訪問スポットを提示することができる．
-%In addition, by using the relative feature vector, subjects have unexpectedness, and it is possible to present unfamiliar spots irrespective of categories.
+\begin{table}[t]
+  \caption{Percentage of evaluation in explanation information}
+  \label{table:Percentage of evaluation in explanation information}
+  \centering
+  \begin{tabular}{c|r|r|r}
+  \hline
+  Evaluation & \multicolumn{1}{c|}{Method A} & \multicolumn{1}{c|}{Method B} & \multicolumn{1}{c}{Method C} \\ \hline
+  1  & 0.00\%                     & 0.00\%                     & 0.00\%                                         \\
+  2  & 41.30\%                    & 33.85\%                    & 29.36\%                                       \\
+  3  & 43.48\%                    & 47.69\%                    & 48.62\%                                       \\
+  4  & 2.17\%                     & 2.31\%                     & 2.75\%                                         \\
+  5  & 13.04\%                    & 16.15\%                    & 19.27\%                                       \\ \hline
+  \end{tabular}
+\end{table}
 
 \begin{table*}[t]
   \caption{When the categories of the familiar spots are different or  percentage of evaluation when similar}
@@ -615,39 +567,67 @@ Option 3 has a high possibility of changing to option 5 if keyword extraction fa
 \end{tabular}
 \end{table*}
 
-% 説明情報Bと説明情報Cについて，被験者が入力した既訪問スポットのカテゴリが異なる場合と類似する場合のとき，評価2と評価3の評価の割合は表\ref{table:When the categories of the familiar spots are different and percentage of evaluation when similar}となる．
+% 表\ref{table:Percentage of evaluation in explanation information}は，方法AからCにおける選択肢1から5としての実験結果の数の割合を示している．
+Table \ref{table:Percentage of evaluation in explanation information} shows the ratio of the number of the experimental results as the option 1 to 5 in the method A to C.
+% 方法Aについて，多くの被験者が選択肢のNo.2を選している．
+Many subjects choose option No.2 for Method A.
+% このことから，方法Aは明らかな関係にあるスポット同士を関連付けることができることがわかった．
+From this, it can be seen that the method A can associate spots having apparent relationships.
+% 他の方法と比較して，方法C(提案手法)では，選択肢No.2の割合が減少し，選択肢No.3の割合が増加している．
+Compared to the other methods, in Method C (proposed method), the ratio of No.2 option decreases and the ratio of No.3 option increases.
+% このことから，方法Cは隠れた関係を見つけて被験者に提示することができると考えた．
+From this, we think that method C finds and presents hidden relationships.
+% しかし，選択肢N0.5の割合も増加しているため，無関係なスポットを抽出しやすくなったといえる．
+However, as the ratio of option No. 5 also increases, we can say that it is easier to extract irrelevant spots.
+
+% 選択肢2と3を合計すると，方法Aが最も高くなった．
+When option 2 and option 3 are summed, method A is the highest.
+% このことから，説明するためのスポットの関連付けの精度が最も高いといえる．
+From this, we can say that the accuracy of the association of spots for explanation is the highest.
+% しかし，上述のように，選択肢2の意味は自然な関係であり，方法Aは少数しか抽出することができない．
+However, as described above, the meaning of option 2 is a natural relationship, and Method A can extract only a small number.
+% 我々にとって，選択肢2と3はトレードオフの関係にあることが考えられている．
+For us, options 2 and 3 are observed to be in a trade-off relationship.
+% 選択肢2は説明する必要がない関係であり，選択肢3は説明に値する関係である．
+Option 2 is a relationship which does not need to explain botherly, option 3 is a relationship worthy of explanation.
+% 選択肢2を維持しながら，選択肢3をできるだけ増やすことが重要だけ思う．
+We think that it is important to increase choice 3 as much as possible while maintaining option 2.
+% この観点からも，方法Bと提案手法は同程度の精度を示していると考えられる．
+From this point of view, it is considered that Method B and the proposed method show the same degree of accuracy.
+
+% 選択肢3は，キーワードの抽出に失敗した場合に選択肢5になる可能性が高いと考えられる．
+Option 3 has a high possibility of changing to option 5 if keyword extraction fails.
+% したがって，キーワード抽出方法を改善する必要がある．
+Therefore, we need to improve the method of keyword extraction.
+
+% 方法Bと方法Cについては，被験者が入力した既訪問スポットのカテゴリが異なる場合も同様で，選択肢2と選択肢3の評価の割合は表\ref{table:When the categories different or similar}である．
 For method B and method C, the case where the category of the familiar spot inputted by the subject is different is similar to the case where the categories of the familiar spots input by the subject are different, the ratio of the evaluation of the option 2 and the option 3 is the table \ref{table:When the categories different or similar}.
-% 提案手法である説明情報Cを使うと，被験者が既に訪問したあるスポットと関係なしで，被験者が有意味のキーワードを提示することができる．
+% 提案手法である方法Cを使用すると，被験者が既訪問スポットと関係なしで，被験者に有意味なキーワードを提示することができる．
 Using method C, which is the proposed method, subjects can present meaningful keywords without relation to a certain spot that the subject has familiar visited.
 % 差分ベクトルを利用することによって，カテゴリに渡って各スポットの特徴を求めることができるといえる．
 By using the relative feature vector, it can be said that the characteristics of each spot can be found over the category.
-% 既訪問スポットのジャンルが類似する場合では説明情報Bの方かより良い評価となっている．
+% 既訪問スポットのジャンルが類似する場合では，方法Bの方かより良い評価となっている．
 In the case where the genres of the familiar spots are similar, the method B is better than the case.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions and Future Work}
 \label{sec:Conclusions and Future Work}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 本研究では，ユーザが行きたい観光スポットが決まっていない場合，ランキング，おすすめ情報やカテゴリなどに観光検索情報を使用することによって，検索した観光スポットがに対する理解が困難であることを着目した．
 We focused on the difficulty of understanding the tourist spots searched by using the tourist spot search engine in ranking, recommendation information, categories, and so on., if the presented tourist spots are unfamiliar for the user.
-% 未訪問スポットに対する理解を支援するために，ユーザが既に訪問したことがあるスポットの特徴を未訪問スポットにあてはめて理解を支援する説明手法を提案した．
+% 未訪問スポットに対する理解を支援するために，理解が困難の点をユーザが既に訪れたことがあるスポットと比較することによって，理解を支援する説明手法を提案した．
 In order to support understanding of unfamiliar spots, we proposed an explanatory method to support understanding by comparing unfamiliar spots with familiar spots that users have already visited.
 
-% 評価実験では4つの説明情報パターンを用いて比較を行った．
-In the evaluation experiment, we evaluate four method of explanatory information.
+% 評価実験では，3つの説明方法を用いて比較を行った．
+In the evaluation experiment, we evaluate three method of explanatory information.
 % 結果，カテゴリを利用する場合では，未訪問スポットと関連する既訪問スポットが最も少ない．
 As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
-% 差分ベクトルと相加平均を利用する場合では，キーワードの理解を支援する役割が最も少ない．
-%In the case of using the relative feature vector and arithmetic mean, the role of supporting the understanding of keywords is the least.
 % 差分ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
 By using the relative feature vector and harmonic mean, the characteristics of each spot can be obtained.
-% また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を引き出すことができる可能性があることを確認した．
+% また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を集めることができる可能性があることを確認した．
 In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
 
-% 今後の課題としては，実験時に得られたユーザに提示するキーワード，未訪問スポットと既訪問スポットのカテゴリの関連性を分析する．
+% 今後の課題としては，実験時に得られたユーザに提示するキーワード間の関連性を分析する．
 As future works, we analyze experimental result such as the relevance between keywords presented to users.
 % また，ユーザに提示する各キーワードの有効性と関連性についての評価を行う予定である．
 We also plan to evaluate the effectiveness and relevance of each keyword presented to the user.
@@ -657,37 +637,10 @@ We also plan to evaluate the effectiveness and relevance of each keyword present
 \section*{Acknowledgment}
 This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551.
 
-
-% Can use something like this to put references on a page
-% by themselves when using endfloat and the captionsoff option.
 \ifCLASSOPTIONcaptionsoff
   \newpage
 \fi
 
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IAENGtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IAENGtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
-% The IAENGtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/IAENGtran/bibtex/
-%\bibliographystyle{IAENGtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IAENGabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
 \begin{thebibliography}{1}
   \bibitem{Codd01}
     T. Kurashima, T. Iwata, G. Irie and K. Fujimura.,
@@ -733,8 +686,8 @@ This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(
   \bibitem{Codd11}
     % 日本の形態素解析に条件付きランダムフィールドを適用する
     T. Kudo, K. Yamamoto and Y. Matsumoto,
-    ``Applying Conditional Random Fields to Japanese Morphological Analysis'',
-    Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP-2004), pp.230-237, 2004
+      ``Applying Conditional Random Fields to Japanese Morphological Analysis'',
+      Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP-2004), pp.230-237, 2004
 
 \end{thebibliography}
 

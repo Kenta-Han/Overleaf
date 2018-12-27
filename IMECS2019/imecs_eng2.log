@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  27 DEC 2018 22:34
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  27 DEC 2018 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**imecs_eng.tex
-(./imecs_eng.tex
+**imecs_eng2.tex
+(./imecs_eng2.tex
 pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./IAENGtran.cls
@@ -202,237 +202,76 @@ File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
 \Gin@req@height=\dimen133
 \Gin@req@width=\dimen134
-) (./imecs_eng.aux)
-\openout1 = `imecs_eng.aux'.
+) (./imecs_eng2.aux)
+\openout1 = `imecs_eng2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Font shape `JT1/mc/bx/it' in size <5> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 23.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JY1/mc/bx/it' in size <5> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 23.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 11.
 
 
 LaTeX Font Warning: Font shape `JT1/mc/m/sc' undefined
-(Font)              using `JT1/mc/m/n' instead on input line 82.
+(Font)              using `JT1/mc/m/n' instead on input line 38.
 
 
 LaTeX Font Warning: Font shape `JY1/mc/m/sc' undefined
-(Font)              using `JY1/mc/m/n' instead on input line 82.
+(Font)              using `JY1/mc/m/n' instead on input line 38.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <7> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 91.
+(Font)              <5> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 91.
+(Font)              <8> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 91.
+(Font)              <6> on input line 43.
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--91
+Underfull \hbox (badness 10000) in paragraph at lines 43--43
 [][][]\OT1/ptm/m/n/8 Jalan is a re-view post-ing site on tourist spots in Japan.
  []
 
-
-LaTeX Warning: Reference `fig:Photo_Image' on page 1 undefined on input line 114.
-
-
-LaTeX Warning: Reference `sec:Related Work' on page 1 undefined on input line 118.
-
-
-LaTeX Warning: Reference `sec:An Explainaton Method of Unfamiliar Tourist Spots' on page 1 undefined on input line 119.
-
-
-LaTeX Warning: Reference `sec:Evaluation Experiment' on page 1 undefined on input line 120.
-
-
-LaTeX Warning: Reference `sec:Conclusions and Future Work' on page 1 undefined on input line 121.
-
 File: picture/Photo_Image_eng.png Graphic file (type eps)
-<picture/Photo_Image_eng.png>
-
-LaTeX Warning: Citation `Codd01' on page 1 undefined on input line 146.
-
-
-LaTeX Warning: Citation `Codd02' on page 1 undefined on input line 152.
-
-
-LaTeX Warning: Citation `Codd03' on page 1 undefined on input line 158.
-
-[1
+<picture/Photo_Image_eng.png> [1
 
 
 ]
-
-LaTeX Warning: Citation `Codd04' on page 2 undefined on input line 165.
-
-
-LaTeX Warning: Citation `Codd05' on page 2 undefined on input line 167.
-
-
-LaTeX Warning: Citation `Codd06' on page 2 undefined on input line 169.
-
-
-LaTeX Warning: Citation `Codd07' on page 2 undefined on input line 173.
-
-
-LaTeX Warning: Citation `Codd08' on page 2 undefined on input line 173.
-
-
-LaTeX Warning: Citation `Codd05' on page 2 undefined on input line 177.
-
-
-LaTeX Warning: Citation `Codd09' on page 2 undefined on input line 177.
-
-
-LaTeX Warning: Citation `Codd10' on page 2 undefined on input line 216.
-
-
-LaTeX Warning: Citation `Codd11' on page 2 undefined on input line 226.
-
 File: picture/Photo_CosSim_eng.png Graphic file (type eps)
-<picture/Photo_CosSim_eng.png>
-
-LaTeX Warning: Reference `math:Vector difference' on page 2 undefined on input line 269.
-
-[2]
-
-LaTeX Warning: Reference `fig:Photo_CosSim' on page 3 undefined on input line 292.
-
-
-LaTeX Warning: Reference `math:CosSim' on page 3 undefined on input line 294.
-
-
-LaTeX Warning: Reference `subsec:Generating feature vector using user reviews of spot' on page 3 undefined on input line 328.
-
-
-./imecs_eng.tex:337: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.337 ...armonic mean of TFIDF values ^^e2^^80^^8b
-                                                  ^^e2^^80^^8bas a score for...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./imecs_eng.tex:337: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.337 ... of TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
-                                                  as a score for feature wor...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Reference `math:TFIDF' on page 3 undefined on input line 342.
-
-
-./imecs_eng.tex:361: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 ...nic mean of the TFIDF values ^^e2^^80^^8b
-                                                  ^^e2^^80^^8bof the feature...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-./imecs_eng.tex:361: Package inputenc Error: Unicode character â^^80^^8b (U+200B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.361 ...the TFIDF values ^^e2^^80^^8b^^e2^^80^^8b
-                                                  of the feature words commo...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Reference `math:Harmonic Mean' on page 3 undefined on input line 365.
-
-
-LaTeX Warning: Reference `fig:photo_map' on page 3 undefined on input line 371.
-
+ <picture/Photo_CosSim_eng.png> [2]
 File: picture/Photo_Map.png Graphic file (type eps)
-<picture/Photo_Map.png>
-Overfull \hbox (10.90863pt too wide) in paragraph at lines 409--418
+ <picture/Photo_Map.png>
+Overfull \hbox (10.90863pt too wide) in paragraph at lines 241--248
  [][][][] 
  []
 
-
-LaTeX Warning: Reference `table:Familiar spot group and Unfamiliar spot group' on page 3 undefined on input line 421.
-
-
-LaTeX Warning: Reference `table:Explanation information' on page 3 undefined on input line 425.
-
-
-LaTeX Warning: Reference `sec:An Explainaton Method of Unfamiliar Tourist Spots' on page 3 undefined on input line 425.
-
-[3]
-
-LaTeX Warning: Reference `subsec:Extraction of explainable words for role' on page 4 undefined on input line 484.
-
-
-LaTeX Warning: Reference `subsec:Generating feature vector using user reviews of spot' on page 4 undefined on input line 487.
-
-
-LaTeX Warning: Reference `subsec:Extraction of explainable words for role' on page 4 undefined on input line 489.
-
-
-LaTeX Warning: Reference `table:Experimental results' on page 4 undefined on input line 536.
-
-
-LaTeX Warning: Reference `table:Percentage of evaluation in explanation information' on page 4 undefined on input line 571.
-
-[4]
-
-LaTeX Warning: Reference `table:When the categories different or similar' on page 5 undefined on input line 604.
-
-[5] (./imecs_eng.aux)
+[3] [4] [5] (./imecs_eng2.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 1400 strings out of 493281
- 23308 string characters out of 6145040
+ 1398 strings out of 493281
+ 23330 string characters out of 6145040
  100217 words of memory out of 5000000
- 5369 multiletter control sequences out of 15000+600000
+ 5367 multiletter control sequences out of 15000+600000
  39260 words of font info for 108 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 27i,13n,21p,425b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,13n,21p,419b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_eng.dvi (5 pages, 39472 bytes).
+Output written on imecs_eng2.dvi (5 pages, 39264 bytes).

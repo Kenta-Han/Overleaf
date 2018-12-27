@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  21 DEC 2018 19:22
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  27 DEC 2018 22:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -161,19 +161,19 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5.25> on input line 49.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10.95> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 54.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 54.
+(Font)              <9> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 54.
+(Font)              <5> on input line 53.
 File: picture/Photo_Image_jap.png Graphic file (type bmp)
 <picture/Photo_Image_jap.png>
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 124.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 124.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 91.
 [1
 
 
@@ -181,30 +181,34 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9> not available
 File: picture/Photo_CosSim_jap.png Graphic file (type bmp)
 <picture/Photo_CosSim_jap.png>
  [2]
+
+LaTeX Warning: Reference `スポットのレビューから特徴ベクトル生成' on page 3 undefined on input line 201.
+
 File: picture/Photo_Map.png Graphic file (type bmp)
 <picture/Photo_Map.png>
- [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 363.
+[3]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 319.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 363.
- [4] [5] [6
-
-] (./imecs_jap(deim).aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 319.
+ [4] [5] (./imecs_jap(deim).aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 1675 strings out of 493281
- 22541 string characters out of 6145040
- 110524 words of memory out of 5000000
- 5628 multiletter control sequences out of 15000+600000
+ 1676 strings out of 493281
+ 22563 string characters out of 6145040
+ 112524 words of memory out of 5000000
+ 5629 multiletter control sequences out of 15000+600000
  19006 words of font info for 73 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,13n,23p,822b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,13n,23p,308b,339s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on imecs_jap(deim).dvi (6 pages, 53964 bytes).
+Output written on imecs_jap(deim).dvi (5 pages, 49792 bytes).
