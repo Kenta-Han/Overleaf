@@ -2,10 +2,6 @@
 
 \ifCLASSINFOpdf
    \usepackage[pdftex]{graphicx}
-  % declare the path(s) where your graphic files are
-  % \graphicspath{{../pdf/}{../jpeg/}}
-  % and their extensions so you won't have to specify these with
-  % every instance of \includegraphics
    \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
 \else
   % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
@@ -334,7 +330,7 @@ We explain the procedure of keyword extraction.
 % まず，TFIDF法を使って対象となる既訪問スポットと未訪問スポットの特徴語とTFIDF値を取得する．
 First, we obtain the feature word and TFIDF value by the TFIDF method from the target familiar spot and unfamiliar spot.
 % 次に，2つのスポットの共通する特徴語のスコアとしてTFIDF値の調和平均を計算する．
-Next, we calculate the harmonic mean of TFIDF values ​​as a score for feature words common to the two spots.
+Next, we calculate the harmonic mean of TFIDF values as a score for feature words common to the two spots.
 % 最後に，スコアが高い特徴語を説明可能な単語として抽出する．
 Finally, we extract feature words with high scores as explainable words.
 
@@ -358,7 +354,7 @@ When $state$ is $f$, we calculate TFIDF value using a set of familiar spots that
 When $state$ is $u$, we calculate TFIDF value using a set of unfamiliar spots that included in inputted area by user.
 
 % 2つのスポットに共通する特徴語のTFIDF値の調和平均を用いて，関連付けした既訪問スポットと未訪問スポットの説明可能なキーワードを抽出する．
-We extract the explainable keywords of the associated familiar spots and unfamiliar spots using the harmonic mean of the TFIDF values ​​of the feature words common to the two spots.
+We extract the explainable keywords of the associated familiar spots and unfamiliar spots using the harmonic mean of the TFIDF values of the feature words common to the spots.
 % まず，既訪問スポットと未訪問スポットのレビュー文書でよく出現する単語を抽出する．
 At first, we extract commonly appearing words in the review document of the familiar spot and the unfamiliar spot.
 % 次に，抽出した単語のスコアは式\ref{math:Harmonic Mean}によって定義する．
@@ -367,7 +363,7 @@ Next, we calculate the score of the extracted word by the formula \ref{math:Harm
 $TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar spot and the unfamiliar spot, respectively.
 % 単語スコアの値が大きいのとき，その単語は各スポットにおいて重要度が高いことを示している．
 When the value of the score is large, the word has high importance in each spot.
-% よって，単語スコアの上位$N$個の単語が説明情報としてユーザに提示する(図\ref{fig:photo_map})．
+% よって，単語スコアの上位$N$個の単語が説明情報としてユーザに提示する(図\ref{fig:Photo_Map})．
 Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:Photo_Map}).
 
 \begin{eqnarray}
@@ -622,7 +618,7 @@ In order to support understanding of unfamiliar spots, we proposed an explanator
 In the evaluation experiment, we evaluate three method of explanatory information.
 % 結果，カテゴリを利用する場合では，未訪問スポットと関連する既訪問スポットが最も少ない．
 As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
-% 差分���クトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
+% 差分ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
 By using the relative feature vector and harmonic mean, the characteristics of each spot can be obtained.
 % また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を集めることができる可能性があることを確認した．
 In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
