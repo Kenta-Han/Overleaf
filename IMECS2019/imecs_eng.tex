@@ -368,7 +368,7 @@ $TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar spot 
 % 単語スコアの値が大きいのとき，その単語は各スポットにおいて重要度が高いことを示している．
 When the value of the score is large, the word has high importance in each spot.
 % よって，単語スコアの上位$N$個の単語が説明情報としてユーザに提示する(図\ref{fig:photo_map})．
-Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:photo_map}).
+Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:Photo_Map}).
 
 \begin{eqnarray}
   score(t,d) = \frac{2 \times TFIDF(t,d,f) \times TFIDF(t,d,u)}{TFIDF(t,d,f) + TFIDF(t,d,u)}
@@ -622,7 +622,7 @@ In order to support understanding of unfamiliar spots, we proposed an explanator
 In the evaluation experiment, we evaluate three method of explanatory information.
 % 結果，カテゴリを利用する場合では，未訪問スポットと関連する既訪問スポットが最も少ない．
 As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
-% 差分ベクトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
+% 差分���クトルと調和平均を利用することによって，各スポットの特徴を求めることができる．
 By using the relative feature vector and harmonic mean, the characteristics of each spot can be obtained.
 % また，意外性がある未訪問スポットと既訪問スポットを関連付けることができ，ユーザが知らない観光スポットに対する興味と関心を集めることができる可能性があることを確認した．
 In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
