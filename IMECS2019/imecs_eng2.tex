@@ -14,51 +14,27 @@
 
 \thanks{K. T. Han is with the Graduate School of Engineering, Kogakuin University, Japan; e-mail: em18011@ns.kogakuin.ac.jp.}% <-this % stops a space
 \thanks{D. Kitayama is with the Faculty of Informatics, Kogakuin University, Japan;  e-mail: kitayama@cc.kogakuin.ac.jp.}}% <-this % stops a space
+
 \maketitle
 
 \pagestyle{empty}
 \thispagestyle{empty}
 
 \begin{abstract}
-In recent years, when user plans to travel, users often use tourist information on the Web.
-However, travel often goes to an unfamiliar area, therefore it is difficult to get the tourist information properly.
-Therefore, in order to support understanding of users' unfamiliar spots, we propose a method to explain tourist spots of unfamiliar area using tourist spots that have visited by users.
-In this paper, at first, we generate the feature vector using user reviews of the tourist spot.
-Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
-We also develop the prototype system, and we evaluate the effect of the explanatory information between the familiar spot and the unfamiliar spot.
+Most tourists resort to available information online when planning for leisure travel; however, this recourse often becomes problematic and misleading as users of the information may be directed to unfamiliar areas. On this regard, we proposed a method of explaining unfamiliar spots through the familiar features of spots they have visited. We generated a feature vector using  tourist reviews of the tourist spot, then compared the vector with already visited spots to extract their role for guiding the user. Finally, we associated the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extracted keywords that explain the relation. Furthermore, we developed a prototype of the system and evaluated the effect of the explanatory information between the familiar and unfamiliar spots.
 \end{abstract}
 
 \begin{IAENGkeywords}
-tourist spots, explainability, user reviews, paragraph vector
+Tourist spots, explainability, tourist reviews, paragraph vector
 \end{IAENGkeywords}
 
 \IAENGpeerreviewmaketitle
 
 \section{Introduction}
 \label{sec:Introduction}
-\IAENGPARstart{W}{hen} deciding the travel destination, the traveler selects tourist spots by planning a travel, browsing web pages of tourist spots and tourist guidebooks.
-However, travel often goes to an unfamiliar area, therefore it is difficult to get the tourist information properly.
-At this time, it is considered that the user often decides the tourist spot by looking at the ranking and recommendation information of the tourist spot search engine.
-In a tourist spot search engine such as Tripadvisor\footnote{https://www.tripadvisor.com/} and Jalan\footnote{Jalan is a review posting site on tourist spots in Japan. https://www.jalan.net/kankou/}, the user who visited there about a certain tourist spot posted reviews and there is a wealth of information on tourist spots.
-However, since the user has no prior knowledge about the search area, what kind of tourist spot is to be confirmed one by one.
-Therefore, in order to effectively understand various tourist spots, we think that it is effective if we compare an unfamiliar spot using a visited spot of user.
-This is a kind of analogy that applies the matters that the user previously experienced to the current matter. In this case, the previous experience is the already visited spot and the current matter is the spot in the unfamiliar area.
-For example, whereas unfamiliar spots such as ``Omotesando'' in Tokyo, Japan, if you explain that it is similar to the already visited ``Avenue des Champs-Elysees'' in Paris, it may make it easier to understand.
-
-In this paper, in order to support understanding of users' unfamiliar spots, we propose a method to explain tourist spots of unfamiliar area using tourist spots that have visited by users.
-In our method, the user inputs already visited spots and unfamiliar area.
-At this time, we generate the feature vector using user reviews of the tourist spot.
-Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
-By this way, we aim to rise understandability of unfamiliar spots.
-Fig. \ref{fig:Photo_Image} shows a concept of the proposed method.
-
-The structure of this paper is as follows.
-In section \ref{sec:Related Work}, we introduce related works.
-In section \ref{sec:An Explainaton Method of Unfamiliar Tourist Spots}, we describe the proposed method.
-In section \ref{sec:Evaluation Experiment}, we discuss evaluation experiments and its results.
-In section \ref{sec:Conclusions and Future Work}, we describe conclusions of this paper and our future work.
+\IAENGPARstart{T}{ourists} often resort to web information when planning travel destinations. The accuracy of these published guides is oftentimes unreliable and leads to the high probability of the traveler getting lost in an unfamiliar area. At present, most tourists read online reviews, travel and leisure communities ranking, and search engine recommendations regarding the spots they consider visiting. For instance, popular Japanese tourist spot posting sites Tripadvisor\footnote{https://www.tripadvisor.com/} and Jalan\footnote{Jalan https://www.jalan.net/kankou/} offer a wealth of information on destination reviews and experiences from travelers. Given that the potential traveler is unfamiliar to these spots, extracting the accurate location and information from the discussions and reviews might be a rigorous task. As an alternative, we proposed an effective locator technique for an unfamiliar spot using a spot visited and familiar to the user. This approach is analogous to employing experience over the current problem. To elucidate further, the previous experience indicates the already visited and familiar spot and the current problem is the unfamiliar spot. For instance, unfamiliar spots such as ``Omotesando'' in Tokyo, Japan may be located and understood easier by a newcomer French user when it is described as ``Avenue des Champs-Elysees'' in Paris, given that he/she has visited and is familiar with the latter area.
+   In the proposed method, the user inputs already visited and unfamiliar spots. From this, a feature vector is generated based on user reviews of the tourist spot, and the relative feature vector is used for comparison with already visited spots to extract their role for the user. Finally, the visited spot is associated with the unfamiliar spot by similarity of their relative feature vector, and keywords that explain the relation are further extracted. This way, we aim to enhance user understanding of unfamiliar spots. Figure \ref{fig:Photo_Image} shows the concept of the proposed method.
+   The rest of the paper is structured as follows. Section \ref{sec:Related Work}, introduces related works on the concept, while Section \ref{sec:An Explanation Method of Unfamiliar Tourist Spots} describes the method. Evaluation experiments and their results are discussed in Section \ref{sec:Evaluation Experiment}. Finally, Section \ref{sec:Conclusions and Future Work}, presents the conclusions of the paper and our future work.
 
 \begin{figure}[t]
   \begin{center}
@@ -73,49 +49,21 @@ In section \ref{sec:Conclusions and Future Work}, we describe conclusions of thi
 \subsection{Tourist spot retrieval and recommendation system}
 \label{subsec:Tourist spot retrieval and recommendation system}
 
-Many researches on retrieval and recommendation system using the user's experience history have been published.
-Kurashima et al.\cite{Codd01} proposed a travel route recommendation method using geotag information of photos posted to Flickr as a travel history of people.
-In this method, it is assumed that it is easy to move from a user's present location to a place easily accessible to the user's interest, and a behavior model is generated.
-That geotagged photo aggregation of users can be regarded as personal travel history when sorted by time information, and we generate user behavior model using geotag information.
-Kitamura et al.\cite{Codd02} proposed a method of recommending sightseeing spots based on estimating user's preferences of travel plan from past personal travel photographs using general object recognition.
-Using an object recognition system to acquire keywords of subject information taken in the photos and represented the co-occurrence of the keywords by a graph visualization technique.
-In addition, present a user interface that visualizes a graph with travel photos based on our graph visualization technique.
-Cheng et al.\cite{Codd03} used photographs of freely available community contributions to focus on personalized trip recommendations, considering specific user profiles or attributes, suggested to consider personalized travel recommendations.
+   Several research on retrieval and recommendation system using user's experience history have been published. Kurashima et al.\cite{Codd01} proposed a travel route recommendation method using geotag information of aggregated photos posted at Flickr, which could be regarded as personal travel history when sorted by time information. In this method, moving from a user's present location to a place easily accessible to his/her interest was presumed, and a behavior model was generated using the geotag information. Kitamura et al.\cite{Codd02} recommended sightseeing spots by estimating user's preferences of travel plan from past personal travel photographs using a general object recognition system to acquire keywords of subject information taken from the photos. Moreover, he represented the co-occurrence of the keywords by a graph visualization technique, which presents a user interface that visualizes a graph with travel photos. Conversely, Cheng et al.\cite{Codd03} used photographs of freely available community contributions to focus on personalized trip recommendations, considering suggested specific user profiles or attributes.
 
 \subsection{The analogy and its applications}
 \label{subsec:The analogy and its applications}
-Analogies were pointed out as contributing to creative thinking\cite{Codd04}.
-Analogical thinking works when acquiring a concept (called the target) from known knowledge (called the bases)\cite{Codd05}.
-Many of the researches on analogy are given the base learning data and targeted problems, and the problems are solved by mapping the features of things to the feature of the problem\cite{Codd06}.
-Gick et al. designed to investigate the use of analogies between disparate domains as a guide to finding solutions for an ill-defined problem.
-Some studied about how to give learning data and functions\cite{Codd07}, and clarified whether to solve the problem depending on the degree of cognitive proficiency\cite{Codd08}.
-In many of the conventional research including these, after giving bases and targets for analogy, we solve problems according to a certain procedure.
-There are three types of structural similarities ``similarity of object level'' determined by the number of shared features, ``relationship similarity'' based on the degree of sharedness of relationships existing in the base and the relationship existing in the base, and similarity in the title solution or target level There is a certain ``pragmatic similarity''\cite{Codd05}，\cite{Codd09}.
-
-In the conventional method of using the user's experience history, many researches that analyze the geotag information of the history photograph and make it user's preference are performed.
-In addition, it is well used in learning support on analogy technology.
-In this research, using the review of familiar spots and unfamiliar spots, the relative features of each spot in each set of user familiar spot set and unfamiliar spot set are determined and associated, thereby supporting understanding of spots explanation information can be presented.
-Moreover, because the quality of analogy is treated explicitly, it is considered to be similar to the similarity of structure "similarity of relationship level" by this research.
+   Analogies were pointed out as contributing to creative thinking\cite{Codd04}; analogical thinking works when acquiring a concept (called the target) from known knowledge (called the bases)\cite{Codd05}. Many research on analogy were given the base learning data and targeted problems, and the problems were solved by mapping the features of things to the feature of the problem\cite{Codd06}. Gick et al. investigated the use of analogies between disparate domains as a guide to finding solutions for an ill-defined problem. Some studied on how to give learning data and functions\cite{Codd07}, and clarified whether to solve the problem depending on the degree of cognitive proficiency\cite{Codd08}. In many of the conventional research including these, after giving bases and targets for analogy, problems were solved according to a certain procedure. There are three types of structural similarities: ``similarity of object level'' determined by the number of shared features, ``relationship similarity'' based on the degree of sharedness of relationships existing in the base and the relationship existing in the base, and ``pragmatic similarity'' based on the title solution or target level \cite{Codd05}，\cite{Codd09}.
+   In the conventional method of using the user's experience history, several research analyzed the geotag information of the history photograph and converted them into user's preference; analogy techniques were also utilized to support learning and understanding. In this research, a review of familiar spots and unfamiliar spots and the relative features of each spot, via the sets of spots familiar and unfamiliar to the user, were determined and associated to enhance understanding of the area information. As it exploited analogy explicitly, this paper is presumed to have similar structure as with the "similarity of relationship level."
 
 \section{An Explanation Method of Unfamiliar Tourist Spots}
 \label{sec:An Explainaton Method of Unfamiliar Tourist Spots}
-We propose an explanation method of unfamiliar tourist spots based on roles of user's familiar spots.
-At first, the user inputs a set of tourist spots that have been visited and tourist area that user wishes to visit.
-In our method, we generate the feature vector using user reviews of the tourist spot.
-Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-Similarly, we calculate the relative feature vector of each tourist spot in the unfamiliar area by comparing with other tourist spots in that area.
-Then, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector.
-Finally, we extract keywords that explain the relation.
+
+   In this method, the user inputs a set of tourist spots he/she has visited and the destination he/she intends to visit. Next, a feature vector is generated based on user reviews of the intended tourist spot. Afterwards, a feature vector relative to the visited spots is used for extraction of their role to the intended destination of the user. The relative feature vector of each tourist spot in the unfamiliar area is calculated and compared. Finally, the relative feature vector of the unfamiliar spot is associated to the similar feature vector of the visited spot, and the keywords explaining the relation are extracted.
 
 \subsection{Generating feature vector using user reviews of spot}
 \label{subsec:Generating feature vector using user reviews of spot}
-In this paper, we will use the review data obtained from ``Jalan'' until the end of September 2016.
-We generate feature vectors of tourist spots using paragraph vector\cite{Codd10}.
-At this time, we combine all the reviews on a tourist spot and treat it as one document about the tourist spot.
-In this paper, we use gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} that is a library of python for calculate paragraph vector.
-We used Distributed Bag-of-Words as a learning method, and the number of dimensions was 300.
-User reviews in Jalan are written by Japanese.
-Therefore, we use MeCab\cite{Codd11} that is the Japanese morphological analyzer with dictionary ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
+   We used the review data obtained from ``Jalan'' until the end of September 2016. We generated feature vectors of tourist spots using paragraph vector\cite{Codd10}; we combined all reviews on a tourist spot and treated them as one document. We used a Python library called gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} to calculate the paragraph vector, and the Distributed Bag-of-Words with 300 dimensions as the learning method. As user reviews in Jalan are written in Japanese, we used MeCab\cite{Codd11} as the Japanese morphological analyzer with dictionary ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
 
 \subsection{Relative features for role of tourist spots}
 \label{subsec:Relative features of tourist spots}
@@ -129,82 +77,39 @@ Therefore, we use MeCab\cite{Codd11} that is the Japanese morphological analyzer
   \end{center}
 \end{figure}
 
-In our method, we extract the role of tourist spots by using the relative features of spots compared with other tourist spots.
-We define the relative feature as the feature of the target spot when compared to the average feature of a set of tourist spots.
-As an example, we consider the case where ``the Tokyo Metropolitan Government Building Observatories(TMGBO)'' and ``Kinkakuji Temple'' exist within the set of famous tourist spots in Japan.
-At this time, relative features of ``Kinkakuji Temple'' is the temple, golden color, Kyoto, and so on.
-On the other hand, relative features of ``TMGBO'' is the panoramic view, night view, building, Shinjuku, and so on.
-When compared with various tourist spots, relative features tend to be general features, categories, places.
-
-We will show other example.
-We consider the case where there are ``Kinkakuji Temple'' and ``Kiyomizudera Temple'' in the set of temples in Kyoto, Japan.
-At this time, the relative features of ``Kinkakuji Temple'' are gold color, gold leaf, brilliance, and so on.
-On the other hand, the relative features of ``Kiyomizudera Temple'' are the stage, the panoramic view, and so on.
-Because both are temples existing in Kyoto, features related to Kyoto and temples do not appear as relative features.
-Instead, more detailed features are obtained as relative features.
-
-The relative feature vector $r_{state,i}$ is defined as formula \ref{math:Vector difference}.
-The relative feature vector is obtained by subtracting the average of feature vectors of other spots from its own feature vector.
+   We extracted the role of tourist spots by comparing their relative features with those of other tourist spots. A relative feature is defined here as the feature of the target spot that is compared to the average feature of a set of tourist spots. For example, we could consider ``the Tokyo Metropolitan Government Building Observatories (TMGBO)'' and ``Kinkakuji Temple'' under a set of famous tourist spots in Japan. The relative features of ``Kinkakuji Temple'' are the temple, its golden color, the city of Kyoto, and so on, while ``TMGBO'' has the features of panoramic view, night view, the building itself, the Shinjuku ward, and so on. When compared with other tourist spots, the relative features of the two examples tend to be general features, categories, and places.
+   Let us take another example. We could consider ``Kinkakuji Temple'' and ``Kiyomizudera Temple'' under a set of temples in Kyoto, Japan. The relative features of ``Kinkakuji Temple'' are its golden color, gold leaf, brilliance, and so on, while for ``Kiyomizudera Temple'' these features include the stage, the panoramic view, and so on. As both temples are located in Kyoto, features related to Kyoto and temples do not appear as relative features; instead, more detailed features are obtained.
+   The relative feature vector $r_{state,i}$  is obtained by subtracting the average of feature vectors of other spots from its own feature vector as in
 \begin{equation}
-  r_{state,i}=s_i-average(S_{state}-s_i)
+  r_{state,i}=s_i-average(S_{state}-s_i),
   \label{math:Vector difference}
 \end{equation}
-Where, $S_{state} =\{s_1,s_2,\dots,s_n\}$ is a familiar spot set or an unfamiliar spot set.
-When $state$ is $'f'$, it means familiar spot set.
-When $state$ is $'u'$, it means unfamiliar spot set.
-$s_i$ is a feature vector of a tourist spot in the set $S_{state}$.
+where $S_{state} =\{s_1,s_2,\dots,s_n\}$ is a familiar spot set when $state$ is $'f'$; otherwise, it is an unfamiliar spot set when $state$ is $'f'$. The term $s_i$ is a feature vector of a tourist spot in the set $S_{state}$.
 
-\subsection{Determination of explainable spot}
-\label{subsec:Determination of explainable spot}
-We use a familiar spot as an explanation of the spot in an unfamiliar area.
-Therefore, we associate unfamiliar spots and familiar spots with similarity that is calculated by the relative feature vector of the familiar spot $r_{f,i}$ and the unfamiliar spot $r_{u,j}$ (Fig. \ref{fig:Photo_CosSim} ).
-For the similarity calculation, we use the cosine scale (formula \ref{math:CosSim}).
+\subsection{Determination of an explainable spot}
+\label{subsec:Determination of an explainable spot}
+   We used a familiar spot to explain the spot in the unfamiliar area. We associated unfamiliar spots and familiar spots through the similarity calculated by the relative feature vector of the familiar spot $r_{f,i}$ and the unfamiliar spot $r_{u,j}$ (Fig. \ref{fig:Photo_CosSim} ). We used  the cosine scale below for the calculation
 \begin{eqnarray}
-  cos(r_{f,i},r_{u,j})=\frac{r_{f,i} \cdot r_{u,j}}{|r_{f,i}| \times |r_{u,j}|}
+  cos(r_{f,i},r_{u,j})=\frac{r_{f,i} \cdot r_{u,j}}{|r_{f,i}| \times |r_{u,j}|.}
   \label{math:CosSim}
 \end{eqnarray}
 
-We explain the associating procedure.
-First, we associate a spot with the highest degree of similarity to a certain spot.
-At this time, if the similarity falls below the threshold (0.125 in this paper), we do not make association.
-At this time, the result changes depending on whether the familiar spot having the highest degree of similarity to the unfamiliar spot is associated or the unfamiliar spot having the maximum similarity to the familiar spot is associated.
-
-In the former the method, when all similarities exceed the threshold, all familiar spots have corresponding spots but not all unfamiliar spots have corresponding spots.
-On the other hand, in latter method, when all similarities exceed the threshold, all unfamiliar spots have corresponding spots.
-In our method, in order to give an explanation for unfamiliar spot, we adopt the latter method.
+   The association procedure is explained as follows. First, we associated a spot with the highest degree of similarity to a certain spot. If similarity falls below the threshold (0.125 in this paper) then no association is made. The result depends on whether the familiar spot having the highest degree of similarity to the unfamiliar spot is associated, or the unfamiliar spot having the maximum similarity to the familiar spot is associated. In the former condition, when all similarities have exceeded the threshold, all familiar spots, but not all unfamiliar spots, have corresponding spots. Conversely, in the latter case, when all similarities have exceeded the threshold, all unfamiliar spots have corresponding spots. To provide explanation for an unfamiliar spot, we adopted the latter condition.
 
 \subsection{Extraction of explainable words for role}
 \label{subsec:Extraction of explainable words for role}
-We present to users the keywords that represent the viewpoints of association between unfamiliar spots and familiar spots.
-However, since we can not obtain the feature of a word from the relative feature vector, we extract words by another method.
-
-As a premise, all reviews are divided into words by the Japanese morphological analyzer MeCab.
-We use ``mecab-ipadic-NEologd'' as the dictionary as in Section \ref{subsec:Generating feature vector using user reviews of spot}.
-However, the particle, auxiliary verb, adnominal, symbol, stop word are deleted.
-
-We explain the procedure of keyword extraction. First, we obtain the feature word and tfidf value by the tfidf method from the target familiar spot and unfamiliar spot. Next, we calculate the harmonic mean of tfidf values as a score for feature words common to the two spots. Finally, we extract feature words with high scores as explainable words.
-
-We calculate the feature value of a keyword in a spot is defined by the formula \ref{math:TFIDF}.
+   Keywords representing the viewpoints of association between the unfamiliar and familiar spots were presented to the user. However, as extracting the feature of a word from the relative feature vector was not possible, we resorted to another method. As a premise, all reviews were divided into words by the Japanese morphological analyzer MeCab, where we used ``mecab-ipadic-NEologd'' as the dictionary; however, the words particle, auxiliary verb, adnominal, symbol, and stop, were deleted. For the keyword extraction, we first obtained a feature word and tfidf value from the target familiar spot and unfamiliar spots by the tfidf method. Next, we calculated the harmonic mean of the tfidf values to score feature words common to the two spots. Finally, we extracted the feature words with high scores as explainable words.
+   We calculated the feature value of a keyword in a spot by the formula
 \begin{equation}
-  TFIDF(t,d,state) = TF(t,d) \times log\Biggr(\frac{|S_{state}|}{DF(t,state)}\Biggr)
+  TFIDF(t,d,state) = TF(t,d) \times log\Biggr(\frac{|S_{state}|}{DF(t,state),}\Biggr)
   \label{math:TFIDF}
 \end{equation}
-Where function $TF(t,d)$ returns the number of the keyword $t$ in the document $d$.
-$d$ is a document combining all reviews of a spot into one.
-Function $DF(t,state)$ retuns the number of documents that include keyword $t$.
-$|S_{state}|$ is the total number of spots.
-When $state$ is $f$, we calculate TFIDF value using a set of familiar spots that inputted by user.
-When $state$ is $u$, we calculate TFIDF value using a set of unfamiliar spots that included in inputted area by user.
-
-We extract the explainable keywords of the associated familiar spots and unfamiliar spots using the harmonic mean of the TFIDF values of the feature words common to the two spots.
-At first, we extract commonly appearing words in the review document of the familiar spot and the unfamiliar spot.
-Next, we calculate the score of the extracted word by the formula \ref{math:Harmonic Mean}.
-$TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar spot and the unfamiliar spot, respectively.
-When the value of the score is large, the word has high importance in each spot.
-Therefore, the top $N$ words of the score are presented to the user as explanation information (Fig. \ref{fig:Photo_Map}).
+where function $TF(t,d)$ returns the number of the keyword $t$ in the document $d$, which combines all reviews of a spot into one; function $DF(t,state)$ returns the number of documents that include keyword $t$ and; $|S_{state}|$ is the total number of spots.
+When $state$ was $f$, we calculated TFIDF using a set of familiar spots from the user spot inputs. Likewise when $state$ was $u$, we calculated TFIDF using the set of unfamiliar spots from the user area inputs.
+   We extracted the explainable keywords of the associated familiar and unfamiliar spots using the harmonic mean of the TFIDF values of the feature words common to the two spots. First, we extracted words commonly appearing in the review document of the familiar and unfamiliar spots. Next, we calculated the score of the extracted word by formula \ref{math:Harmonic Mean}. $TFIDF(t,d,f)$ and $TFIDF(t,d,u)$ indicate the TFIDF value of the familiar and unfamiliar spots, respectively. The word has high importance in each spot when the score is large. Therefore, the top $N$ words of the score were presented as explanatory information to the user (Fig. \ref{fig:photo_map}).
 
 \begin{eqnarray}
-  score(t,d) = \frac{2 \times TFIDF(t,d,f) \times TFIDF(t,d,u)}{TFIDF(t,d,f) + TFIDF(t,d,u)}
+  score(t,d) = \frac{2 \times TFIDF(t,d,f) \times TFIDF(t,d,u)}{TFIDF(t,d,f) + TFIDF(t,d,u)}.
   \label{math:Harmonic Mean}
 \end{eqnarray}
 
@@ -212,7 +117,7 @@ Therefore, the top $N$ words of the score are presented to the user as explanati
   \begin{center}
     \includegraphics[clip,width=8.5cm,bb=0 0 1289 750]{picture/Photo_Map.png}
     \caption{User interface of prototype system}
-    \label{fig:Photo_Map}
+    \label{fig:photo_map}
    \end{center}
 \end{figure}
 
@@ -220,7 +125,7 @@ Therefore, the top $N$ words of the score are presented to the user as explanati
 \label{subsec:Example of explained unfamiliar spots}
 
 \begin{table}[t]
-  \caption{The set of Familiar spot and Unfamiliar spot}
+  \caption{Set of Familiar and Unfamiliar spot}
   \label{table:Familiar spot group and Unfamiliar spot group}
   \centering
   \begin{tabular}{l|l}
@@ -247,56 +152,32 @@ Therefore, the top $N$ words of the score are presented to the user as explanati
   \end{tabular}
 \end{table*}
 
-Table \ref{table:Familiar spot group and Unfamiliar spot group} shows an example of a set of user's familiar spots and unfamiliar spots.
-Unfamiliar spots are five spots randomly selected from within Tokyo.
-Table \ref{table:Explanation information} shows the results of explainable words using the proposed method in Section \ref{sec:An Explainaton Method of Unfamiliar Tourist Spots}.
-
-Focusing on the feature of the park, it is thought that the spot closest to the park in the set of unfamiliar spots is ``Shinjuku Gyoen''.
-In the set of familiar spots there are two parks, ``Odawara-jo Park'' and ``Nara Park''.
-``Odawara-jo Park'' has a lot of descriptions about flowers and play equipments, on the other hand, ``Nara Park'' has a lot of descriptions about deers and grass.
-Because ``Shinjuku Gyoen'' has a lot of descriptions about flowers and play equipments, it seems to be related to ``Odawara-jo Park''.
-
-``Mishima Skywalk'' is considered to be a feature with a good view and high in the set of familiar spots.
-On the other hand, ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' are the scenes with a good view and high in the set of unfamiliar spots.
-In this case, we think both are correct answers. In this example, it was associated with ``Tokyo Skytree'' which is considered to have better view.
-Also, ``Mt. Fuji'' is extracted as an explainable keyword. It is common as a word that emphasizes the good view and it seems that it expresses the relationship appropriately.
-The proposed method can show the feature of each relationship.
+Table \ref{table:Familiar spot group and Unfamiliar spot group} shows an example of a set of user's familiar and unfamiliar spots. Five unfamiliar spots were randomly selected within Tokyo. Table \ref{table:Explanation information} shows the list of explainable words using the proposed method in Section \ref{sec:An Explanation Method of Unfamiliar Tourist Spots}.
+   Focusing on the feature of the park, we believed that the spot closest to the park in the set of unfamiliar spots was ``Shinjuku Gyoen.'' In the set of familiar spots there were two parks, ``Odawara-jo Park'' and ``Nara Park.''
+``Odawara-jo Park'' had many descriptions about flowers and play equipment, while ``Nara Park'' had many descriptions about deers and grasses. Because ``Shinjuku Gyoen'' had many descriptions about flowers and play equipment, it seemed related to ``Odawara-jo Park.''
+   In the set of familiar spots, ``Mishima Skywalk'' had features of good view and high, while ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' had the same features in the set of unfamiliar spots. In this case, both could be considered as similar relative features. However, ``Mishima Skywalk'' was associated with ``Tokyo Skytree'' as the latter had a better view than ``Tokyo Tower Main Deck.'' Moreover, ``Mt. Fuji'' was extracted as an explainable keyword. A word that emphasizes the good view seemed to express the relationship appropriately. Thus, the proposed method can show the feature of each relationship.
 
 \section{Evaluation Experiment}
 \label{sec:Evaluation Experiment}
-\subsection{Settings of experiment}
-\label{subsec:Settings of experiment}
-We evaluate proposed method by comparing with other method.
-We compare following three methods.
+\subsection{Experiment settings}
+\label{subsec:Experiment settings}
+We compared the proposed method with these existing methods:
 \begin{description}
-\item[A]Metadata (category, duration time, season)
-\item[B]Paragraph vector (feature vector)
-\item[C]Proposed Method (relative feature vector)
+\item[A.]Metadata (category, duration time, season)
+\item[B.]Paragraph vector (feature vector)
+\item[C.]Proposed Method (relative feature vector)
 \end{description}
-
-The method A is metadata used for searching spots on the sightseeing spots search site.
-We selected three metadata that are often used for search as follows.
+   Metadata (A) is used for searching spots on sightseeing spots search site. We selected three metadata that are often used:
 \begin{itemize}
-\item category: e.g.) Shrine / Temple，Tourist facilities / Tourist tours etc.
-\item duration time: e.g.) less than 1 hour，1 to 2 hour etc.
-\item season: e.g.) 1 to 12 month, spring, summer, autumn, winnter
+\item Category: e.g., shrine/temple，tourist facilities /tourist tours
+\item Duration time: e.g., less than one hour，1--2 hours
+\item Season: e.g., 1--12 month, spring, summer, autumn, winter
 \end{itemize}
-
-In method A, familiar spot and unfamiliar spot of the same category, same duration time, same season are extracted. If it can not be extracted, delete the conditions in order of season, duration time, category.
-If there are multiple unfamiliar spots, we select the one with the largest number of reviews.
-Finally, we extract the explainable words using section \ref{subsec:Extraction of explainable words for role} and present them to the subjects.
-
-The method B use the feature of each spot using the feature vector created in section \ref{subsec:Generating feature vector using user reviews of spot}.
-And, we extract the explainable words using section \ref{subsec:Extraction of explainable words for role} and present them to the subjects.
-
-We collected 24 subjects using CrowdWorks\footnote{CrowdWorks is a crowdsourcing service in Japan. https://crowdworks.jp/}.
-We presented explainable information of unfamiliar spots based on subjects' familiar spots using each method.
-First, the subject inputted tourist spots that he/she had already visited and he/she likes. The number of spots to be input by the subject is four to ten.
-In this experiment, in order to match the input character string with the spot name in the system, the subject selected from the spot name candidates similar to the input character string.
-Next, the subjects never went on a trip etc and entered prefectures / areas that we would like to visit.
-We presented familiar and unfamiliar spots associated with methods A to C and their explainable keywords.
-We presented up to five keywords (N = 5).
-Subjects evaluated the results by choosing one out of the following five options.
+   In method A, familiar and unfamiliar spots of the same category, duration time, and season were extracted. If otherwise these could not be extracted, conditions in the order of season, duration time, and category were deleted
+If there were multiple unfamiliar spots, we selected the one with the largest number of reviews. Moreover, we extracted the explainable words using Section \ref{subsec:Extraction of explainable words for role} and presented them to the subjects.
+   Paragraph vector (B) uses the feature of each spot using the feature vector created in Section \ref{subsec:Generating feature vector using user reviews of spot}. For this method, we extracted the explainable words using Section \ref{subsec:Extraction of explainable words for role} and presented them to the subjects.
+   We gathered 24 subjects using CrowdWorks\footnote{CrowdWorks is a crowdsourcing service in Japan. https://crowdworks.jp/} and presented them explainable information of unfamiliar spots based on their familiar spots using each method. The subjects inputted four to ten tourist spots they had visited and favored. In the system, to match the input character string with the spot name, the subjects selected from the spot list the candidates similar to the input character string. Afterwards, the subjects were asked to input destinations they intend to visit. We presented familiar and unfamiliar spots associated with methods A to C and their explainable keywords (N $\le$ 5).
+The subjects evaluated the results by choosing one out of the following five options.
 \begin{enumerate}
   \item No keyword.
   \item There is a relationship between the two spots, and the relationship became clear by keywords.
@@ -305,8 +186,8 @@ Subjects evaluated the results by choosing one out of the following five options
   \item There is no relationship between the two spots.
 \end{enumerate}
 
-\subsection{Result}
-\label{subsec:Result}
+\subsection{Results}
+\label{subsec:Results}
 
 \begin{table}[t]
   \caption{Experimental results}
@@ -324,10 +205,7 @@ Subjects evaluated the results by choosing one out of the following five options
   \end{tabular}
 \end{table}
 
-Table \ref{table:Statistics on the number of data of experiment results} shows the number of each experimental result of method A to C.
-In the evaluation experiment, the total of usable data is 285.
-The method A has the smallest number of familiar spots associated with unfamiliar spots.
-The method B has the largest number of familiar spots related to unfamiliar spots.
+   Table \ref{table:Statistics on the number of data of experiment results} shows the experimental results for methods A to C. A total of 285 usable data were used in the experiment. As shown, method A had the smallest number of familiar spots associated with unfamiliar spots, while method B had the largest number of familiar spots related to unfamiliar spots.
 
 \begin{table}[t]
   \caption{Percentage of evaluation in explanation information}
@@ -345,7 +223,7 @@ The method B has the largest number of familiar spots related to unfamiliar spot
 \end{table}
 
 \begin{table*}[t]
-  \caption{When the categories of the familiar spots are different or  percentage of evaluation when similar}
+  \caption{Evaluation percentages when the categories of the familiar spots are different and when the familiar spots are similar}
   \label{table:When the categories different or similar}
   \centering
   \begin{tabular}{c|r|r}
@@ -358,33 +236,16 @@ The method B has the largest number of familiar spots related to unfamiliar spot
 \end{tabular}
 \end{table*}
 
-Table \ref{table:Percentage of evaluation in explanation information} shows the ratio of the number of the experimental results as the option 1 to 5 in the method A to C.
-Many subjects choose option No.2 for Method A. From this, it can be seen that the method A can associate spots having apparent relationships.
-Compared to the other methods, in Method C (proposed method), the ratio of No.2 option decreases and the ratio of No.3 option increases. From this, we think that method C finds and presents hidden relationships. However, as the ratio of option No. 5 also increases, we can say that it is easier to extract irrelevant spots.
-
-When option 2 and option 3 are summed, method A is the highest. From this, we can say that the accuracy of the association of spots for explanation is the highest. However, as described above, the meaning of option 2 is a natural relationship, and Method A can extract only a small number.
-For us, options 2 and 3 are observed to be in a trade-off relationship. Option 2 is a relationship which does not need to explain botherly, option 3 is a relationship worthy of explanation.
-We think that it is important to increase choice 3 as much as possible while maintaining option 2. From this point of view, it is considered that Method B and the proposed method show the same degree of accuracy.
-
-Option 3 has a high possibility of changing to option 5 if keyword extraction fails. Therefore, we need to improve the method of keyword extraction.
-
-For method B and method C, the case where the category of the familiar spot inputted by the subject is different is similar to the case where the categories of the familiar spots input by the subject are different, the ratio of the evaluation of the option 2 and the option 3 is the table \ref{table:When the categories different or similar}.
-Using method C, which is the proposed method, subjects can present meaningful keywords without relation to a certain spot that the subject has familiar visited.
-By using the relative feature vector, it can be said that the characteristics of each spot can be found over the category.
-In the case where the genres of the familiar spots are similar, the method B is better than the case.
-
+   Table \ref{table:Percentage of evaluation in explanation information} shows the ratio of the number of the experimental results from options 1--5 in A to C. Most subjects chose option 2 for method A; this implied that A could associate spots having similar relationships. As for the proposed method (C), the ratio of option 2 decreased while it increased for option 3. This trend implied that method C found and presented hidden relationships. However, as the ratio of option 5 also increased, we could say that irrelevant spots were easier to extract.
+   When options 2 and 3 were summed, method A had the highest explanation information percentage; therefore, it had the highest accuracy of association. However, as described above, option 2 is a natural relationship, and method A could extract only a small number. In our opinion, options 2 and 3 were observed to be in a trade-off relationship. Option 2 was a relationship that did not need bothersome explanation, while option 3 was a relationship worthy of explanation. We believe it important to increase choice 3 as much as possible while maintaining option 2. From this point of view, method B and the proposed method would show the same degree of accuracy.
+   Option 3 had the high possibility of changing to option 5 if keyword extraction failed. Therefore, we would need to improve the method of keyword extraction.
+   For methods B and C, the case where the category of the familiar spots inputted by the subject was different, was similar to the case where the categories of the familiar spots inputted by the subjects were different. Table \ref{table:When the categories different or similar} shows the ratio of the evaluation of options 2 and 3. With method C, which is the proposed method, subjects could present meaningful keywords without needing relation to a certain spot the subject has visited and is familiar with. Using the relative feature vector, the characteristics of each spot could be compared to using category. Furthermore, method B was better in the case where the genres of the familiar spots were similar.
 \section{Conclusions and Future Work}
 \label{sec:Conclusions and Future Work}
-We focused on the difficulty of understanding the tourist spots searched by using the tourist spot search engine in ranking, recommendation information, categories, and so on., if the presented tourist spots are unfamiliar for the user.
-In order to support understanding of unfamiliar spots, we proposed an explanatory method to support understanding by comparing unfamiliar spots with familiar spots that users have already visited.
 
-In the evaluation experiment, we evaluate four method of explanatory information.
-As a result, in the case of using categories, the number of familiar spots associated with unfamiliar spots is the smallest.
-By using the relative feature vector and harmonic mean, the characteristics of each spot can be obtained.
-In addition, we confirmed that it was possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
-
-As future works, we analyze experimental result such as the relevance between keywords presented to users.
-We also plan to evaluate the effectiveness and relevance of each keyword presented to the user.
+   We focused on the difficulty of understanding tourist spots suggested by search engines through ranking, visit recommendations, categories, and so on, given that these areas are unfamiliar to a web user. To support the understanding of unfamiliar spots by potential visitors, we proposed an explanatory method that compares the relative features of the spots in question and the areas they visited and are familiar with.
+   We evaluated four methods, including our proposed method, for their accuracy on providing explanatory information. Using categories, the number of familiar spots associated with unfamiliar spots had the lowest accuracy. However, using relative feature vector and harmonic mean, the characteristics of each spot can be obtained. In addition, we confirmed it possible to correlate unexpected unfamiliar spots with familiar spots, and that there is a possibility that interest and attention can be drawn to tourist spots that users do not know.
+   As future work, we intend to analyze the experimental results in terms of effectiveness and relevance of each keyword presented to the users.
 
 \section*{Acknowledgment}
 This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551.
