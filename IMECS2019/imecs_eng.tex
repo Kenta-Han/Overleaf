@@ -57,7 +57,7 @@ Therefore, in order to support understanding of users' unfamiliar spots, we prop
 In this paper, at first, we generate the feature vector using user reviews of the tourist spot.
 % 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出する．
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-% 最後に，相対的な特徴ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連づけし，その関係を説明するためのキーワードを抽出する．
+% 最後に，相対的な特徴ベクトルの類似度に基づいて既訪問スポットと未訪問スポットの関連付けし，その関係を説明するためのキーワードを抽出する．
 Finally, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector, and further extract keywords that explain the relation.
 % また，プロトタイプシステムを構築し，既訪問スポットと未訪問スポットとの説明情報の効果を検証する評価実験を行う．
 We also develop the prototype system, and we evaluate the effect of the explanatory information between the familiar spot and the unfamiliar spot.
@@ -90,7 +90,8 @@ However, since the user has no prior knowledge about the search area, what kind 
 % さまざまな観光スポットを効果的に理解するためには，既存の情報をもとにして，未知な情報と既知な情報との対応関係を考えることが不可欠となる．
 Therefore, in order to effectively understand various tourist spots, we think that it is effective if we compare an unfamiliar spot using a visited spot of user.
 % この考え方は，以前に経験した事柄(ベースと呼ぶ)を，現在直面している事柄あるいは問題(ターゲットと呼ぶ)にあてはめる類推に相当する．
-This is a kind of analogy that applies the matters that the user previously experienced to the current matter. In this case, the previous experience is the already visited spot and the current matter is the spot in the unfamiliar area.
+This is a kind of analogy that applies the matters that the user previously experienced to the current matter.
+In this case, the previous experience is the already visited spot and the current matter is the spot in the unfamiliar area.
 % たとえば，金沢の「にし茶屋街」という未知なスポットに対して既訪問の京都の「花見小路」と似ていると説明するとイメージの理解がしやすくすることがある．
 For example, whereas unfamiliar spots such as ``Omotesando'' in Tokyo, Japan, if you explain that it is similar to the already visited ``Avenue des Champs-Elysees'' in Paris, it may make it easier to understand.
 
@@ -218,7 +219,7 @@ In this paper, we use gensim\footnote{https://radimrehurek.com/gensim/models/doc
 We used Distributed Bag-of-Words as a learning method, and the number of dimensions was 300.
 % じゃらんのユーザレビューは日本語で書かれいてる．
 User reviews in Jalan are written by Japanese.
-% 従って、日本語の形態素解析器であるmecab\cite{Codd11}を辞書 `` mecab-ipadic-NEologd ''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}を使って使用します。
+% 従って、日本語の形態素解析器であるmecab\cite{Codd11}を辞書 `` mecab-ipadic-NEologd ''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}を使っている．
 Therefore, we use MeCab\cite{Codd11} that is the Japanese morphological analyzer with dictionary ``mecab-ipadic-NEologd''\footnote{https://github.com/neologd/mecab-ipadic-neologd/}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -302,7 +303,7 @@ At this time, if the similarity falls below the threshold (0.125 in this paper),
 % また，未訪問スポットと類似度が最も高い既訪問スポットと関連付けられているか，既訪問スポットと類似度が最も高い未訪問スポットと関連付けられているかによって結果が異なる．
 At this time, the result changes depending on whether the familiar spot having the highest degree of similarity to the unfamiliar spot is associated or the unfamiliar spot having the maximum similarity to the familiar spot is associated.
 
-% 前者の方法では，すべての類似度が閾値を超えると，すべての既訪問スポットが対応するスポットがあるが，すべての未訪問スポットが対応するスポットがあるわけではない．
+% 前者の方法では，すべての類似度が閾値を超えると，すべての既訪問スポットに対応するスポットがあるが，すべての未訪問スポットが対応するスポットがあるわけではない．
 In the former the method, when all similarities exceed the threshold, all familiar spots have corresponding spots but not all unfamiliar spots have corresponding spots.
 % 一方，後者の方法では，すべての類似度が閾値を超えると，すべての未訪問スポットが対応するスポットがある．
 On the other hand, in latter method, when all similarities exceed the threshold, all unfamiliar spots have corresponding spots.
@@ -529,9 +530,13 @@ Subjects evaluated the results by choosing one out of the following five options
   \end{tabular}
 \end{table}
 
+% 表\ref{table:実験結果}は方法Aから方法Cの各実験結果の数を示している．
 Table \ref{table:Experimental results} shows the number of each experimental result of method A to C.
+% 評価実験では，使用可能のデータの合計は285である．
 In the evaluation experiment, the total of usable data is 285.
+% 方法Aは，未訪問スポットに関連する既訪問スポットの数が最も少ない．
 The method A has the smallest number of familiar spots associated with unfamiliar spots.
+% 方法Bは，未訪問スポットに関連する既訪問スポットの数が最も多い．
 The method B has the largest number of familiar spots related to unfamiliar spots.
 
 \begin{table}[t]
