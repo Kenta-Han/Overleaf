@@ -80,8 +80,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
 OUTPUT imecs_jap(deim).dvi
 INPUT picture/Photo_CosSim_jap.png
 INPUT extractbb -B cropbox -O picture/Photo_CosSim_jap.png
-INPUT picture/Photo_Map.png
-INPUT extractbb -B cropbox -O picture/Photo_Map.png
+INPUT picture/Photo_Map2_jap.png
+INPUT extractbb -B cropbox -O picture/Photo_Map2_jap.png
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT imecs_jap(deim).aux

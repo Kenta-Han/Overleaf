@@ -10,10 +10,13 @@
 
 \begin{document}
 \title{An Explanation Method of Unfamiliar Tourist Spots based on Roles of User's Familiar Spots}
-\author{Kenta~Han and Daisuke~Kitayama
+\author{Kenta~Han, Daisuke~Kitayama
 
+\thanks{Manuscript received December 20, 2018; revised January 10, 2019. }
+\thanks{This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551. }
 \thanks{K. T. Han is with the Graduate School of Engineering, Kogakuin University, Japan; e-mail: em18011@ns.kogakuin.ac.jp.}% <-this % stops a space
 \thanks{D. Kitayama is with the Faculty of Informatics, Kogakuin University, Japan;  e-mail: kitayama@cc.kogakuin.ac.jp.}}% <-this % stops a space
+
 
 \maketitle
 
@@ -21,12 +24,10 @@
 \thispagestyle{empty}
 
 \begin{abstract}
-% 多くの観光客は，レジャー旅行を計画するときに，オンラインから利用可能情報を得ている．しかし，情報の利用者は未訪問エリアに向けられるかもしれないので，この頼りはしばしば問題を生じそして誤解を招くようになる．
-Most tourists resort to available information online when planning for leisure travel; however, this recourse often becomes problematic and misleading as users of the information may be directed to unfamiliar areas.
+% 多くの観光客は，レジャー旅行を計画するときに，オンラインから利用可能情報を得ている．しかし，旅行客は未訪問エリアに向けられるかもしれないので，この頼りはしばしば問題を生じそして誤解を招くようになる．
+Most tourists resort to available information online when planning for leisure travel; however, this recourse often becomes problematic and misleading as tourist of the information may be directed to unfamiliar areas.
 % この点に関して，我々は彼らが既に訪れたことがあるスポットの特徴を通して未訪問スポットを説明する方法を提案した．
 On this regard, we proposed a method of explaining unfamiliar spots through the familiar features of spots they have visited.
-% % 観光スポットの観光レビューを使用して特徴ベクトルを生成し，次に特徴ベクトルを既に訪問したスポットと比較して，ユーザを誘導するための役割を抽出した．
-% We generated a feature vector using  tourist reviews of the tourist spot, then compared the feature vector with already visited spots to extract their role for guiding the user.
 % 本研究では，まず，観光スポットのユーザレビューを用いて特徴ベクトルを生成した．
 In this paper, at first, we generated the feature vector using user reviews of the tourist spot.
 % 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出した．
@@ -56,17 +57,15 @@ At present, most tourists read online reviews, travel and leisure communities ra
 % % 例えば，人気のある日本の観光スポット投稿サイトTripadvisorとJalanは行き先のレビューや旅行者からの経験に関する豊富な情報を提供している．
 % For instance, popular Japanese tourist spot posting sites Tripadvisor\footnote{https://www.tripadvisor.com/} and Jalan\footnote{Jalan https://www.jalan.net/kankou/} offer a wealth of information on destination reviews and experiences from travelers.
 % Tripadvisorやじゃらんなどの観光スポット検索サイトでは，ユーザが特定の観光スポットを訪問した後レビューを投稿するため，観光スポットに関する豊富な情報がある．
-In a tourist spot search engine such as Tripadvisor\footnote{https://www.tripadvisor.com/} and Jalan\footnote{Jalan is a review posting site on tourist spots in Japan. https://www.jalan.net/kankou/}, the user who visited there about a certain tourist spot posted reviews and there is a wealth of information on tourist spots.
+In a tourist spot search engine such as Tripadvisor\footnote{https://www.tripadvisor.com/} and Jalan\footnote{Jalan is a review posting site on tourist spots in Japan. https://www.jalan.net/kankou/}, the tourist who visited there about a certain tourist spot posted reviews and there is a wealth of information on tourist spots.
 % しかし，ユーザは訪問したいエリアについての事前知識がないため，検索された観光スポットを1つずつ確認する必要がある．
-However, since the user has no prior knowledge about the search area, what kind of tourist spot is to be confirmed one by one.
+However, since the tourist has no prior knowledge about the search area, what kind of tourist spot is to be confirmed one by one.
 % さまざまな観光スポットを効果的に理解するためには，既存の情報をもとにして，未知な情報と既知な情報との対応関係を考えることが不可欠となる．
-Therefore, in order to effectively understand various tourist spots, we think that it is effective if we compare an unfamiliar spot using a visited spot of user.
+Therefore, in order to effectively understand various tourist spots, we think that it is effective if we compare an unfamiliar spot using a visited spot of tourist.
 % 代替案として，我々は，ユーザが既訪問スポットを使用し，未訪問スポットに対する効果的なロケータ技法を提案した．
 As an alternative, we proposed an effective locator technique for an unfamiliar spot using a spot visited and familiar to the user.
 % % このアプローチは，現在の問題に対する経験の採用に似ている．
-% This approach is analogous to employing experience over the current problem.
-% この考え方は，以前に経験した事柄(ベースと呼ぶ)を，現在直面している事柄あるいは問題(ターゲットと呼ぶ)にあてはめる類推に相当する．
-This is a kind of analogy that applies the matters that the user previously experienced to the current matter.
+This approach is analogous to employing experience over the current problem.
 % さらに解明するために，以前の経験は既訪問スポット，現在の問題は未訪問スポットである．
 To elucidate further, the previous experience indicates the familiar spot and the current problem is the unfamiliar spot.
 % 例えば，日本の東京の「表参道」のような未訪問スポットは，パリでは「アベニューデシャンゼリゼ通り」と表現されていると，フランス人の初心者にとっては見つけやすく理解しやすいかもしれません，彼らが訪問し，後者の分野に精通しているとする．
@@ -74,9 +73,9 @@ For instance, unfamiliar spots such as ``Omotesando'' in Tokyo, Japan may be loc
 
 % 提案手法では，ユーザは既に訪れたことがある場所や未訪問エリアを入力する．
 In the proposed method, the user inputs already visited and unfamiliar area.
-% これから、観光スポットのユーザレビューに基づいて特徴ベクトルが生成する．
+% これから，観光スポットのユーザレビューに基づいて特徴ベクトルが生成する．
 From this, a feature vector is generated based on user reviews of the tourist spot．
-% 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出する．
+% 次に，ユーザの観光地の役割を抽出するために，既に訪れたスポットと比較した相対的特徴ベクトルを使用する．
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
 % 最後に，訪問されたスポットは，それらの相対的特徴ベクトルの類似性によって未訪問スポットと関連付けられ，そして関係を説明するキーワードが抽出される．
 Finally, the visited spot is associated with the unfamiliar spot by similarity of their relative feature vector, and keywords that explain the relation are further extracted.
@@ -94,14 +93,6 @@ Evaluation experiments and their results are discussed in Section \ref{sec:Evalu
 % 最後に，\ref{secsec:Conclusions and Future Work}では，この論文の結論と今後の課題について説明する．
 Finally, Section \ref{sec:Conclusions and Future Work}, presents the conclusions of the paper and our future work.
 
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[clip,width=7.5cm,bb=0 0 720 540]{picture/Photo_Image_eng.png}
-    \caption{An explanation method of unfamiliar tourist spots based on roles of user's familiar spots}
-    \label{fig:Photo_Image}
-   \end{center}
-\end{figure}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Related Work}
@@ -109,7 +100,6 @@ Finally, Section \ref{sec:Conclusions and Future Work}, presents the conclusions
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Tourist spot retrieval and recommendation system}
 \label{subsec:Tourist spot retrieval and recommendation system}
-
 % 利用者の経験履歴を用いた検索推薦システムに関する研究がいくつか発表されている．
 Several research on retrieval and recommendation system using user's experience history have been published.
 % 倉島ら\cite{Codd01}は，Flickrに投稿された集約写真のジオタグ情報を用いた旅行ルートの推薦方法を提案した．この手法では，時間情報で分類すると個人的な旅行履歴と見なすことができる．
@@ -144,8 +134,15 @@ In the conventional method of using the user's experience history, several resea
 % 本研究では，地域情報の理解を深めるために，既訪問スポットと未訪問スポットの見直し，および各スポットの相対的な特徴を見分け，関連付けを行った．
 In this research, a review of familiar spots and unfamiliar spots and the relative features of each spot, via the sets of spots familiar and unfamiliar to the user, were determined and associated to enhance understanding of the area information.
 % それが明示的に類推を利用したので，この論文は「関係レベルの類似性」と同様の構造を持つと推定される．
-As it exploited analogy explicitly, this paper is presumed to have similar structure as with the "similarity of relationship level."
+As it exploited analogy explicitly, this paper is presumed to have similar structure as with the ``similarity of relationship level."
 
+\begin{figure}[t]
+  \begin{center}
+    \includegraphics[clip,width=7.5cm,bb=0 0 720 540]{picture/Photo_Image_eng.png}
+    \caption{An explanation method of unfamiliar tourist spots based on roles of user's familiar spots}
+    \label{fig:Photo_Image}
+   \end{center}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,15 +153,15 @@ As it exploited analogy explicitly, this paper is presumed to have similar struc
 We propose an explanation method of unfamiliar tourist spots based on roles of user's familiar spots.
 % まず，ユーザが既訪問の複数個の観光スポットと訪問したい観光スポットエリア情報を入力する．
 At first, the user inputs a set of tourist spots that have been visited and tourist area that user wishes to visit.
-% 本手法では，観光スポットのユーザレビューを用いて特徴ベクトルを生成する．
+% 本手法では，観光スポットのユーザレビューを用いて特徴ベクトルを作成する．
 In our method, we generate the feature vector using user reviews of the tourist spot.
-% 次に，既に訪問したスポットと比較した相対的な特徴ベクトルを用いて，観光スポットの独特な特徴を抽出する．
+% 次に，ユーザの観光地の役割を抽出するために，既に訪れたスポットと比較した相対的特徴ベクトルを使用する．
 Next, we use the relative feature vector compared with already visited spots to extract the role of the tourist spot for the user.
-% 未訪問スポットも同様にエリア内の各スポットの特徴ベクトルを求める．
+% 同様に，未訪問エリアの各観光スポットの相対的な特徴ベクトルを，そのエリアの他の観光スポットと比較して計算する．
 Similarly, we calculate the relative feature vector of each tourist spot in the unfamiliar area by comparing with other tourist spots in that area.
-% 次に，既訪問スポットレビューベクトルと未訪問スポットレビューベクトルの相対的な特徴に類似する特徴を持つ未既訪問観光スポット関連付けを行う．
+% 次に，相対的な特徴ベクトルの類似性によって訪問されたスポットを未訪問スポットと関連付ける．
 Then, we associate the visited spot with the unfamiliar spot by the similarity of the relative feature vector.
-% 最後に，TFIDFを用いて未訪問スポットの理解支援のための説明手法を定義し，ユーザに提示する．
+% 最後に，その関係性を説明するためのキーワードを抽出する．
 Finally, we extract keywords that explain the relation.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,7 +182,7 @@ As user reviews in Jalan are written in Japanese, we used MeCab\cite{Codd11} as 
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[clip,width=7.5cm,bb=0 0 720 540]{picture/Photo_CosSim_eng.png}
+    \includegraphics[clip,width=7.5cm,bb=0 0 702 458]{picture/Photo_CosSim_eng.png}
     \caption{Concept of similarity calculation}
     \label{fig:Photo_CosSim}
   \end{center}
@@ -297,7 +294,7 @@ Therefore, the top $N$ words of the score were presented as explanatory informat
 
 \begin{figure}[t]
   \begin{center}
-    \includegraphics[clip,width=8.5cm,bb=0 0 1289 750]{picture/Photo_Map.png}
+    \includegraphics[clip,width=8.5cm,bb=0 0 1289 750]{picture/Photo_Map3_eng.png}
     \caption{User interface of prototype system}
     \label{fig:Photo_Map}
    \end{center}
@@ -352,7 +349,7 @@ In the set of familiar spots there were two parks, ``Odawara-jo Park'' and ``Nar
 Because ``Shinjuku Gyoen'' had many descriptions about flowers and play equipment, it seemed related to ``Odawara-jo Park.''
 
 % 既訪問スポットでは，「三島スカイウォーク」は眺めがよく，高い特徴を持っていたが，「東京スカイツリー」と「東京タワー大展望台」は未訪問スポット集合で同じ機能を持っていた．
-In the set of familiar spots, ``Mishima Skywalk'' had features of good view and high, while ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' had the same features in the set of unfamiliar spots.
+In the set of familiar spots, ``Mishima Skywalk'' had features of good view and high place, while ``Tokyo Skytree'' and ``Tokyo Tower Main Deck'' had the same features in the set of unfamiliar spots.
 % この場合mどちらも類似の相対的な特徴と見なすことができる．
 In this case, both could be considered as similar relative features.
 % しかし，「三島スカイウォーク」は「東京タワー大展望台」よりも眺望が良いため，「東京スカイツリー」と関連付けた．
@@ -464,19 +461,19 @@ As shown, method A had the smallest number of familiar spots associated with unf
   \end{tabular}
 \end{table}
 
-\begin{table*}[t]
-  \caption{Evaluation percentages when the categories of the familiar spots are different and when the familiar spots are similar}
+\begin{table}[t]
+  \caption{Evaluation percentages when the categories of are different or same}
   \label{table:When the categories different or similar}
   \centering
   \begin{tabular}{c|r|r}
   \hline
-  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}When the familiar spots are different\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}When the familiar spots are similar\end{tabular}} \\ \hline
+  & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Different\end{tabular}} & \multicolumn{1}{c}{\begin{tabular}[c]{@{}c@{}}Same\end{tabular}} \\ \hline
   Method B \& Option 2 & 56.82\%                            & 43.18\%                            \\
   Method C \& Option 2 & 71.87\%                            & 28.13\%                            \\ \hline
   Method B \& Option 3 & 51.61\%                            & 48.39\%                            \\
   Method C \& Option 3 & 52.83\%                            & 47.170\%                            \\ \hline
 \end{tabular}
-\end{table*}
+\end{table}
 
 % 表\ref{table:Percentage of evaluation in explanation information}は，A〜Cの選択肢1〜5の実験結果数の割合を示したものである．
 Table \ref{table:Percentage of evaluation in explanation information} shows the ratio of the number of the experimental results from options 1-5 in A to C.
@@ -507,10 +504,16 @@ Option 3 had the high possibility of changing to option 5 if keyword extraction 
 % したがって，キーワード抽出方法を改善する必要がある．
 Therefore, we would need to improve the method of keyword extraction.
 
-% 方法Bと方法Cでは，被験者が入力した既訪問スポットのカテゴリが異なる場合は，被験者が入力した既訪問スポットのカテゴリが異なる場合と同様であった．
-For methods B and C, the case where the category of the familiar spots inputted by the subject was different, was similar to the case where the categories of the familiar spots inputted by the subjects were different.
+% % 方法Bと方法Cでは，被験者が入力した既訪問スポットのカテゴリが異なる場合は，被験者が入力した既訪問スポットのカテゴリが異なる場合と同様であった．
+% For methods B and C, the case where the category of the familiar spots inputted by the subject was different, was similar to the case where the categories of the familiar spots inputted by the subjects were different.
+% 方法Bと方法Cでは，被験者が入力した既訪問スポットのカテゴリが異なる場合は同様の傾向を示した．
+For methods B and C,the same trend was shown to the case where the category of the familiar spots inputted by the subject was different.
 % Table \ref{table:When the categories different or similar}は選択肢2と3の評価の割合を示している．
 Table \ref{table:When the categories different or similar} shows the ratio of the evaluation of options 2 and 3.
+% 既訪問スポット集合では，同一カテゴリーに含むスポットが半数を超えた場合はカテゴリーは同じと定義する．
+In the familiar spot set, if the number of spots in the same category exceeds half, the category is defined to be the same.
+% それ以外の場合はカテゴリーは異なると定義する．
+Otherwise the category is defined to be different.
 % 提案手法法である方法Cでは，被験者は，被験者が訪れたことがあり，慣れ親しんでいる特定の場所との関係を必要とせずに，意味のあるキーワードを提示することができる．
 With method C, which is the proposed method, subjects could present meaningful keywords without needing relation to a certain spot the subject has visited and is familiar with.
 % 相対的特徴ベクトルを使用して，各スポットの特徴を使用カテゴリーと比較することができた．
@@ -543,8 +546,8 @@ As future work, we intend to analyze the experimental results in terms of effect
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Acknowledgment}
-This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551.
+% \section*{Acknowledgment}
+% This work was supported by ISPS KAKENHI of Grant-in-Aid for Scientific Research(C) Grant Number 18K11551.
 
 \ifCLASSOPTIONcaptionsoff
   \newpage

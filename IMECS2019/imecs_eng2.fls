@@ -101,9 +101,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT picture/Photo_Image_eng.png
 OUTPUT imecs_eng2.dvi
+INPUT picture/Photo_Image_eng.png
 INPUT picture/Photo_CosSim_eng.png
-INPUT picture/Photo_Map.png
+INPUT picture/Photo_Map3_eng.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
 INPUT imecs_eng2.aux
