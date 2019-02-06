@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1548748944 "_DEIM.dvi" "_DEIM.pdf" "_DEIM" 1548748946
-  "_DEIM.dvi" 1548748944 63556 8909b3f3f3d577ef28ad0f8ebfe8d218 "latex"
+["dvipdf"] 1549426731 "_DEIM.dvi" "_DEIM.pdf" "_DEIM" 1549426734
+  "_DEIM.dvi" 1549426731 63576 4b157f935724cd5e3519f25f16ede620 "latex"
   (generated)
   "_DEIM.pdf"
-["latex"] 1548748943 "_DEIM.tex" "_DEIM.dvi" "_DEIM" 1548748946
+["latex"] 1549426730 "_DEIM.tex" "_DEIM.dvi" "_DEIM" 1549426734
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1480098698 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min9.tfm" 1480098698 1196 415df3c165ce605a3c248afbbe3c844b ""
@@ -27,8 +27,6 @@
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1480098701 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1480098701 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm" 1480098701 1116 25a7bf822c58caf309a702ef79f4afbb ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/cidjmr1-h.tfm" 1480098710 172 ef6d6fbf60066fa123b55a5ac0d915da ""
-  "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/cidjmr1-v.tfm" 1480098710 172 3c1e14f3b2533bc0571f4d68408cebdf ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm" 1480098710 504 e15e0ced49bc0fca57e32b1199da50ac ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm" 1480098710 504 90cc0bfc6764b11e5837e72f13617993 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm" 1480098710 504 e15e0ced49bc0fca57e32b1199da50ac ""
@@ -50,8 +48,8 @@
   "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "_DEIM.aux" 1548748944 2107 fd9e5e030bbae018581cf960f3b48b55 ""
-  "_DEIM.tex" 1548748943 48297 f2adac17de7775796f6a9ef7d0f0a588 ""
+  "_DEIM.aux" 1549426731 2173 fca31c93b747c8fa0f3c3e821aacfd1a ""
+  "_DEIM.tex" 1549426730 48275 9a8d6cb5c9c57f84d6654f7c13e9ceb9 ""
   "deimj.cls" 1545269610 90049 2c30bb21be596661873dec91165c4a10 ""
   "extractbb -B cropbox -O picture/Photo_CosSim_jap.png" 0 -1 0 ""
   "extractbb -B cropbox -O picture/Photo_Image_jap.png" 0 -1 0 ""
@@ -61,5 +59,5 @@
   "picture/Photo_Map2_jap.png" 1546936032 1178388 b8be4ad6570a60f43e196aef3ffb5d7f ""
   (generated)
   "_DEIM.log"
-  "_DEIM.aux"
   "_DEIM.dvi"
+  "_DEIM.aux"

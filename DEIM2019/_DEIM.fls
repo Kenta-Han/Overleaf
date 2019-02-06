@@ -101,8 +101,4 @@ INPUT picture/Photo_Map2_jap.png
 INPUT extractbb -B cropbox -O picture/Photo_Map2_jap.png
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/cidjmr1-v.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/cidjmr1-h.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/cidjmr1-v.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/cidjmr1-h.tfm
 INPUT _DEIM.aux
