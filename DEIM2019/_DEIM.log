@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  7 MAR 2019 15:48
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  17 MAR 2019 19:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -8,7 +8,7 @@ entering extended mode
 pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./deimj.cls
-Document Class: deimj
+Document Class: deimj 
 \@JQ=\dimen118
 \@Q=\dimen119
 \@EM=\dimen120
@@ -239,164 +239,41 @@ LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 59.
 LaTeX Font Info:    Font shape `JT1/hmc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 70.
+(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 86.
 LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 8.65997pt on input line 70.
+(Font)              scaled to size 8.65997pt on input line 86.
 LaTeX Font Info:    Font shape `JY1/hmc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 70.
+(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 86.
 LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 8.65997pt on input line 70.
-
-LaTeX Warning: Reference `fig:Photo_Image' on page 1 undefined on input line 70.
-
-
-LaTeX Warning: Citation `Codd01' on page 1 undefined on input line 88.
-
-
-LaTeX Warning: Citation `Codd02' on page 1 undefined on input line 91.
-
-
-LaTeX Warning: Citation `Codd03' on page 1 undefined on input line 94.
-
+(Font)              scaled to size 8.65997pt on input line 86.
 [1
 
 
 ]
-
-LaTeX Warning: Citation `Codd04' on page 2 undefined on input line 97.
-
-
-LaTeX Warning: Citation `Codd05' on page 2 undefined on input line 98.
-
-
-LaTeX Warning: Citation `Codd06' on page 2 undefined on input line 99.
-
-
-LaTeX Warning: Citation `Codd07' on page 2 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Codd08' on page 2 undefined on input line 101.
-
-
-LaTeX Warning: Citation `Codd05' on page 2 undefined on input line 103.
-
-
-LaTeX Warning: Citation `Codd09' on page 2 undefined on input line 103.
-
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
 (Font)              scaled to size 7.69775pt on input line 110.
 File: picture/Photo_Image_jap.png Graphic file (type bmp)
 <picture/Photo_Image_jap.png>
-
-LaTeX Warning: Citation `Codd10' on page 2 undefined on input line 135.
-
-
-LaTeX Warning: Citation `Codd11' on page 2 undefined on input line 139.
-
 File: picture/Photo_CosSim_jap.png Graphic file (type bmp)
 <picture/Photo_CosSim_jap.png>
-[2]
-
-LaTeX Warning: Reference `math:Vector difference' on page 3 undefined on input line 169.
-
-
-LaTeX Warning: Reference `fig:Photo_CosSim' on page 3 undefined on input line 180.
-
-
-LaTeX Warning: Reference `math:CosSim' on page 3 undefined on input line 181.
-
-
-LaTeX Warning: Reference `subsec:スポットのレビューから特徴ベクトル生成' on page 3 undefined on input line 203.
-
-
-LaTeX Warning: Reference `table:mecab' on page 3 undefined on input line 204.
-
-
-LaTeX Warning: Reference `math:TFIDF' on page 3 undefined on input line 223.
-
-
-LaTeX Warning: Reference `math:Harmonic Mean' on page 3 undefined on input line 238.
-
-
-LaTeX Warning: Reference `fig:Photo_Map' on page 3 undefined on input line 241.
-
+ [2]
 File: picture/Photo_Map2_jap.png Graphic file (type bmp)
 <picture/Photo_Map2_jap.png>
-
-LaTeX Warning: Reference `table:既訪問スポット集合と未訪問スポット集合' on page 3 undefined on input line 301.
-
-
-LaTeX Warning: Reference `table:説明情報の例' on page 3 undefined on input line 303.
-
-
-LaTeX Warning: Reference `sec:未訪問スポットの説明手法' on page 3 undefined on input line 303.
-
-[3]
-
-LaTeX Warning: Reference `subsec:スポットのレビューから特徴ベクトル生成' on page 4 undefined on input line 333.
-
-
-LaTeX Warning: Reference `subsec:説明するための役割語の抽出' on page 4 undefined on input line 334.
-
-
-LaTeX Warning: Reference `math:Mean' on page 4 undefined on input line 336.
-
-
-LaTeX Warning: Reference `math:Multi' on page 4 undefined on input line 342.
-
-
-LaTeX Warning: Reference `math:Mean' on page 4 undefined on input line 348.
-
-
-LaTeX Warning: Reference `math:Multi' on page 4 undefined on input line 348.
-
-
-LaTeX Warning: Reference `table:キーワード説明情報における評価の割合' on page 4 undefined on input line 392.
-
-[4]
+ [3] [4]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 419.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 419.
-
-
-LaTeX Warning: Reference `subsec:説明するための役割語の抽出' on page 5 undefined on input line 427.
-
-
-LaTeX Warning: Reference `subsec:スポットのレビューから特徴ベクトル生成' on page 5 undefined on input line 429.
-
-
-LaTeX Warning: Reference `subsec:説明するための役割語の抽出' on page 5 undefined on input line 430.
-
-
-LaTeX Warning: Reference `subsec:実験手順' on page 5 undefined on input line 433.
-
-
-LaTeX Warning: Reference `table:対応付けの実験結果' on page 5 undefined on input line 454.
-
-
-LaTeX Warning: Reference `table:対応付け説明情報における評価の割合' on page 5 undefined on input line 488.
-
-
-LaTeX Warning: Reference `table:既訪問スポットのカテゴリが異なる場合と同じ場合の評価の割合' on page 5 undefined on input line 510.
-
-[5]
-
-LaTeX Warning: Reference `table:被験者がシステムaの方が良いと回答した例' on page 6 undefined on input line 542.
-
-
-LaTeX Warning: Reference `table:被験者がシステムbの方が良いと回答した例' on page 6 undefined on input line 542.
-
-
+ [5]
 Overfull \hbox (3.9881pt too wide) in paragraph at lines 555--561
- [][]
+ [][] 
  []
 
 
 Overfull \hbox (3.98808pt too wide) in paragraph at lines 567--573
- [][]
+ [][] 
  []
 
 [6] [7
@@ -406,20 +283,14 @@ Overfull \hbox (3.98808pt too wide) in paragraph at lines 567--573
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+ ) 
 Here is how much of TeX's memory you used:
  3410 strings out of 493281
  43377 string characters out of 6145040
- 141410 words of memory out of 5000000
+ 141711 words of memory out of 5000000
  7356 multiletter control sequences out of 15000+600000
  18133 words of font info for 85 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,13n,23p,304b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,13n,23p,303b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on _DEIM.dvi (7 pages, 63924 bytes).
+Output written on _DEIM.dvi (7 pages, 63820 bytes).
