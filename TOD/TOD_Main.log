@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  14 MAY 2019 13:42
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  20 MAY 2019 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2896,7 +2896,6 @@ LaTeX Font Info:    Font shape `JY1/gt/bx/n' in size <19.2207> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 76.
 LaTeX Font Info:    Calculating math sizes for size <9.61035> on input line 76.
 LaTeX Font Info:    Calculating math sizes for size <11.82813> on input line 76.
-LaTeX Font Info:    Calculating math sizes for size <8.27965> on input line 76.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.22882> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.22882> not available
@@ -2910,70 +2909,67 @@ LaTeX Font Info:    Font shape `JT1/mc/m/sc' in size <7.24469> not available
 (Font)              Font shape `JT1/mc/m/n' tried instead on input line 76.
 LaTeX Font Info:    Font shape `JY1/mc/m/sc' in size <7.24469> not available
 (Font)              Font shape `JY1/mc/m/n' tried instead on input line 76.
-LaTeX Font Info:    Calculating math sizes for size <7.24469> on input line 76.
 LaTeX Font Info:    Calculating math sizes for size <8.13184> on input line 76.
-LaTeX Font Info:    Calculating math sizes for size <5.69225> on input line 76.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <11.82813> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <11.82813> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.24873> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 89.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 94.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.24873> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 89.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 94.
  (I search kanjifont definition file: . . ) (I search font definition file: . . . . . . . )
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 89.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 94.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OT1+txsy on input line 89.
-LaTeX Font Info:    No file OT1txsy.fd. on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+txsy on input line 94.
+LaTeX Font Info:    No file OT1txsy.fd. on input line 94.
 
 
 LaTeX Font Warning: Font shape `OT1/txsy/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 89.
+(Font)              using `OT1/cmr/m/n' instead on input line 94.
 
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 94.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) [1
 
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.61035> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 110.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.61035> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 110.
-File: picture/Photo_Image_jap.png Graphic file (type bmp)
-<picture/Photo_Image_jap.png>
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8.13184> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 137.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8.13184> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 137.
- [2]
 File: picture/Photo_Map2_jap.png Graphic file (type bmp)
 <picture/Photo_Map2_jap.png>
- [3] [4]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <8.13184> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 103.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <8.13184> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 103.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <9.61035> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 130.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <9.61035> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 130.
+ [2] [3]
 
-LaTeX Warning: Reference `table:既訪問スポットのカテゴリが異なる場合と同じ場合の評価の割合' on page 5 undefined on input line 451.
+LaTeX Warning: Reference `table:既訪問スポットのカテゴリが異なる場合と同じ場合の評価の割合' on page 4 undefined on input line 326.
 
-
-Overfull \hbox (14.44324pt too wide) in paragraph at lines 542--548
+[4]
+Overfull \hbox (14.44324pt too wide) in paragraph at lines 417--423
  [][][][] 
  []
 
 
-Overfull \hbox (10.53094pt too wide) in paragraph at lines 554--560
+Overfull \hbox (10.53094pt too wide) in paragraph at lines 429--435
  [][][][] 
  []
 
+LaTeX Font Info:    Calculating math sizes for size <8.8711> on input line 461.
 [5]
-LaTeX Font Info:    Calculating math sizes for size <8.8711> on input line 586.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <11.08887> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 635.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 490.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <11.08887> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 635.
- [6] (./TOD_Main.aux)
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 490.
+ [6
+
+] (./TOD_Main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2982,12 +2978,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 1730 strings out of 493281
- 24357 string characters out of 6145040
- 96958 words of memory out of 5000000
- 5661 multiletter control sequences out of 15000+600000
- 48263 words of font info for 212 fonts, out of 8000000 for 9000
+ 1689 strings out of 493281
+ 23565 string characters out of 6145040
+ 95958 words of memory out of 5000000
+ 5621 multiletter control sequences out of 15000+600000
+ 40927 words of font info for 182 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 34i,14n,21p,471b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,14n,21p,333b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOD_Main.dvi (6 pages, 55968 bytes).
+Output written on TOD_Main.dvi (6 pages, 50040 bytes).

@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1557808976 "TOD_Main.dvi" "TOD_Main.pdf" "TOD_Main" 1557808978
-  "TOD_Main.dvi" 1557808976 55968 170b7cfbc4e67c8e29707751172a87a1 "latex"
+["dvipdf"] 1558330008 "TOD_Main.dvi" "TOD_Main.pdf" "TOD_Main" 1558330010
+  "TOD_Main.dvi" 1558330008 50040 5efa1ba2ba2957c9dbc8e5b723660f2d "latex"
   (generated)
   "TOD_Main.pdf"
-["latex"] 1557808975 "TOD_Main.tex" "TOD_Main.dvi" "TOD_Main" 1557808978
+["latex"] 1558330007 "TOD_Main.tex" "TOD_Main.dvi" "TOD_Main" 1558330010
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm" 1480098689 2124 2601a75482e9426d33db523edf23570a ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm" 1480098698 468 53f854284f6afa6c36aaa2d1090ecc12 ""
@@ -64,12 +64,10 @@
   "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "TOD_Main.aux" 1557808976 3394 a83668e53052d299152746e9be720d0e ""
-  "TOD_Main.tex" 1557808974 49272 10a35eb861c0c757f964ee1971a3cae9 ""
-  "extractbb -B cropbox -O picture/Photo_Image_jap.png" 0 -1 0 ""
+  "TOD_Main.aux" 1558330008 3043 ad70fce4350f767861ff62560f3ffb82 ""
+  "TOD_Main.tex" 1558330006 37324 c2b8e8125831ad3f47b57e5ce88664c6 ""
   "extractbb -B cropbox -O picture/Photo_Map2_jap.png" 0 -1 0 ""
   "ipsj.cls" 1541385384 142123 a913fa6ef20099c2a9e7fc1a97a1415b ""
-  "picture/Photo_Image_jap.png" 1545917511 109970 2de19b8d6bedfccc060896cb607ea69c ""
   "picture/Photo_Map2_jap.png" 1546936032 1178388 b8be4ad6570a60f43e196aef3ffb5d7f ""
   (generated)
   "TOD_Main.log"
