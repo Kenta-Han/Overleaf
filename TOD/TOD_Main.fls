@@ -143,6 +143,9 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tmin10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jis.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmss9.tfm
@@ -169,9 +172,6 @@ INPUT extractbb -B cropbox -O picture/Photo_Map2_jap.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/tgoth10.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/jis/jisg.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr5.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
