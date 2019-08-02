@@ -1,6 +1,6 @@
 
 \documentclass[submit]{ipsj}
-%\documentclass{ipsj}
+% \documentclass{ipsj}
 
 % \usepackage{graphicx}
 \usepackage[dvipdfmx]{graphicx}
@@ -10,29 +10,23 @@
 \def\endUnderline{\vphantom{y}\egroup\smash{\underline{\box0}}\\}
 \def\|{\verb|}
 
-% \bibliographystyle{jplain}
+\bibliographystyle{jplain}
 
-% \setcounter{巻数}{58}
-% \setcounter{号数}{1}
-% \setcounter{page}{1}
+\setcounter{巻数}{60}
+\setcounter{号数}{1}
+\setcounter{page}{1}
 
 
-% \受付{2016}{3}{4}
+\受付{2019}{3}{4}
 % \再受付{2015}{7}{16}   %省略可能
 % \再再受付{2015}{7}{20} %省略可能
 % \再再受付{2015}{11}{20} %省略可能
-% \採録{2016}{8}{1}
+\採録{2019}{8}{2}
 
 
 \begin{document}
 
-
-% \title{ユーザの既訪問スポットの位置付けに基づく\\未訪問スポットの説明手法}
-% \title{ユーザレビューを用いたスポット対応付け手法の\\提案とその応用}
 \title{説明性向上のためのユーザレビューを用いた\\観光スポットの対応付け手法}
-
-% \etitle{An Explanation Method of Unfamiliar Tourist Spots based on Roles of User's Familiar Spots}
-% \etitle{Proposal of Spot Matching Method Using User Review And Its Application}
 \etitle{An Association Method of Tourist Spots using User Reviews for Advancing Explainability}
 
 % \affiliate{IPSJ}{情報処理学会\\
@@ -61,7 +55,7 @@
 \begin{eabstract}
 % 多くの観光客は，レジャー旅行を計画するときに，オンラインから利用可能情報を得ている．しかし，旅行客は未訪問エリアに向けられるかもしれないので，この頼りはしばしば問題を生じそして誤解を招くようになる．
 Most tourists resort to available information online when planning for leisure travel; however, this recourse often becomes problematic and misleading as tourist of the information may be directed to unfamiliar areas.
-% この点に関して，我々は彼らが既に訪れたことがあるスポットの特徴を通して未訪問スポットを説明する方法を提案した．
+% この点に関して，我々は彼らが既に訪れたことがあるスポットの特徴を通して未訪問スポットを説明する方法を提案した． 
 On this regard, we proposed a method of explaining unfamiliar spots through the familiar features of spots they have visited.
 % 本研究では，まず，観光スポットのユーザレビューを用いて特徴ベクトルを生成した．
 In this paper, at first, we generated the feature vector using user reviews of the tourist spot.
@@ -86,13 +80,11 @@ tourist spots, explainability, tourist reviews, paragraph vector
 しかし，ユーザにとって訪問したいエリアは，訪問したことがなく不慣れであることが多い．
 そのため，エリア内に数多く存在する観光スポットから，自身の要求に合う観光スポットを見つけることは容易ではない．
 
-% Tripadvisor\footnote{https://www.tripadvisor.com/}やじゃらん\footnote{https://www.jalan.net/kankou/}などの観光スポット検索サイトでは，特定の観光スポットを訪問したことのあるユーザがレビューを投稿するため，観光スポットに関する豊富な情報が存在している．
-% これらのレビューサイトは，ユーザの意思決定の材料になりえる．
 ユーザの意識決定の材料の1つとして，Tripadvisor\footnote{https://www.tripadvisor.com/}やじゃらん\footnote{https://www.jalan.net/kankou/}などの観光スポット検索サイトがある．
 これらのサイトには特定の観光スポットを訪問したことのあるユーザがレビューを投稿し，観光スポットに関する豊富な情報が存在している．
 しかし，ユーザは検索エリアに関する事前知識がないため，どのスポットのレビューを読むべきか効率的に判断することは困難である．
 そこで我々は，さまざまな観光スポットを効果的に理解するためには，ユーザが訪問した経験のあるスポットを使って未訪問スポットと類推できることが重要であると考えた．
-たとえば，日本に初めて訪れるフランス人旅行者に対し，未訪問スポットである東京の「表参道」をパリにおける「シャンゼリゼ通り」と表現するとを理解しやすいであろう．
+たとえば，日本に初めて訪れるフランス人旅行者に対し，未訪問スポットである東京の「表参道」をパリにおける「シャンゼリゼ通り」と表現するとを理解しやすい．
 この考え方は，ユーザが以前に経験した物事を現在の物事に適用する一種の類推である．
 既知の知識（ベースと呼ぶ）から概念（ターゲットと呼ぶ）を獲得するときに類推思考が働くとされる\cite{Gentner}．
 構造の類似性には3種類あり，特徴の共有数で決まる「対象レベルの類似性」，ベースに存在する関係とターゲットに存在する関係の共有度に基づく「関係レベルの類似性」，および題の解法あるいは目標レベルでの類似性である「プラグマティックな類似性」とがある\cite{Gentner}，\cite{Holyoak}．
@@ -148,27 +140,24 @@ Kanazawaら\cite{Kanazawa}は印象語などの分析に基づき，行きたい
 \subsection{スポットのユーザレビューを用いた相対的特徴ベクトル生成}
 \label{subsec:スポットのレビューから相対的特徴ベクトル生成}
 本稿では，2016年9月末までのじゃらんから得られたレビューデータを使用する．
-分散表現\cite{Le}を用いて観光スポットの特徴ベクトルの作成する．
+分散表現\cite{Le}を用いて観光スポットの特徴ベクトルを作成する．
 このとき，観光スポット毎のレビューをまとめて1つの文書として扱う．
 本研究では，分散表現を計算するためにPythonのライブラリであるgensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html}を利用する．
 学習方法として，Distributed Bag-of-Wordsを利用して，各スポットの全レビューを使って300次元で作成したベクトルを使う．
-既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器であるMeCab\cite{Kudo}に辞書「mecab-ipadic-NEologd」\footnote{https://github.com/neologd/mecab-ipadic-neologd/}用いて，分かち書きし原型にしたレビューを利用して作成する．
+既訪問スポットや未訪問スポットのレビューベクトルは，形態素解析器であるMeCab\cite{Kudo}に辞書「mecab-ipadic-NEologd」\footnote{https://github.com/neologd/mecab-ipadic-neologd/}用いて，分かち書きし原形にしたレビューを利用して作成する．
 
 各々の観光スポットは，ユーザによって，その強調するべき特徴は変化する．
 たとえば，日本の有名な観光スポットを履歴に持つユーザにとっての「東京都庁舎展望台」と「金閣寺」について考える．
 このとき，「金閣寺」の相対的特徴は，お寺，金色，京都などである．
-「東京都庁舎展望台」の相対的特徴は，展望，夜景，建物，新宿などが考えられる．
-% さまざまな観光スポットと比較すると，相対的特徴は一般的な特徴，カテゴリ，場所になる傾向がある．
+「東京都庁舎展望台」の相対的特徴は，展望，夜景，建物，新宿などが考えられる．る．
 
 一方，京都の寺院を履歴に持つユーザにとっての「金閣寺」と「清水寺」について考える．
 このとき，同じ「金閣寺」でもお寺や京都などは特徴にはならず，「金閣寺」の相対的特徴は，金色，金箔，輝きなどとなる．
 「清水寺」の相対的特徴は，舞台や一望などである．
-% どちらも京都にある寺院であるため，京都や寺院に関連する特徴は相対的特徴にならない．
-% その代わりに，より詳細な特徴が相対的特徴として得られる．
 
 相対的特徴ベクトル$r_{state,i}$を，式\ref{math:Vector difference}として定義する．
 \begin{equation}
-  r_{state,i}=s_i-average(S_{state}-s_i)
+  r_{state,i}=s_i-average(S_{state} \cap s_i)
   \label{math:Vector difference}
 \end{equation}
 相対的特徴ベクトルは，そのスポット自体の特徴ベクトルから他のスポットの特徴ベクトルの平均を引いた値によって得られる．
@@ -180,8 +169,6 @@ $s_i$は集合$S_{state}$内の観光スポット$i$の特徴ベクトルを示�
 \subsection{対応するスポットの決定と特徴語の抽出}
 \label{subsec:対応するスポットの決定と特徴語の抽出}
 未訪問エリア内のスポットを既訪問スポットと対応付ける．
-% そのため，未訪問スポットと既訪問スポットを，それらの相対的特徴ベクトルの類似度に基づいて対応付けを行う．
-% 関連付け手順について説明する．
 具体的には，ある未訪問スポットの相対的特徴ベクトルに最も類似度が高い既訪問スポットを対応付ける．
 類似度計算には，コサイン尺度を用いる．
 ただし，類似度が閾値（本研究では0.125）以下である場合は対応付けを行わない．
@@ -275,9 +262,6 @@ $tfidf(t,s_f)$と$tfidf(t,s_u)$は同じ単語に関する既訪問スポット$
   \end{tabular}
 \end{table}
 
-% 方法Aと方法Bは，まず，各スポットの特徴として\ref{subsec:スポットのレビューから特徴ベクトル生成}節で作成された特徴ベクトルを使用する．
-% そして，\ref{subsec:対応するスポットの決定と特徴語の抽出}節を用いて既訪問スポットと未訪問スポットの特徴語とTFIDF値を求める．
-
 キーワードを抽出するとき，算術平均法では，2つのスポットに共通する特徴語のスコアとして算術平均を計算する．抽出した単語のスコアを式\ref{math:Mean}によって定義する．
 \begin{eqnarray}
   score(t,s_f,s_u) = \frac{tfidf(t,s_f) + tfidf(t,s_u)}{2}
@@ -290,15 +274,11 @@ $tfidf(t,s_f)$と$tfidf(t,s_u)$は同じ単語に関する既訪問スポット$
   \label{math:Multi}
 \end{eqnarray}
 
-% 式\ref{math:Mean}，式\ref{math:Multi}の$TFIDF(t,d,f)$と$TFIDF(t,d,u)$は同じ単語に関する既訪問スポットのTFIDF値と未訪問スポットのTFIDF値を示している．単語スコアの上位$N$個の単語を説明情報としてユーザに提示する．
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{実験手順}
 \label{subsec:実験手順}
 クラウドソーシングのサービスである，CrowdWorks\footnote{https://crowdworks.jp/}を利用して23人の被験者を集めた．
-% 各方法を用いて，被験者の既訪問スポットに基づいて，未訪問スポットの説明可能な情報を提示した．
 まず，被験者は4から10個の自分が既に訪れたことのある観光スポットを入力した．
-% 本実験では，入力文字列とシステム内のスポット名を照会するために，入力文字列から検索したスポット名候補の中から対象スポットを選択した．
 次に，被験者は旅行などで行ったことがなく，これから訪れたい都道府県やエリアを入力した．
 
 本実験では，それぞれの手法において，対応付けられた既訪問スポットと未訪問スポット，およびスポット同士の関係を説明する特徴語を最大で5つまで提示した．
@@ -384,12 +364,10 @@ $tfidf(t,s_f)$と$tfidf(t,s_u)$は同じ単語に関する既訪問スポット$
 しかし，メタデータ法は対応付けすることができるスポットの数が他の手法に比べ半分以下であり，未訪問スポットの多くに説明を付与することができない．
 
 分散表現法と提案手法を詳細に考察するために，既訪問スポットの入力別に分析した．
-% 被験者が入力した既訪問スポットのカテゴリが異なる場合は同様の傾向を示した．
-入力した既訪問スポットの半数以上が同一カテゴリのスポットであった被験者（表中の同じ場合）とそうではない被験者（表中の異なる場合）に分けて集計した．
+入力した既訪問スポットの半数以上が同一カテゴリのスポットであった被験者（表中の「同じ場合」）とそうではない被験者（表中の「異なる場合」）に分けて集計した．
 表\ref{table:既訪問スポットのカテゴリの同異による評価割合}は選択肢1と選択肢2の評価の割合である．
 提案手法を使用すると，カテゴリが異なる場合において，分散表現法よりも選択肢1および選択肢2の割合を増加させることができる．
 相対的特徴ベクトルを用いることによって，カテゴリをこえて各スポットの特徴を求めることができるといえる．
-% 既訪問スポットのジャンルが類似する場合では，方法Eの方がより良い評価となっている．
 カテゴリが同じ場合の選択肢1は提案手法では，少なくなっている．
 これは，相対的特徴ベクトルとしては，カテゴリの特徴が打ち消されたベクトルが生成されるため，明らかな関係となる対応付けが減ったと考えられる．
 しかし，選択肢2が増えずに選択肢4が増え，無関係に見える対応付けを増やす結果となった．
@@ -401,9 +379,9 @@ $tfidf(t,s_f)$と$tfidf(t,s_u)$は同じ単語に関する既訪問スポット$
   \centering
   \begin{tabular}{c|c|r|r}
   \hline  \hline
-                        & 選択肢 & \multicolumn{1}{c|}{分散表現} & \multicolumn{1}{c}{提案手法} \\ \hline
+  & 選択肢 & \multicolumn{1}{c|}{分散表現} & \multicolumn{1}{c}{提案手法} \\ \hline
   異なる場合                 & 1   & 19.23\%                  & 21.10\%                 \\ \cline{2-4}
-                        & 2   & 24.62\%                  & 25.69\%                 \\ \hline
+  & 2   & 24.62\%                  & 25.69\%                 \\ \hline
   同じ場合                  & 1   & 14.62\%                  & 8.26\%                  \\ \cline{2-4}
   \multicolumn{1}{l|}{} & 2   & 23.08\%                  & 22.94\%                 \\ \hline
   \end{tabular}
@@ -426,11 +404,12 @@ $tfidf(t,s_f)$と$tfidf(t,s_u)$は同じ単語に関する既訪問スポット$
 なお，システムaとシステムbはランダムな順番で実行される.
 システムを評価するために，被験者は以下の2つの設問について回答した．
 また，それらの選択理由について自由記述で答えた．
-
 \begin{description}
   \item Q1. 表示されたスポットの詳細情報はどちらの方が分かりやすいかを選択してください．
   \item Q2. 旅行の計画を立てる際にどちらの方が使いたいかを選択してください．
 \end{description}
+
+クラウドソーシングのサービスである，CrowdWorksを利用して50人の被験者を集めた．
 
 \subsection{実験結果と考察}
 Q1に対する回答について，システムaとシステムbの結果はそれぞれ12件と38件となった．
@@ -456,18 +435,6 @@ Q1に対する回答について，システムaとシステムbの結果はそ�
   \end{tabular}
 \end{table}
 
-\begin{table}[t]
-  \caption{システムbの方が良いと回答した被験者の自由記述}
-  \label{table:システムbの方が良いと回答した被験者の自由記述}
-  \centering
-  \begin{tabular}{l}
-  \hline  \hline
-  自分が訪れた事のあるスポットと関連性があり連想しやすいから．                                                 \\ \hline
-  \begin{tabular}[c]{@{}l@{}}どのような場所か想像しやすいので、計画を立てるのにも使いたい\\ と思ったから．\end{tabular} \\ \hline
-  何と関連して表示された等詳細の情報が表示されわかりやすかった．                                                  \\ \hline
-  \end{tabular}
-\end{table}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{まとめと今後の課題}
@@ -483,6 +450,8 @@ Q1に対する回答について，システムaとシステムbの結果はそ�
 システム評価について，提案手法の方がより詳細な情報を提示しているため，ユーザが未訪問スポットをイメージしやすいことを確認した．
 
 今後の課題としては，レビュー数が少ないスポットに対する関連付けの精度が低いため，新たな方法を検討する必要がある．また，ある観光スポットに類似する特徴を持つ既訪問スポットで説明するだけではなく，既訪問スポット集合と対象観光スポットの関係を説明可能な可視化インタフェースへと拡張する予定である．
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgment}
@@ -502,24 +471,24 @@ Q1に対する回答について，システムaとシステムbの結果はそ�
       Cognitive Science, Vol.13, pp.295–355, 1989
   \bibitem{Kurashima}
     Kurashima, T., Iwata, T., Irie, G. and Fujimura, K.:
-      Travel route recommendation using geotags in photo sharing sites,
-      CIKM '10 Proceedings of the 19th ACM international conference on Information and knowledge management, pp.579-588, 2010
+      Travel Route Recommendation Using Geotags in Photo Sharing Sites,
+      In Proceedings of the 19th ACM international conference on Information and knowledge management, pp.579-588, 2010
   \bibitem{Kitamura}
     Kitamura, R. and Itoh, T.:
-      Tourist Spot Recommmendation Applying Generic Object Recognition with Travel Photos,
-      ITE Tech. Rep., Vol.42, No.12, AIT2018-94, pp.185-188, 2018
+      Tourist Spot Recommendation Applying Generic Object Recognition with Travel Photos,
+      ITE Technial Report, Vol.42, No.12, AIT2018-94, pp.185-188, 2018
   \bibitem{Cheng}
     Cheng, A.J., Chen, Y.Y., Huang, Y.T. and Hsu, W.H.:
       Personalized Travel Recommendation by Mining People Attributes from Community-Contributed Photos,
-      MM '11 Proceedings of the 19th ACM international conference on Multimedia, pp.83-92, 2011
+      In Proceedings of the 19th ACM international conference on Multimedia, pp.83-92, 2011
   \bibitem{Le}
     Le, Quoc V. and Mikolov, T.:
-      Distributed representations of sentences and documents,
-      In Proceedings of the 31th International Conference on Machine Learning, ICML 2014, pp.1188–1196, 2014
+      Distributed Representations of Sentences and Documents,
+      In Proceedings of the 31th International Conference on Machine Learning, pp.1188–1196, 2014
   \bibitem{Kudo}
     Kudo, T., Yamamoto, K. and Matsumoto, Y.:
       Applying Conditional Random Fields to Japanese Morphological Analysis,
-      Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing (EMNLP-2004), pp.230-237, 2004
+      In Proceedings of the 2004 Conference on Empirical Methods in Natural Language Processing, pp.230-237, 2004
   \bibitem{松本}
     松本 敦志, 杉本 徹：
       クチコミから抽出した特徴語を利用する観光地検索支援,
@@ -540,6 +509,18 @@ Q1に対する回答について，システムaとシステムbの結果はそ�
   %     ``Mining travel patterns from geotagged photos'',
   %     ACM Transaction on Intelligent System and Technology, Vol.3, No.3, pp.1-18, 2012
 \end{thebibliography}
+
+\begin{table}[t]
+  \caption{システムbの方が良いと回答した被験者の自由記述}
+  \label{table:システムbの方が良いと回答した被験者の自由記述}
+  \centering
+  \begin{tabular}{l}
+  \hline  \hline
+  自分が訪れた事のあるスポットと関連性があり連想しやすいから．                                                 \\ \hline
+  \begin{tabular}[c]{@{}l@{}}どのような場所か想像しやすいので、計画を立てるのにも使いたい\\ と思ったから．\end{tabular} \\ \hline
+  何と関連して表示された等詳細の情報が表示されわかりやすかった．                                                  \\ \hline
+  \end{tabular}
+\end{table}
 
 \begin{biography}
 \profile{n}{潘 健太}{2018年工学院大学情報学部コンピュータ科学科卒業．
