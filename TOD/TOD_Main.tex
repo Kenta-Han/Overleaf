@@ -55,7 +55,7 @@
 \begin{eabstract}
 % 多くの観光客は，レジャー旅行を計画するときに，オンラインから利用可能情報を得ている．しかし，旅行客は未訪問エリアに向けられるかもしれないので，この頼りはしばしば問題を生じそして誤解を招くようになる．
 Most tourists resort to available information online when planning for leisure travel; however, this recourse often becomes problematic and misleading as tourist of the information may be directed to unfamiliar areas.
-% この点に関して，我々は彼らが既に訪れたことがあるスポットの特徴を通して未訪問スポットを説明する方法を提案した． 
+% この点に関して，我々は彼らが既に訪れたことがあるスポットの特徴を通して未訪問スポットを説明する方法を提案した．
 On this regard, we proposed a method of explaining unfamiliar spots through the familiar features of spots they have visited.
 % 本研究では，まず，観光スポットのユーザレビューを用いて特徴ベクトルを生成した．
 In this paper, at first, we generated the feature vector using user reviews of the tourist spot.
@@ -157,7 +157,7 @@ Kanazawaら\cite{Kanazawa}は印象語などの分析に基づき，行きたい
 
 相対的特徴ベクトル$r_{state,i}$を，式\ref{math:Vector difference}として定義する．
 \begin{equation}
-  r_{state,i}=s_i-average(S_{state} \cap s_i)
+  r_{state,i}=s_i-average(S_{state} \setminus s_i)
   \label{math:Vector difference}
 \end{equation}
 相対的特徴ベクトルは，そのスポット自体の特徴ベクトルから他のスポットの特徴ベクトルの平均を引いた値によって得られる．
