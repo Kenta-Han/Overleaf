@@ -1,0 +1,7 @@
+\begin{tabular}{l|rrr|r}\Hline
+		& A & B & C & $\Sigma$\\ \hline
+	1	& 2 & 9 & 4 & 15\\
+	2	& 7 & 5 & 3 & 15\\
+	3	& 6 & 1 & 8 & 15\\ \hline
+	$\Sigma$ & 15 & 15 & 15 & 45\\ \hline
+\end{tabular}
