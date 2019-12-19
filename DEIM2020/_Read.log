@@ -1,10 +1,10 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 DEC 2019 16:11
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 DEC 2019 16:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**_DEIM.tex
-(./_DEIM.tex
+**_Read.tex
+(./_Read.tex
 pLaTeX2e <2018-04-01>+1 (based on LaTeX2e <2018-04-01> patch level 2)
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./deimj.cls
@@ -137,41 +137,45 @@ Package: ajmacros 2005/12/25 13:52 iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp>
 \@tempcntd=\count109
 \@tempcnte=\count110
 \@tempcntf=\count111
-)) (./_DEIM.aux)
-\openout1 = `_DEIM.aux'.
+)) (./_Read.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Warning: Label `fig:image' multiply defined.
+
+)
+\openout1 = `_Read.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 8.65997pt on input line 35.
+(Font)              scaled to size 8.65997pt on input line 34.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 8.65997pt on input line 35.
+(Font)              scaled to size 8.65997pt on input line 34.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 37.
+(Font)              scaled to size 9.6222pt on input line 36.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 37.
+(Font)              scaled to size 9.6222pt on input line 36.
 LaTeX Font Info:    Font shape `JT1/hmc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 37.
+(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 37.
+(Font)              scaled to size 9.6222pt on input line 36.
 LaTeX Font Info:    Font shape `JY1/hmc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 37.
+(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 36.
 LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 37.
+(Font)              scaled to size 9.6222pt on input line 36.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
 (Font)              scaled to size 6.73553pt on input line 50.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
@@ -237,60 +241,53 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
 (Font)              scaled to size 4.8111pt on input line 54.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 59.
+(Font)              scaled to size 4.8111pt on input line 60.
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 85.
+File: picture/system_image.png Graphic file (type bmp)
+<picture/system_image.png>
 LaTeX Font Info:    Font shape `JT1/hmc/bx/n' in size <9> not available
-(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 86.
+(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 99.
 LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 8.65997pt on input line 86.
+(Font)              scaled to size 8.65997pt on input line 99.
 LaTeX Font Info:    Font shape `JY1/hmc/bx/n' in size <9> not available
-(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 86.
+(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 99.
 LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 8.65997pt on input line 86.
+(Font)              scaled to size 8.65997pt on input line 99.
 [1
 
 
-]
-LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 110.
-File: picture/Photo_Image_jap.png Graphic file (type bmp)
-<picture/Photo_Image_jap.png>
-File: picture/Photo_CosSim_jap.png Graphic file (type bmp)
-<picture/Photo_CosSim_jap.png>
- [2]
-File: picture/Photo_Map2_jap.png Graphic file (type bmp)
-<picture/Photo_Map2_jap.png>
- [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 419.
+] [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 154.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 419.
- [5]
-Overfull \hbox (3.9881pt too wide) in paragraph at lines 555--561
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 154.
+ [3]
+File: picture/score_image2.png Graphic file (type bmp)
+<picture/score_image2.png>
+
+Overfull \hbox (6.62083pt too wide) in paragraph at lines 368--377
  [][] 
  []
 
-
-Overfull \hbox (3.98808pt too wide) in paragraph at lines 567--573
- [][] 
- []
-
-[6] [7
-
-] (./_DEIM.aux)
+[4] [5] (./_Read.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 3410 strings out of 493281
- 43377 string characters out of 6145040
- 141711 words of memory out of 5000000
- 7356 multiletter control sequences out of 15000+600000
+ 3396 strings out of 493281
+ 42865 string characters out of 6145040
+ 140655 words of memory out of 5000000
+ 7343 multiletter control sequences out of 15000+600000
  18133 words of font info for 85 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 25i,13n,23p,303b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 25i,8n,23p,354b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on _DEIM.dvi (7 pages, 63820 bytes).
+Output written on _Read.dvi (5 pages, 52096 bytes).

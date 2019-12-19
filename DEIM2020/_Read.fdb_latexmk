@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1576739474 "_DEIM.dvi" "_DEIM.pdf" "_DEIM" 1576739476
-  "_DEIM.dvi" 1576739474 63820 7e44260530d1993e65f803bf0bb270ca "latex"
+["dvipdf"] 1576739674 "_Read.dvi" "_Read.pdf" "_Read" 1576739675
+  "_Read.dvi" 1576739674 52096 85848a083b7c3cc85812323fe94a6e26 "latex"
   (generated)
-  "_DEIM.pdf"
-["latex"] 1576739473 "_DEIM.tex" "_DEIM.dvi" "_DEIM" 1576739476
+  "_Read.pdf"
+["latex"] 1576739673 "_Read.tex" "_Read.dvi" "_Read" 1576739675
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1480098698 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min9.tfm" 1480098698 1196 415df3c165ce605a3c248afbbe3c844b ""
@@ -48,16 +48,14 @@
   "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "_DEIM.aux" 1576739474 2173 fca31c93b747c8fa0f3c3e821aacfd1a ""
-  "_DEIM.tex" 1576739472 48442 bd006bb9164107e4e778e66855221fed ""
-  "deimj.cls" 1545269610 90049 2c30bb21be596661873dec91165c4a10 ""
-  "extractbb -B cropbox -O picture/Photo_CosSim_jap.png" 0 -1 0 ""
-  "extractbb -B cropbox -O picture/Photo_Image_jap.png" 0 -1 0 ""
-  "extractbb -B cropbox -O picture/Photo_Map2_jap.png" 0 -1 0 ""
-  "picture/Photo_CosSim_jap.png" 1545917522 52080 64c3651bf40fc93ce4b94258b92fb351 ""
-  "picture/Photo_Image_jap.png" 1545917511 109970 2de19b8d6bedfccc060896cb607ea69c ""
-  "picture/Photo_Map2_jap.png" 1546936032 1178388 b8be4ad6570a60f43e196aef3ffb5d7f ""
+  "_Read.aux" 1576739674 1486 91d68b13b2b809efaa8d2c3a6ddd0219 ""
+  "_Read.tex" 1576739672 38309 c095f25e5060e9260b5733fd2a12d269 ""
+  "deimj.cls" 1576707180 90049 2c30bb21be596661873dec91165c4a10 ""
+  "extractbb -B cropbox -O picture/score_image2.png" 0 -1 0 ""
+  "extractbb -B cropbox -O picture/system_image.png" 0 -1 0 ""
+  "picture/score_image2.png" 1576707182 95968 d0303718723ddf5fbf092ce58e6dafc6 ""
+  "picture/system_image.png" 1576707182 53195 8d7b8477b65b3640b1fe8ec0a75bd02b ""
   (generated)
-  "_DEIM.aux"
-  "_DEIM.dvi"
-  "_DEIM.log"
+  "_Read.log"
+  "_Read.aux"
+  "_Read.dvi"
