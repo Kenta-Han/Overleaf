@@ -88,12 +88,12 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
-INPUT picture/system_image.png
-INPUT extractbb -B cropbox -O picture/system_image.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
+INPUT picture/system_image.png
+INPUT extractbb -B cropbox -O picture/system_image.png
 OUTPUT _Read.dvi
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
