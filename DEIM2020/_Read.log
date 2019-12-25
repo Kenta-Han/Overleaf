@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  19 DEC 2019 16:14
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  25 DEC 2019 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -137,11 +137,7 @@ Package: ajmacros 2005/12/25 13:52 iNOUE Koich! <inoue@ma.ns.musashi-tech.ac.jp>
 \@tempcntd=\count109
 \@tempcnte=\count110
 \@tempcntf=\count111
-)) (./_Read.aux
-
-LaTeX Warning: Label `fig:image' multiply defined.
-
-)
+)) (./_Read.aux)
 \openout1 = `_Read.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
@@ -183,6 +179,7 @@ LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
 (Font)              scaled to size 15.39551pt on input line 50.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
+(Font)              scaledshape `JY1/hmc/m/n' will be
 (Font)              scaled to size 15.39551pt on input line 50.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
 (Font)              scaled to size 11.54663pt on input line 50.
@@ -260,17 +257,103 @@ LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
 ] [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 154.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
+File: omscndefined on input line 76.
+
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 85.
+File: picture/system_image.png Graphic file (type bmp)
+<picture/system_image.png>
+
+LaTeX Warning: Citation `Kurashima' on page 1 undefined on input line 101.
+
+
+LaTeX Warning: Citation `Kitamura' on page 1 undefined on input line 104.
+
+[1
+
+
+]
+
+LaTeX Warning: Citation `櫻川2015' on page 2 undefined on input line 112.
+
+
+LaTeX Warning: Citation `櫻川2016' on page 2 undefined on input line 114.
+
+
+LaTeX Warning: Citation `上村' on page 2 undefined on input line 117.
+
+
+LaTeX Warning: Citation `doc2vec' on page 2 undefined on input line 136.
+
+
+LaTeX Warning: Citation `mecab' on page 2 undefined on input line 139.
+
+
+LaTeX Warning: Citation `山田' on page 2 undefined on input line 149.
+
+[2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 154.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 154.
- [3]
+
+
+LaTeX Warning: Reference `eq:gini' on page 3 undefined on input line 160.
+
+
+LaTeX Warning: Reference `eq:gini_w' on page 3 undefined on input line 173.
+
+
+LaTeX Warning: Reference `eq:pref' on page 3 undefined on input line 185.
+
+
+LaTeX Warning: Reference `sub:既訪問スポットのクラスタ分類と特徴語抽出' on page 3 undefined on input line 202.
+
+
+LaTeX Warning: Reference `math:CosSim' on page 3 undefined on input line 209.
+
+
+LaTeX Warning: Reference `math:Harmonic Mean' on page 3 undefined on input line 230.
+
+
+LaTeX Warning: Reference `sec:検索結果スポットと既訪問スポットの対応付け' on page 3 undefined on input line 243.
+
+
+LaTeX Warning: Citation `潘STI' on page 3 undefined on input line 244.
+
+
+LaTeX Warning: Reference `math:score' on page 3 undefined on input line 248.
+
+[3]
+
+LaTeX Warning: Reference `fig:image' on page 4 undefined on input line 261.
+
 File: picture/score_image2.png Graphic file (type bmp)
 <picture/score_image2.png>
 
-Overfull \hbox (6.62083pt too wide) in paragraph at lines 368--377
+LaTeX Warning: Reference `table:ユーザAの既訪問スポット履歴' on page 4 undefined on input line 300.
+
+
+LaTeX Warning: Reference `table:ユーザBの既訪問スポット履歴' on page 4 undefined on input line 300.
+
+
+Overfull \hbox (6.62083pt too wide) in paragraph at lines 358--367
  [][] 
  []
+
+
+LaTeX Warning: Reference `table:ユーザAのクラスタ分け結果' on page 4 undefined on input line 370.
+
+
+LaTeX Warning: Reference `table:ユーザBのクラスタ分け結果' on page 4 undefined on input line 370.
+
+
+LaTeX Warning: Reference `table:ユーザAのクラスタ分け結果' on page 4 undefined on input line 374.
+
+
+LaTeX Warning: Reference `table:ユーザBのクラスタ分け結果' on page 4 undefined on input line 375.
 
 [4] [5] (./_Read.aux)
 
@@ -278,16 +361,19 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
  3396 strings out of 493281
  42865 string characters out of 6145040
- 140655 words of memory out of 5000000
+ 142426 words of memory out of 5000000
  7343 multiletter control sequences out of 15000+600000
  18133 words of font info for 85 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  25i,8n,23p,354b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on _Read.dvi (5 pages, 52096 bytes).
+Output written on _Read.dvi (5 pages, 54296 bytes).
