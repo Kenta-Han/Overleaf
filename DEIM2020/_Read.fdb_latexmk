@@ -1,9 +1,9 @@
 # Fdb version 3
-["dvipdf"] 1578451272 "_Read.dvi" "_Read.pdf" "_Read" 1578451273
-  "_Read.dvi" 1578451272 55008 402029c2845e3ff76ab278552c5cbca7 "latex"
+["dvipdf"] 1578465815 "_Read.dvi" "_Read.pdf" "_Read" 1578465816
+  "_Read.dvi" 1578465815 55124 0142d2a1381945d4b4f3ac9a4115ed4f "latex"
   (generated)
   "_Read.pdf"
-["latex"] 1578451271 "_Read.tex" "_Read.dvi" "_Read" 1578451273
+["latex"] 1578465814 "_Read.tex" "_Read.dvi" "_Read" 1578465816
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/goth10.tfm" 1480098698 1196 5981e79c37b2cfd27b3612a6783cd4b6 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/ptex-fonts/standard/min9.tfm" 1480098698 1196 415df3c165ce605a3c248afbbe3c844b ""
@@ -48,14 +48,14 @@
   "/usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf" 1522066949 33362 cf75436e19743e94a92a6b1b9183c434 ""
   "/usr/local/texlive/2018/texmf-var/web2c/eptex/platex.fmt" 1542247501 4475038 6433916e1773dbfc00993ca197162afb ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "_Read.aux" 1578451272 1563 d0fdd064cd989b1b03e27b3e2c812660 ""
-  "_Read.tex" 1578451270 39983 c340c92d58f3d28289c1b59212fe0711 ""
+  "_Read.aux" 1578465815 1563 d0fdd064cd989b1b03e27b3e2c812660 ""
+  "_Read.tex" 1578465813 40015 7f49ef2adb7d58bb343fbf7d3b07b6c4 ""
   "deimj.cls" 1576707180 90049 2c30bb21be596661873dec91165c4a10 ""
   "extractbb -B cropbox -O picture/score_image2.png" 0 -1 0 ""
   "extractbb -B cropbox -O picture/system_image.png" 0 -1 0 ""
   "picture/score_image2.png" 1576707182 95968 d0303718723ddf5fbf092ce58e6dafc6 ""
   "picture/system_image.png" 1576707182 53195 8d7b8477b65b3640b1fe8ec0a75bd02b ""
   (generated)
-  "_Read.dvi"
   "_Read.aux"
+  "_Read.dvi"
   "_Read.log"
