@@ -142,30 +142,29 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm
-INPUT _Master_Main.toc
-INPUT _Master_Main.toc
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
-OUTPUT _Master_Main.toc
-INPUT _Master_Main.lof
-INPUT _Master_Main.lof
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm
+INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm
+INPUT _Master_Main.toc
+OUTPUT _Master_Main.toc
+INPUT _Master_Main.lof
 OUTPUT _Master_Main.lof
-INPUT _Master_Main.lot
 INPUT _Master_Main.lot
 OUTPUT _Master_Main.lot
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
@@ -182,14 +181,14 @@ INPUT extractbb -B cropbox -O ./figure/spot_info.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
-INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlgothr-h.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/helvetic/phvr7t.tfm
+INPUT ./figure/image.png
+INPUT extractbb -B cropbox -O ./figure/image.png
 INPUT ./figure/system_fig.png
 INPUT extractbb -B cropbox -O ./figure/system_fig.png
 INPUT ./figure/map_jap.png
@@ -204,8 +203,8 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-h.tfm
 INPUT ./figure/score_image.png
 INPUT extractbb -B cropbox -O ./figure/score_image.png
-INPUT ./figure/position_map.png
-INPUT extractbb -B cropbox -O ./figure/position_map.png
+INPUT ./figure/map_p.png
+INPUT extractbb -B cropbox -O ./figure/map_p.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
@@ -218,10 +217,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT ./figure/line_map.png
-INPUT extractbb -B cropbox -O ./figure/line_map.png
-INPUT ./figure/table_map.png
-INPUT extractbb -B cropbox -O ./figure/table_map.png
+INPUT ./figure/map_l.png
+INPUT extractbb -B cropbox -O ./figure/map_l.png
+INPUT ./figure/map_t.png
+INPUT extractbb -B cropbox -O ./figure/map_t.png
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/japanese-otf/nmlminr-v.tfm

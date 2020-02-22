@@ -1,13 +1,13 @@
 \addvspace {10\jsc@mpt }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces レビューサイト上で観光スポットに付与される情報例}}{2}{figure.1.1}
 \addvspace {10\jsc@mpt }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 観光支援システムの流れ}}{5}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 一般的な観光スポット検索システムと提案する説明性を向上する手法}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 観光地検索システムの説明性向上手法}}{6}{figure.2.2}
 \addvspace {10\jsc@mpt }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces プロトタイプシステム}}{9}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces プロトタイプシステム}}{11}{figure.3.1}
 \addvspace {10\jsc@mpt }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 既訪問スポットの経度座標計算の例}}{19}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 位置関係($Position\_Map$)}}{20}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 位置関係+線($Line\_Map$)}}{20}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 表形式($Table\_Map$)}}{20}{figure.4.4}
-\addvspace {10\jsc@mpt }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 既訪問スポットの経度座標計算の例}}{23}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 位置関係（$Position\_Map$）}}{24}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 位置関係+線（$Line\_Map$）}}{24}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 表形式（$Table\_Map$）}}{24}{figure.4.4}
 \addvspace {10\jsc@mpt }

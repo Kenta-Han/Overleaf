@@ -1,35 +1,38 @@
 \contentsline {chapter}{\numberline {第1章}序論}{1}{chapter.1}
-\contentsline {chapter}{\numberline {第2章}本研究のアプローチ}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}観光支援システム}{4}{section.2.1}
-\contentsline {section}{\numberline {2.2}関連研究}{5}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}体験履歴による検索や推薦システムに関する研究}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}情報可視化に関する研究}{7}{subsection.2.2.2}
-\contentsline {chapter}{\numberline {第3章}ユーザの既訪問スポットの位置付けに基づく未訪問スポットの説明手法}{8}{chapter.3}
-\contentsline {section}{\numberline {3.1}概要}{8}{section.3.1}
-\contentsline {section}{\numberline {3.2}未訪問スポットと既訪問スポットの対応付け}{9}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}観光スポットのユーザレビューを用いた相対的特徴ベクトル生成}{9}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}対応する観光スポットの決定と特徴語抽出}{10}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}実行例}{11}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}対応関係を表す特徴語抽出評価}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}実験内容}{11}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}実験手順}{12}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}実験結果と考察}{13}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}観光スポットの対応付けに関する評価}{13}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}実験内容}{13}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}実験結果と考察}{14}{subsection.3.4.2}
-\contentsline {section}{\numberline {3.5}未訪問スポット説明の有効性評価}{15}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}実験内容}{15}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}実験結果と考察}{15}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {第4章}地図上における未訪問スポットの説明性向上のための観光スポットの対応関係可視化手法}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}概要}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}観光スポット間の対応関係を用いた可視化}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}対応関係の可視化評価}{18}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}実験内容}{18}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}実験手順}{19}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}実験結果と考察}{21}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {第5章}考察}{24}{chapter.5}
-\contentsline {chapter}{\numberline {第6章}結論}{25}{chapter.6}
-\contentsline {chapter}{謝辞}{26}{chapter*.5}
-\contentsline {chapter}{本研究に関する発表}{27}{chapter*.6}
-\contentsline {chapter}{その他の発表実績}{28}{chapter*.10}
-\contentsline {chapter}{受賞}{29}{chapter*.12}
+\contentsline {chapter}{\numberline {第2章}本研究のアプローチ}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}説明性向上手法}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}関連研究}{7}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}体験履歴による検索や推薦システムに関する研究}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}情報可視化に関する研究}{8}{subsection.2.2.2}
+\contentsline {chapter}{\numberline {第3章}ユーザの既訪問スポットの位置付けに基づく検索結果スポットの説明手法}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}概要}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}検索結果スポットと既訪問スポットの対応付け}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}観光スポットのユーザレビューを用いた特徴ベクトル生成と対応付け}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}対応する観光スポットの特徴語抽出}{13}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}実行例}{14}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}対応関係を表す特徴語抽出の評価}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}実験内容}{14}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}実験手順}{15}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}実験結果と考察}{16}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}観光スポットの対応付けに関する評価}{16}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}実験内容}{16}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}実験結果と考察}{16}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}検索結果スポット説明の有効性評価}{18}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}実験内容}{18}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}実験結果と考察}{18}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}まとめ}{19}{section.3.6}
+\contentsline {chapter}{\numberline {第4章}地図上における検索結果スポットの説明性向上のための観光スポットの対応関係可視化手法}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}概要}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}観光スポット間の対応関係を用いた可視化}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}対応関係の可視化評価}{22}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}実験内容}{22}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}実験手順}{24}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}分散表現ベクトルを用いた結果と考察}{25}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}相対的特徴ベクトルを用いた結果と考察}{27}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}分散表現ベクトルと相対的特徴ベクトルの比較}{29}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}まとめ}{29}{section.4.4}
+\contentsline {chapter}{\numberline {第5章}結論}{31}{chapter.5}
+\contentsline {chapter}{謝辞}{33}{chapter*.5}
+\contentsline {chapter}{本研究に関する発表}{34}{chapter*.6}
+\contentsline {chapter}{その他の発表実績}{35}{chapter*.10}
+\contentsline {chapter}{受賞}{36}{chapter*.12}

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  7 DEC 2019 20:49
+This is e-pTeX, Version 3.14159265-p3.8.0-180226-2.6 (utf8.euc) (TeX Live 2018) (preloaded format=platex 2018.11.15)  22 FEB 2020 18:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,30 +331,30 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 ) (./_Master_Main.aux)
 \openout1 = `_Master_Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 113.
+LaTeX Font Info:    ... okay on input line 113.
  (I search kanjifont definition file: . . ) (I search font definition file: . . . . . . . . )
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 114.
+(Font)              scaled to size 9.24683pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 114.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 114.
+(Font)              scaled to size 9.24683pt on input line 113.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 113.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -393,7 +393,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 114.
+Package hyperref Info: Link coloring OFF on input line 113.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -401,17 +401,20 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 114.
-LaTeX Info: Redefining \pageref on input line 114.
-LaTeX Info: Redefining \nameref on input line 114.
+LaTeX Info: Redefining \ref on input line 113.
+LaTeX Info: Redefining \pageref on input line 113.
+LaTeX Info: Redefining \nameref on input line 113.
  (./_Master_Main.out) (./_Master_Main.out)
 \@outlinefile=\write4
 \openout4 = `_Master_Main.out'.
 
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: Incompatible package detected (regarding \caption).
 (caption)             \caption = macro:->\@protected@testopt \caption \\caption {}.
-
 
 Package caption Warning: \caption will not be redefined since it's already
 (caption)                redefined by a document class or package which is
@@ -420,338 +423,323 @@ See the caption package documentation for explanation.
 
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 22.19238pt on input line 114.
+(Font)              scaled to size 22.19238pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 22.19238pt on input line 114.
+(Font)              scaled to size 22.19238pt on input line 113.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 114.
+(Font)              scaled to size 11.09619pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 114.
+(Font)              scaled to size 11.09619pt on input line 113.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 18.49365pt on input line 114.
+(Font)              scaled to size 18.49365pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 18.49365pt on input line 114.
+(Font)              scaled to size 18.49365pt on input line 113.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 5.5481pt on input line 114.
+(Font)              scaled to size 5.5481pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 5.5481pt on input line 114.
+(Font)              scaled to size 5.5481pt on input line 113.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 8.78448pt on input line 114.
+(Font)              scaled to size 8.78448pt on input line 113.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 8.78448pt on input line 114.
-\@orgwspc=\dimen155
-\@orgwspc=\dimen156
-[0
-
-]
-LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 120.
+(Font)              scaled to size 8.78448pt on input line 113nfo:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 23.0061pt on input line 119.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 120.
+(Font)              scaled to size 23.0061pt on input line 119.
 LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 120.
+(Font)              scaled to size 23.0061pt on input line 119.
 LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 120.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 120.
+(Font)              scaled to size 23.0061pt on input line 119.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 119.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
-) [1
-
-
-
-]
-LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 127.
-LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 127.
- (./_Master_Main.toc
-LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 7.39746pt on input line 3.
 )
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 133.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 133.
+ [1
+
+
+
+] [2] [3]
+LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 213.
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 7.39746pt on input line 213.
+ [4]
+LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 221.
+LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 221.
+ (./_Master_Main.toc [5
+
+
+])
 \tf@toc=\write5
 \openout5 = `_Master_Main.toc'.
 
- [2
-
-
-] (./_Master_Main.lof
-LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 7.39746pt on input line 9.
-)
+ [6] (./_Master_Main.lof)
 \tf@lof=\write6
 \openout6 = `_Master_Main.lof'.
 
- [3
+ [7
 
 
 ] (./_Master_Main.lot)
 \tf@lot=\write7
 \openout7 = `_Master_Main.lot'.
 
- [4
+ [8
 
 
 ]
 第1章
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 19.17792pt on input line 132.
+(Font)              scaled to size 19.17792pt on input line 224.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 19.17792pt on input line 132.
+(Font)              scaled to size 19.17792pt on input line 224.
 LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 19.17792pt on input line 132.
+(Font)              scaled to size 19.17792pt on input line 224.
 LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 19.17792pt on input line 132.
+(Font)              scaled to size 19.17792pt on input line 224.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 143.
-LaTeX Font Info:    Font shape `JT1/hmc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 144.
-LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 144.
-LaTeX Font Info:    Font shape `JY1/hmc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 144.
-LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 144.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
-
-LaTeX Warning: Reference `fig:観光スポット検索サイト上で観光スポットに付与される情報例' on page 1 undefined on input line 144.
-
+(Font)              scaled to size 4.62341pt on input line 234.
 File: ./figure/spot_info.png Graphic file (type bmp)
 <./figure/spot_info.png>
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 10.17151pt on input line 149.
+(Font)              scaled to size 10.17151pt on input line 240.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 10.17151pt on input line 149.
+(Font)              scaled to size 10.17151pt on input line 240.
 [1
 
 
 
-]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 157.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
- [2] [3]
+] [2] [3] [4]
 第2章
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 198.
+(Font)              scaled to size 13.31541pt on input line 310.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 198.
+(Font)              scaled to size 13.31541pt on input line 310.
 LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 198.
+(Font)              scaled to size 13.31541pt on input line 310.
 LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 198.
+(Font)              scaled to size 13.31541pt on input line 310.
+File: ./figure/image.png Graphic file (type bmp)
+<./figure/image.png>
 File: ./figure/system_fig.png Graphic file (type bmp)
 <./figure/system_fig.png>
-
-LaTeX Warning: Citation `Kurashima' on page 4 undefined on input line 232.
-
-[4
+[5
 
 ]
-
-LaTeX Warning: Citation `Cheng' on page 5 undefined on input line 235.
-
-
-LaTeX Warning: Citation `松本' on page 5 undefined on input line 237.
-
-[5]
-
-LaTeX Warning: Citation `嶋田' on page 6 undefined on input line 241.
-
-
-LaTeX Warning: Citation `廣嶋' on page 6 undefined on input line 245.
+LaTeX Font Info:    Font shape `JT1/hmc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/hgt/m/n' tried instead on input line 348.
+LaTeX Font Info:    Font shape `JT1/hgt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 348.
+LaTeX Font Info:    Font shape `JY1/hmc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/hgt/m/n' tried instead on input line 348.
+LaTeX Font Info:    Font shape `JY1/hgt/m/n' will be
+(Font)              scaled to size 11.09619pt on input line 348.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 348.
 
 
-LaTeX Warning: Citation `平野' on page 6 undefined on input line 248.
+LaTeX Warning: Citation `TF' on page 6 undefined on input line 348.
 
 
-LaTeX Warning: Citation `野守' on page 6 undefined on input line 250.
+LaTeX Warning: Citation `IDF' on page 6 undefined on input line 348.
 
 
-LaTeX Warning: Citation `上原' on page 6 undefined on input line 258.
-
-
-LaTeX Warning: Citation `佃' on page 6 undefined on input line 260.
-
-
-LaTeX Warning: Citation `林' on page 6 undefined on input line 263.
-
-
-LaTeX Warning: Citation `服部' on page 6 undefined on input line 266.
+LaTeX Warning: Citation `Le' on page 6 undefined on input line 348.
 
 [6]
 
-LaTeX Warning: Citation `櫻川2015' on page 7 undefined on input line 276.
+LaTeX Warning: Citation `Kurashima' on page 7 undefined on input line 370.
 
 
-LaTeX Warning: Citation `櫻川2016' on page 7 undefined on input line 278.
-
-
-LaTeX Warning: Citation `倉田2010' on page 7 undefined on input line 279.
-
-
-LaTeX Warning: Citation `Kitamura' on page 7 undefined on input line 283.
-
-
-LaTeX Warning: Citation `上村2019' on page 7 undefined on input line 286.
+LaTeX Warning: Citation `Cheng' on page 7 undefined on input line 372.
 
 [7]
+
+LaTeX Warning: Citation `松本' on page 8 undefined on input line 378.
+
+
+LaTeX Warning: Citation `嶋田' on page 8 undefined on input line 381.
+
+
+LaTeX Warning: Citation `廣嶋' on page 8 undefined on input line 384.
+
+
+LaTeX Warning: Citation `平野' on page 8 undefined on input line 387.
+
+
+LaTeX Warning: Citation `野守' on page 8 undefined on input line 388.
+
+
+LaTeX Warning: Citation `櫻川2015' on page 8 undefined on input line 397.
+
+
+LaTeX Warning: Citation `櫻川2016' on page 8 undefined on input line 399.
+
+
+LaTeX Warning: Citation `倉田2010' on page 8 undefined on input line 400.
+
+[8]
+
+LaTeX Warning: Citation `Kitamura' on page 9 undefined on input line 404.
+
+
+LaTeX Warning: Citation `上村2019' on page 9 undefined on input line 407.
+
+[9]
 第3章
 
-LaTeX Warning: Citation `Gentner' on page 8 undefined on input line 304.
+LaTeX Warning: Citation `Gentner' on page 10 undefined on input line 425.
 
 
-LaTeX Warning: Citation `Gentner' on page 8 undefined on input line 305.
+LaTeX Warning: Citation `Gentner' on page 10 undefined on input line 426.
 
 
-LaTeX Warning: Citation `Holyoak' on page 8 undefined on input line 305.
+LaTeX Warning: Citation `Holyoak' on page 10 undefined on input line 426.
 
 File: ./figure/map_jap.png Graphic file (type bmp)
 <./figure/map_jap.png>
-[8
+[10
 
 ]
 
-LaTeX Warning: Citation `Le' on page 9 undefined on input line 332.
+LaTeX Warning: Citation `篠田' on page 11 undefined on input line 453.
 
 
-LaTeX Warning: Citation `Kudo' on page 9 undefined on input line 336.
+LaTeX Warning: Citation `藤田' on page 11 undefined on input line 453.
 
-[9]
+
+LaTeX Warning: Citation `Mikolov' on page 11 undefined on input line 460.
+
+
+LaTeX Warning: Citation `Le' on page 11 undefined on input line 460.
+
+
+LaTeX Warning: Citation `Harris' on page 11 undefined on input line 461.
+
+[11]
+
+LaTeX Warning: Citation `Kudo' on page 12 undefined on input line 468.
+
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 342.
-LaTeX Font Info:    Calculating math sizes for size <> on input line 342.
-
+(Font)              scaled to size 6.47278pt on input line 480.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 480.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 342.
+(Font)              size <5> substituted on input line 480.
 
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 0.92468pt on input line 342.
+(Font)              scaled to size 0.92468pt on input line 480.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 0.64726pt on input line 342.
+(Font)              scaled to size 0.64726pt on input line 480.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 0.46234pt on input line 342.
+(Font)              scaled to size 0.46234pt on input line 480.
+[12]
 
-LaTeX Warning: Reference `subsec:スポットのレビューから相対的特徴ベクトル生成' on page 10 undefined on input line 359.
+LaTeX Warning: Citation `IDF' on page 13 undefined on input line 526.
 
-[10]
-
-LaTeX Warning: Reference `sec:未訪問スポットと既訪問スポットの対応付け' on page 11 undefined on input line 406.
-
-[11] [12]
-
-LaTeX Warning: Reference `subsec:対応するスポットの決定と特徴語の抽出' on page 13 undefined on input line 489.
-
-
-LaTeX Warning: Reference `subsec:スポットのレビューから相対的特徴ベクトル生成' on page 13 undefined on input line 508.
-
-[13] [14] [15] [16]
+[13] [14] [15] [16] [17] [18] [19] [20]
 第4章
-
-LaTeX Warning: Citation `潘' on page 17 undefined on input line 648.
-
-[17
+[21
 
 ]
 File: ./figure/score_image.png Graphic file (type bmp)
 <./figure/score_image.png>
-File: ./figure/position_map.png Graphic file (type bmp)
-<./figure/position_map.png>
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 703.
+File: ./figure/map_p.png Graphic file (type bmp)
+<./figure/map_p.png>
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 894.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 703.
+(Font)              size <5> substituted on input line 894.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 703.
+(Font)              size <5> substituted on input line 894.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 703.
+(Font)              size <5> substituted on input line 894.
 
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 7.12001pt on input line 703.
+(Font)              scaled to size 7.12001pt on input line 894.
 LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
-(Font)              scaled to size 5.08575pt on input line 703.
+(Font)              scaled to size 5.08575pt on input line 894.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 7.12001pt on input line 703.
+(Font)              scaled to size 7.12001pt on input line 894.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 5.08575pt on input line 703.
-File: ./figure/line_map.png Graphic file (type bmp)
-<./figure/line_map.png>
-File: ./figure/table_map.png Graphic file (type bmp)
-<./figure/table_map.png>
-[18] [19] [20]
+(Font)              scaled to size 5.08575pt on input line 894.
+File: ./figure/map_l.png Graphic file (type bmp)
+<./figure/map_l.png>
+File: ./figure/map_t.png Graphic file (type bmp)
+<./figure/map_t.png>
+[22] [23] [24]
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 770.
+(Font)              scaled to size 6.47278pt on input line 968.
 LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 770.
- [21] [22] [23]
+(Font)              scaled to size 4.62341pt on input line 968.
+ [25] [26] [27] [28] [29] [30]
 第5章
-[24
+[31
 
-]
-第6章
-[25
-
-] [26
+] [32] [33
 
 
-] (./_Master_Main.bbl) [27
+] (./_Master_Main.bbl) [34
 
 
-] [28
+] [35
 
 ] Excluding 'domestic' comment.
 No file _Master_Main.ind.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1005.
-[29
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1377.
+[36
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1005.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1377.
  (./_Master_Main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1005.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1005.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1377.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1377.
 Package rerunfilecheck Info: File `_Master_Main.out' has not changed.
-(rerunfilecheck)             Checksum: B1F1E1B816478B729BC70C938BC859EB;1538.
+(rerunfilecheck)             Checksum: 5104C20243ECBFD931E508ECEC72CB1A;1620.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -760,15 +748,241 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1005.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1377.
  ) 
 Here is how much of TeX's memory you used:
- 10580 strings out of 493281
- 151392 string characters out of 6145040
- 267131 words of memory out of 5000000
- 14396 multiletter control sequences out of 15000+600000
+ 10594 strings out of 493281
+ 152016 string characters out of 6145040
+ 268980 words of memory out of 5000000
+ 14409 multiletter control sequences out of 15000+600000
  28901 words of font info for 119 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 43i,14n,40p,416b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,14n,40p,424b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on _Master_Main.dvi (34 pages, 126268 bytes).
+Output written on _Master_Main.dvi (45 pages, 198760 bytes).
+��同異による評価割合' on page 17 undefined on input line 700.
+
+[17]
+
+LaTeX Warning: Reference `table:システムaの方が良いと回答した被験者の自由記述' on page 18 undefined on input line 750.
+
+
+LaTeX Warning: Reference `table:システムbの方が良いと回答した被験者の自由記述' on page 18 undefined on input line 750.
+
+[18]
+
+LaTeX Warning: Reference `sub:対応関係を表す特徴語抽出の評価' on page 19 undefined on input line 794.
+
+
+LaTeX Warning: Reference `sub:観光スポットの対応付けに関する評価' on page 19 undefined on input line 797.
+
+
+LaTeX Warning: Reference `sub:対応関係を表す特徴語抽出の評価' on page 19 undefined on input line 798.
+
+[19]
+
+LaTeX Warning: Reference `sub:検索結果スポット説明の有効性評' on page 20 undefined on input line 811.
+
+
+LaTeX Warning: Reference `sub:対応関係を表す特徴語抽出の評価' on page 20 undefined on input line 814.
+
+
+LaTeX Warning: Reference `sub:観光スポットの対応付けに関する評価' on page 20 undefined on input line 814.
+
+
+LaTeX Warning: Reference `sub:検索結果スポット説明の有効性評' on page 20 undefined on input line 814.
+
+[20]
+第4章
+[21
+
+]
+
+LaTeX Warning: Reference `math:score' on page 22 undefined on input line 849.
+
+
+LaTeX Warning: Reference `fig:image' on page 22 undefined on input line 863.
+
+File: ./figure/score_image.png Graphic file (type bmp)
+<./figure/score_image.png>
+
+LaTeX Warning: Reference `fig:P' on page 22 undefined on input line 884.
+
+
+LaTeX Warning: Reference `fig:L' on page 22 undefined on input line 884.
+
+
+LaTeX Warning: Reference `fig:T' on page 22 undefined on input line 884.
+
+File: ./figure/map_p.png Graphic file (type bmp)
+<./figure/map_p.png>
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 894.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 894.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 894.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 894.
+
+LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
+(Font)              scaled to size 7.12001pt on input line 894.
+LaTeX Font Info:    Font shape `JY1/hmc/m/n' will be
+(Font)              scaled to size 5.08575pt on input line 894.
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 7.12001pt on input line 894.
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 5.08575pt on input line 894.
+File: ./figure/map_l.png Graphic file (type bmp)
+<./figure/map_l.png>
+File: ./figure/map_t.png Graphic file (type bmp)
+<./figure/map_t.png>
+[22]
+
+LaTeX Warning: Reference `fig:P' on page 23 undefined on input line 916.
+
+
+LaTeX Warning: Reference `fig:L' on page 23 undefined on input line 922.
+
+
+LaTeX Warning: Reference `fig:T' on page 23 undefined on input line 929.
+
+[23] [24]
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 6.47278pt on input line 968.
+LaTeX Font Info:    Font shape `JT1/hmc/m/n' will be
+(Font)              scaled to size 4.62341pt on input line 968.
+
+
+LaTeX Warning: Reference `table:行き先の決定しやすさ（特徴ベクトル）' on page 25 undefined on input line 973.
+
+
+LaTeX Warning: Reference `table:行き先の決定しやすさ（特徴ベクトル）' on page 25 undefined on input line 975.
+
+
+LaTeX Warning: Reference `table:PLの訪問履歴との関係（特徴ベクトル）' on page 25 undefined on input line 1009.
+
+
+LaTeX Warning: Reference `table:PLの訪問履歴との関係（特徴ベクトル）' on page 25 undefined on input line 1010.
+
+
+LaTeX Warning: Reference `table:行き先の決定しやすさ（特徴ベクトル）' on page 25 undefined on input line 1011.
+
+
+LaTeX Warning: Reference `table:LTの訪問履歴との関係（特徴ベクトル）' on page 25 undefined on input line 1013.
+
+
+LaTeX Warning: Reference `table:LTの訪問履歴との関係（特徴ベクトル）' on page 25 undefined on input line 1014.
+
+[25]
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった体感時間（特徴ベクトル）' on page 26 undefined on input line 1059.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった労力（特徴ベクトル）' on page 26 undefined on input line 1061.
+
+[26]
+
+LaTeX Warning: Reference `table:行き先の決定しやすさ（相対的特徴ベクトル）' on page 27 undefined on input line 1086.
+
+
+LaTeX Warning: Reference `table:行き先の決定しやすさ（相対的特徴ベクトル）' on page 27 undefined on input line 1088.
+
+
+LaTeX Warning: Reference `table:PLの訪問履歴との関係（相対的特徴ベクトル）' on page 27 undefined on input line 1123.
+
+
+LaTeX Warning: Reference `table:PLの訪問履歴との関係（相対的特徴ベクトル）' on page 27 undefined on input line 1124.
+
+
+LaTeX Warning: Reference `table:LTの訪問履歴との関係（相対的特徴ベクトル）' on page 27 undefined on input line 1125.
+
+
+LaTeX Warning: Reference `table:LTの訪問履歴との関係（相対的特徴ベクトル）' on page 27 undefined on input line 1126.
+
+
+LaTeX Warning: Reference `table:行き先の決定しやすさ（相対的特徴ベクトル）' on page 27 undefined on input line 1127.
+
+[27]
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった体感時間（相対的特徴ベクトル）' on page 28 undefined on input line 1175.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった労力（相対的特徴ベクトル）' on page 28 undefined on input line 1177.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった体感時間（相対的特徴ベクトル）' on page 28 undefined on input line 1180.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった労力（相対的特徴ベクトル）' on page 28 undefined on input line 1180.
+
+[28]
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった体感時間（特徴ベクトル）' on page 29 undefined on input line 1192.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった体感時間（相対的特徴ベクトル）' on page 29 undefined on input line 1192.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった労力（特徴ベクトル）' on page 29 undefined on input line 1193.
+
+
+LaTeX Warning: Reference `table:訪問先決定までにかかった労力（相対的特徴ベクトル）' on page 29 undefined on input line 1193.
+
+[29] [30]
+第5章
+[31
+
+] [32] [33
+
+
+] (./_Master_Main.bbl) [34
+
+
+] [35
+
+] Excluding 'domestic' comment.
+No file _Master_Main.ind.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1377.
+[36
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1377.
+ (./_Master_Main.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1377.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1377.
+
+
+Package rerunfilecheck Warning: File `_Master_Main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `_Master_Main.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  5104C20243ECBFD931E508ECEC72CB1A;1620.
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 4.5pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1377.
+ ) 
+Here is how much of TeX's memory you used:
+ 10584 strings out of 493281
+ 151879 string characters out of 6145040
+ 266382 words of memory out of 5000000
+ 14405 multiletter control sequences out of 15000+600000
+ 28901 words of font info for 119 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 43i,14n,40p,424b,991s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on _Master_Main.dvi (44 pages, 171668 bytes).

@@ -1,19 +1,22 @@
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
-\contentsline {table}{\numberline {3.1}{\ignorespaces 既訪問スポット集合と未訪問スポット集合}}{11}{table.3.1}
-\contentsline {table}{\numberline {3.2}{\ignorespaces 対応付け結果の例}}{11}{table.3.2}
-\contentsline {table}{\numberline {3.3}{\ignorespaces 対応関係を表す特徴語の実験結果}}{12}{table.3.3}
-\contentsline {table}{\numberline {3.4}{\ignorespaces 対応付けに関する実験結果}}{14}{table.3.4}
-\contentsline {table}{\numberline {3.5}{\ignorespaces 既訪問スポットのカテゴリの同異による評価割合}}{15}{table.3.5}
-\contentsline {table}{\numberline {3.6}{\ignorespaces システムaの方が良いと回答した被験者の自由記述}}{16}{table.3.6}
-\contentsline {table}{\numberline {3.7}{\ignorespaces システムbの方が良いと回答した被験者の自由記述}}{16}{table.3.7}
+\contentsline {table}{\numberline {3.1}{\ignorespaces 既訪問スポット集合と検索結果スポット集合}}{14}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces 対応付け結果の例}}{14}{table.3.2}
+\contentsline {table}{\numberline {3.3}{\ignorespaces 対応関係を表す特徴語の実験結果}}{15}{table.3.3}
+\contentsline {table}{\numberline {3.4}{\ignorespaces 対応付けに関する実験結果}}{17}{table.3.4}
+\contentsline {table}{\numberline {3.5}{\ignorespaces 既訪問スポットのカテゴリの同異による評価割合}}{17}{table.3.5}
+\contentsline {table}{\numberline {3.6}{\ignorespaces システムaの方が良いと回答した被験者の自由記述}}{19}{table.3.6}
+\contentsline {table}{\numberline {3.7}{\ignorespaces システムbの方が良いと回答した被験者の自由記述}}{19}{table.3.7}
 \addvspace {10\jsc@mpt }
-\contentsline {table}{\numberline {4.1}{\ignorespaces 行き先の決定しやすさの回答数割合}}{21}{table.4.1}
-\contentsline {table}{\numberline {4.2}{\ignorespaces $Position\_Map$と$Line\_Map$の訪問履歴との関係の回答数割合}}{21}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces $Line\_Map$と$Table\_Map$の訪問履歴との関係の回答数割合}}{21}{table.4.3}
-\contentsline {table}{\numberline {4.4}{\ignorespaces $Position\_Map$と$Line\_Map$の決定しやすさと関係わかりやすさについての回答数}}{22}{table.4.4}
-\contentsline {table}{\numberline {4.5}{\ignorespaces 訪問先決定までにかかった体感時間の回答数割合}}{22}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces 訪問先決定までにかかった労力の回答数割合}}{22}{table.4.6}
-\addvspace {10\jsc@mpt }
+\contentsline {table}{\numberline {4.1}{\ignorespaces 行き先の決定しやすさの回答数割合（分散表現ベクトル）}}{25}{table.4.1}
+\contentsline {table}{\numberline {4.2}{\ignorespaces $Position\_Map$と$Line\_Map$の訪問履歴との関係の回答数割合（分散表現ベクトル）}}{26}{table.4.2}
+\contentsline {table}{\numberline {4.3}{\ignorespaces $Line\_Map$と$Table\_Map$の訪問履歴との関係の回答数割合（分散表現ベクトル）}}{26}{table.4.3}
+\contentsline {table}{\numberline {4.4}{\ignorespaces 訪問先決定までにかかった体感時間の回答数割合（分散表現ベクトル）}}{26}{table.4.4}
+\contentsline {table}{\numberline {4.5}{\ignorespaces 訪問先決定までにかかった労力の回答数割合（分散表現ベクトル）}}{26}{table.4.5}
+\contentsline {table}{\numberline {4.6}{\ignorespaces 行き先の決定しやすさの回答数割合（相対的特徴ベクトル）}}{27}{table.4.6}
+\contentsline {table}{\numberline {4.7}{\ignorespaces $Position\_Map$と$Line\_Map$の訪問履歴との関係の回答数割合（相対的特徴ベクトル）}}{28}{table.4.7}
+\contentsline {table}{\numberline {4.8}{\ignorespaces $Line\_Map$と$Table\_Map$の訪問履歴との関係の回答数割合（相対的特徴ベクトル）}}{28}{table.4.8}
+\contentsline {table}{\numberline {4.9}{\ignorespaces 訪問先決定までにかかった体感時間の回答数割合（相対的特徴ベクトル）}}{28}{table.4.9}
+\contentsline {table}{\numberline {4.10}{\ignorespaces 訪問先決定までにかかった労力の回答数割合（相対的特徴ベクトル）}}{28}{table.4.10}
 \addvspace {10\jsc@mpt }
